@@ -79,7 +79,11 @@ Repositório (privado): `github.com/ArthurPamplonaEng/Lats2027Slack`. A `.venv` 
 
 Nota do parecer: 7/10 (aceite fraco); as mudanças de texto, figuras e análise estão listadas na
 mensagem do commit. O que **falta na bancada** (placa 2 da AU15P; só SRAM, Vcore entre 0,70 e
-0,92 V e de volta a 0,85 V no fim):
+0,92 V e de volta a 0,85 V no fim). **Roteiro passo a passo, com os comandos:**
+[`bench/ROTEIRO_revisao.md`](bench/ROTEIRO_revisao.md). Com só a placa conectada (sem forno), o
+roteiro cobre os itens 1 e 2; o item 2 vira a prioridade 1 (testado: `make_period.tcl` gera o
+bitstream de 12 ns e o Δ* das 23 derivações não muda), e as derivações longas de A e B têm Δ*
+previsto de −337 a +616 ps.
 
 1. **Implantações C e D** da mesma RTL em outras regiões de clock (build de ~10 min e shmoo de
    ~8 min cada). São testes fora da amostra do modelo STA, hoje apoiado em A-S74; levam o n de 11
@@ -87,9 +91,10 @@ mensagem do commit. O que **falta na bancada** (placa 2 da AU15P; só SRAM, Vcor
 2. **Outro período de clock no mesmo checkpoint roteado** (só atributos do MMCM, como em
    `make_guard.tcl`). O Δ* não depende do período, e as derivações S94–S150, que já falham no topo
    da faixa, passam a cruzar a falha dentro dela.
-3. Opcional: **derivações mais densas** entre S60 e S96 (passo de 2 estágios).
-4. **Eixo de temperatura** (depende do PID do forno, item 3 abaixo): dependência do desvio com T.
-5. **Placa 1** (a outra RV02A): repetir A e B para separar dispositivo e implementação.
+3. Opcional: **derivações mais densas** entre S60 e S96 (passo de 2 estágios). Não recomendado
+   agora: o item 2 já dá até 30 derivações novas sem mexer na RTL.
+4. **Eixo de temperatura** (depende do PID do forno, item 3 abaixo): fora até o forno estar ligado.
+5. **Placa 1** (a outra RV02A): fora enquanto só a placa 2 estiver conectada.
 
 ## Pendências para o usuário (decisões suas)
 
