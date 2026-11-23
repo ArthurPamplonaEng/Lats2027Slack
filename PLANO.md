@@ -138,5 +138,34 @@ previsto de −337 a +616 ps.
 6. **Depois da revisão de 23/11:** o repositório é privado e o artigo (modo não cego) aponta para
    ele; tornar público ou criar um repositório só com `hw/`, `bench/`, `data/` e `analysis/`.
    Conferir no DS931 v1.9 a linha MMCM_TSTATPHAOFFSET (citada na Seção V-C) e as versões dos
-   datasheets (tiradas do bib do JICS). Confirmar que o SBCCI 2026 não publicou os corners da Run 1.
-   Se o resumo já foi enviado, atualizar com o de `paper/SUBMISSAO_titulo_resumo.txt` (197 palavras).
+   datasheets (tiradas do bib do JICS).
+   Se o resumo já foi enviado, atualizar com o de `paper/SUBMISSAO_titulo_resumo.txt` (199 palavras).
+7. **Perguntar a quem rodou a Run 1:** a Nexys foi desligada ou reprogramada entre os corners de
+   antes do burn-in (capturas de tela sem data) e o início do burn-in? O SBCCI 2026 diz que, ao
+   religar, o sensor refaz a autocalibração e por isso só compara inclinações dentro de cada
+   rodada; o resultado de 28 nm do LATS compara leituras absolutas de antes e depois. Argumentos a
+   favor do LATS:
+   - a "calibração" é a própria varredura, que parte sempre da mesma origem de fase;
+   - um desvio por religar seria constante em passos, e uma constante deixa até 5,5 passos de
+     resíduo nos três corners, contra 0,7 do deslocamento de 14,3 mV;
+   - na AU15P, as leituras absolutas se repetiram com até 1 passo de diferença depois de reprogramar
+     a placa três dias depois (outra família de FPGA).
+   Se houve religamento, pôr uma frase com isso na Seção V-D. Durante o burn-in não houve: o log tem
+   lacuna máxima de 6,2 s em 214,6 h, e as únicas 5 linhas inválidas estão no início.
+
+**SBCCI 2026 conferido em 23/11** (`~/Documents/Trabalho/Artigos/SBCCI2026.pdf`):
+- **Sem sobreposição de resultados.** O artigo compara forno bang-bang com PID (duas rodadas de
+  23,08 h a 1,3 V e 80 °C) e não tem a Run 1, os corners, o deslocamento de 14,3 mV nem nada de
+  16 nm. O LATS o cita só para o forno com PID, que a Run 1 usou (mesmos Kp, Ki e Kd no cabeçalho
+  do log).
+- **Passo do sensor.** Lá o passo é de 19,85 ps, aqui 17,857 ps.
+  - O da Run 1 está confirmado: a versão em RTL de maio de 2026 usa ×10, VCO de 1 GHz (ver o
+    HANDOFF; confirmado em simulação do MMCME2).
+  - O do SBCCI 2026 é provavelmente o do projeto antigo da Nexys (`aging-study`, em diagrama de
+    blocos), que usava ×9, VCO de 900 MHz e 19,84 ps. Mas o git só guarda esse projeto a partir de
+    maio de 2026, e os logs das campanhas de 2025 e 2026 não registram o bitstream. Não dá para
+    descartar que o SBCCI 2026 tenha usado por engano o valor da AU15P.
+  - O artigo agora diz "VCO at 1 GHz", o que vale nos dois casos.
+- **Terminologia.** "Never recalibrated" virou "without interruption", porque no SBCCI 2025/2026 cada
+  varredura já se chama calibração.
+- O `LASCAS2027.pdf` da mesma pasta é de outro assunto (controle térmico CEM43) e não se sobrepõe.

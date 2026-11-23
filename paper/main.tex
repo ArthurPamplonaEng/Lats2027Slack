@@ -203,12 +203,12 @@ do not use. The margins below are differences of readings in phase steps and do 
 SYSMON voltage calibration, which enters only the voltages we quote.
 
 \textbf{28\,nm.} A Nexys~4~DDR board (Artix-7 xc7a100t, nominal 1.0\,V) runs the same sensor, with
-the same 17.857\,ps step, on the most significant sum bit of a 16-bit ripple-carry adder whose
-inputs toggle every cycle. An IT6502D supply feeds the core rail and is trimmed every second against
+the same 17.857\,ps step (VCO at 1\,GHz), on the most significant sum bit of a 16-bit ripple-carry
+adder whose inputs toggle every cycle. An IT6502D supply feeds the core rail and is trimmed every second against
 the XADC reading of $\Vcc$; the board sits in an oven under PID control~\cite{sbcci26}. The burn-in
 (Run~1) lasted \vRunDurH\,h at $\Vcc=\vRunV$\,V ($\pm$\vRunVsdmV\,mV) and a die temperature of
 $\vRunT\pm\vRunTsd$\,\textdegree C (oven air \vRunOven\,\textdegree C), with the sensor read every
-second (\vRunN{} samples) and never recalibrated; it read $\vRunSlack\pm\vRunSlackSd$ steps
+second without interruption (\vRunN{} samples); it read $\vRunSlack\pm\vRunSlackSd$ steps
 (\vRunSlackNs\,ns of slack). At about \vPreT\,\textdegree C, corners at 1.10, 1.00 and 0.90\,V were
 taken before the burn-in (single readings) and right after it, in a logged run that also stepped
 $\Vcc$ from \vSweepHi{} to \vSweepLo\,V; cold corners at \vColdT\,\textdegree C followed. The burn-in
