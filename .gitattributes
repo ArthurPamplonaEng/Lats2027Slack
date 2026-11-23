@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Raw data are stored byte for byte: data/SHA256SUMS hashes the files as written, and some of them end
+# their lines with CRLF or mix CRLF and LF. Without this, a fresh clone gets LF and fails the check.
+data/** -text
