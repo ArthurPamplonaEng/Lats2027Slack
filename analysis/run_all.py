@@ -17,24 +17,33 @@ import run1  # noqa: E402
 import au15p_corners  # noqa: E402
 import fig_run1  # noqa: E402
 
-TAP_BUILD = os.path.join(ROOT, "hw", "au15p_tap", "build", "impl")
-TAP_STA_FROZEN = os.path.join(ROOT, "data", "au15p_tap", "build_frozen", "taps_sta.csv")
+FROZEN = os.path.join(ROOT, "data", "au15p_tap", "build_frozen")
+PLACEMENTS = ("impl", "impl_b", "impl_c", "impl_d")      # placements A-D at 10 ns
 
 
 def sta() -> list[dict]:
-    path = TAP_STA_FROZEN if os.path.exists(TAP_STA_FROZEN) else os.path.join(TAP_BUILD, "taps_sta.csv")
-    if not os.path.exists(path):
+    """Raw STA slack difference (FF2 minus FF1) of every tap of the four placements, from the
+    frozen copies of taps_sta.csv; the ns-per-stage fit uses placement A."""
+    tabs = {}
+    for d in PLACEMENTS:
+        path = os.path.join(FROZEN, d, "taps_sta.csv")
+        if os.path.exists(path):
+            with open(path) as f:
+                tabs[d] = list(csv.DictReader(f))
+    if "impl" not in tabs:
         return []
-    with open(path) as f:
-        rows = list(csv.DictReader(f))
-    slow = [r for r in rows if r["corner"] == "Slow"]
-    fast = [r for r in rows if r["corner"] == "Fast"]
-    ds = [float(r["delta_ns"]) for r in slow]
-    df = [float(r["delta_ns"]) for r in fast]
+    rows = tabs["impl"]
+    every = [r for t in tabs.values() for r in t]
+    ds = [float(r["delta_ns"]) for r in every if r["corner"] == "Slow"]
+    df = [float(r["delta_ns"]) for r in every if r["corner"] == "Fast"]
     V.put("StaDeltaLo", min(ds), "{:.2f}")
     V.put("StaDeltaHi", max(ds), "{:.2f}")
+    V.put("StaDeltaPosN", sum(1 for v in ds if v > 0), "{}")
+    V.put("StaDeltaTaps", len(ds), "{}")
     V.put("StaDeltaFastLo", min(df), "{:.2f}")
     V.put("StaDeltaFastHi", max(df), "{:.2f}")
+    slow = [r for r in rows if r["corner"] == "Slow"]
+    fast = [r for r in rows if r["corner"] == "Fast"]
     s_slow = [(float(r["ff2_delay_ns"]), int(r["stage"])) for r in slow]
     s_fast = [(float(r["ff2_delay_ns"]), int(r["stage"])) for r in fast]
     # ns per stage (linear fit over the graded taps)

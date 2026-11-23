@@ -244,6 +244,11 @@ O `tap_top_routed.dcp` das variantes de período não precisa ir para o git, por
 
 ## 5. O que muda na análise (eu faço quando os dados chegarem)
 
+**Feito em 23/11/2026**, depois da bancada: ver o `PLANO.md` e o artigo. Diferenças em relação ao
+plano abaixo: a Tabela I continua por derivação (sessão de 20/11, com as guardas) e o resumo por
+conjunto virou a Tabela II; o conjunto independente usa o menor período em que cada derivação cruza
+a falha (o maior período dá 69 ps rms, em vez de 77).
+
 - **`analysis/tap_offsets.py`:** acrescentar ao `IMPLS` as entradas `impl_a12`…`impl_b18`, `impl_c` e
   `impl_d`. O `impl_of()` reconhece a implantação pelo `/build/<pasta>/` gravado no `.json`.
 - **`analysis/tap_values.py`:**

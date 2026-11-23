@@ -3,7 +3,7 @@
 Atualizado em 2026-11-23 (sessão Claude Code; autoria definida, título e resumo revistos; parecer de revisão aplicado, ver abaixo). Prazos: **título + resumo 23/11/2026**,
 **artigo completo 30/11/2026**. LATS 2027: 13–16/04/2027, Lima. O site oficial só carrega com
 JavaScript: **limite de páginas e revisão cega não confirmados** (o rascunho supõe IEEE conference,
-até 6 páginas; depois da revisão de 23/11 está com 5,5: a 6ª página só tem metade das referências).
+até 6 páginas; com os dados da bancada de 23/11 ocupa as 6 páginas inteiras, com poucas linhas de folga).
 
 Artigo: [`paper/main.pdf`](paper/main.pdf) — *How Far from Failure Is a Zero Slack Reading?
 Predicting and Guard-Banding the Offset of an FPGA Aging Sensor* (título e resumo novos em 23/11). Texto para o formulário de
@@ -46,20 +46,33 @@ Repositório (privado): `github.com/ArthurPamplonaEng/Lats2027Slack`. A `.venv` 
 
 ## Resultados principais
 
-- **16 nm (11 derivações independentes, implantações A e B):** a leitura zero e o primeiro erro
-  funcional ficam de −108 a +335 ps de slack um do outro (negativo: o erro vem antes; repetível a
-  0,3 passo, sem histerese);
-  7 das 11 falham ainda lendo positivo mesmo no extremo favorável do intervalo de 10 mV.
+- **16 nm (81 derivações independentes, implantações A–D, períodos de 10 a 18 ns; artigo
+  atualizado em 23/11):** a leitura zero e o primeiro erro funcional ficam de −462 a +404 ps de slack
+  um do outro (negativo: o erro vem antes); 32 das 81 falham ainda lendo positivo mesmo no extremo
+  favorável do intervalo de 10 mV. A repetição de A três dias depois mudou m em +3 a +19 ps.
+- **Modelo STA, 81 derivações:** 77 ps rms contra 175 ps da melhor constante (r = 0,93, inclinação
+  0,81). Fora da amostra (as 70 novas): 77 contra 182 ps; C e D, com o Δ* commitado antes da medida
+  (812b19e): 70 contra 199 ps. Sem A-S74, r = 0,93. Em toda implantação o STA vence a constante
+  (Tabela II do artigo).
+- **De que é feito o Δ\*:** chegada dos dois clocks (−476 a +512 ps, em degraus), roteamento até
+  FF1 e FF2 (−342 a +166 ps) e um setup 394 ps menor que o STA dá ao FF2 em alguns locais de slice
+  (23 derivações de B, C e D; a medida confirma: −9 ps de resíduo com o termo, +385 sem). Um ajuste
+  de m às três partes dá pesos 0,85 (clock), 0,84 (setup) e 0,56 (roteamento): o STA exagera o
+  roteamento. A mesma derivação em dois períodos: |m| maior na tensão de falha mais baixa em 11 de 14
+  pares com |Δ\*| ≥ 100 ps (o STA de um corner não acompanha isso).
+- **Guarda por implantação:** a de 254 ps deixaria 5 dos 113 casos atrasados (B e D); dimensionada
+  pelo STA (pior Δ\* da implantação + 2 × 74 ps, o rms de 20/11) dá 348–594 ps e cobre os 113 casos
+  com folga mínima de 132 ps.
+- **Histórico, 20/11 (11 derivações, A e B a 10 ns):** −108 a +335 ps; 74 ps rms; repetível a 0,3
+  passo; 7 das 11 atrasadas no extremo favorável.
 - **Modelo STA** (sem a incerteza de 120 ps e o pessimismo de 153 ps em A e 207 ps em B cobrados a
   mais no caminho cruzado de FF1; antes o texto dava 154 ps para as duas): r = 0,84 (p = 0,001), Spearman 0,78, 74 ps rms contra 117 ps de um offset
   constante; B (medida depois de a correção ser achada em A) 62 ps rms; nenhuma tendência do
   resíduo com V_f. As estatísticas usam só A e B (as variantes com guarda são as mesmas rotas).
-- **Robustez do STA (revisão de 23/11):** a correlação depende de A-S74, cujo FF2 recebe o clock
-  385 ps mais tarde. Sem ela, r = 0,68 (p = 0,03) e uma constante (42 ps rms) vence o STA (68 ps).
-  Nas outras derivações a diferença de clock é constante por implantação, e o desvio segue o
-  roteamento: o STA ordena certo (r = 0,93 em A, 0,71 em B), mas exagera (inclinação 0,4). Fora da
-  amostra, a constante de A aplicada a B dá 94 ps (50 ps sem A-S74) e o STA, 62 ps. Isso está no
-  artigo (Seção V-B) e é o motivo dos itens de bancada abaixo.
+- **Robustez do STA só com os dados de 20/11 (superado pela bancada de 23/11):** a correlação
+  dependia de A-S74 (sem ela, r = 0,68). A bancada mostrou que degraus de clock como o de A-S74 são
+  comuns e que o STA os acompanha; a "diferença de clock constante por implantação" valia só para
+  S70–S90.
 - **Guarda:** 250 ps (A′, B′) baixam as leituras 14,24 ± 0,18 passos (254 ps) em 246 pontos
   pareados, V_f no mesmo degrau de 10 mV, as 11 derivações leem zero antes de falhar. 125 ps (B″,
   medida nesta revisão) baixam **8,06 passos (144 ps), não 7,0**, igual em todas as derivações: os
@@ -106,10 +119,10 @@ previsto de −337 a +616 ps.
     175 ps da melhor constante.
   - C e D, com a previsão registrada antes da medida, dão 70 ps.
   - Sem A-S74 continua r = 0,93.
-- **Falta:**
-  - Fazer a análise da seção 5 do roteiro.
-  - Reescrever as Seções V-B e V-C e as Limitações. O guarda de 254 ps não cobre B S118 a 16 ns nem
-    D S94–S106 a 14 ns, mas a STA previu essas derivações como atrasadas.
+- **Feito em 23/11 (seção 5 do roteiro):** a análise separa a repetição de A (`shmooArep`, só
+  repetibilidade) e inclui C, D e os períodos longos; o resumo e as Seções III, IV, V-A, V-B, V-C,
+  VI e VII foram reescritos; a Fig. 3 tem as 81 derivações e a nova Tabela II resume o STA por
+  conjunto. Os números de 20/11 continuam os mesmos.
 
 ## Pendências para o usuário (decisões suas)
 

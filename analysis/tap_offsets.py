@@ -1,9 +1,12 @@
 """Sensor offset at failure versus static timing, per tap and implementation (16 nm).
 
 For every shmoo CSV (bench/tapbench.py) the implementation is taken from the bitstream path in its
-.json metadata (build/impl = A, build/impl_aguard = A', build/impl_b = B). For each tap that fails
-inside a sweep, margin_steps() gives m (phase steps; > 0: the reading reached zero before the
-first error). The prediction from the routed checkpoint of the same implementation is
+.json metadata (build/impl = A, build/impl_aguard = A', build/impl_b = B, build/impl_c = C, ...;
+build/impl_a14 = A at a 14 ns clock period, see IMPLS). The repetition of A on the second bench
+session (tag shmooArep, 23/11) is labelled "Arep" and kept out of A, whose margins stay those of the
+first session (20/11); it measures the day-to-day repeatability. For each tap that fails inside a
+sweep, margin_steps() gives m (phase steps; > 0: the reading reached zero before the first error).
+The prediction from the routed checkpoint of the same implementation is
     Delta_si = (s2 + U2 - CPR2) - (s1 + U1 - CPR1)        (slow corner, ns)
 the FF2-minus-FF1 setup-slack difference without the analysis-only uncertainty U and clock
 pessimism CPR, which are larger on the FF1 path because it crosses into the phase-swept clock.
@@ -21,16 +24,42 @@ from common import ROOT, STEP_TAP_PS
 from tap_analysis import STAGES, TAPDIR, load, margin_steps, split_sweeps
 
 BUILD = os.path.join(ROOT, "hw", "au15p_tap", "build")
+# build folder -> implementation label. Placements A-D (four regions of the die, same RTL); a
+# trailing number is the clock period in ns of a variant that changes only the MMCM dividers of the
+# routed design (make_period.tcl; no number: 10 ns); ' and '' mark the designed guards
+# (make_guard.tcl: 250 and 125 ps).
 IMPLS = {"impl": "A", "impl_aguard": "A'", "impl_b": "B", "impl_bguard": "B'",
-         "impl_bguard125": "B''"}
+         "impl_bguard125": "B''", "impl_c": "C", "impl_d": "D"}
+IMPLS.update({f"impl_{p}{t}": f"{p.upper()}{t}" for p in "ab" for t in (12, 14, 16, 18)})
+IMPLS.update({f"impl_{p}{t}": f"{p.upper()}{t}" for p in "cd" for t in (14, 18)})
+# repeated shmoos of an implementation on a later session: their own label, same STA model
+REPEATS = {"shmooArep": ("Arep", "impl")}
+BUILD_OF = {name: d for d, name in IMPLS.items()}
+BUILD_OF.update({lab: d for lab, d in REPEATS.values()})
 
 
 def impl_of(meta: dict) -> str | None:
+    if meta.get("tag") in REPEATS:
+        return REPEATS[meta["tag"]][0]
     bit = meta.get("bitstream", "")
     for d, name in IMPLS.items():
         if f"/build/{d}/" in bit:
             return name
     return None
+
+
+def placement(label: str) -> str:
+    return label[0]
+
+
+def period_ns(label: str) -> int:
+    """Clock period of an implementation label: A14 -> 14, A, A', Arep -> 10."""
+    digits = "".join(c for c in label if c.isdigit())
+    return int(digits) if digits else 10
+
+
+def guarded(label: str) -> bool:
+    return "'" in label
 
 
 def sta_model(impl_dir: str, corner: str = "Slow") -> dict[int, dict]:
@@ -48,16 +77,26 @@ def sta_model(impl_dir: str, corner: str = "Slow") -> dict[int, dict]:
         if (j, "FF1") not in by:
             continue
         a, b = by[(j, "FF1")], by[(j, "FF2")]
+        # setup time of each flip-flop as STA charges it (the slack equation solved for it)
+        su = {k: q["requirement"] + q["end_clk"] + q["pessimism"] - q["uncertainty"] - q["start_clk"]
+              - q["datapath"] - q["slack"] for k, q in (("FF1", a), ("FF2", b))}
         d_sta = b["slack"] - a["slack"]
         d_si = (b["slack"] + b["uncertainty"] - b["pessimism"]) - (a["slack"] + a["uncertainty"] - a["pessimism"])
-        # Delta_si splits into the arrival of the capture clock at FF2 minus FF1 (clock part) and
-        # the data route to FF1 minus the route to FF2 (routing part); the setup times nearly cancel
+        # Delta_si = clock part (capture clock at FF2 minus FF1, minus the launch-clock difference
+        # of the two worst paths) + routing part (data route to FF1 minus the route to FF2) + setup
+        # part (setup of FF1 minus FF2; 0 in most taps, 0.39 ns where STA gives FF2 the smaller
+        # setup of some slice columns)
         out[j] = {"delta_sta_ns": d_sta, "delta_si_ns": d_si,
+                  "clkpart_ns": (b["end_clk"] - a["end_clk"]) - (b["start_clk"] - a["start_clk"]),
+                  "setup_ns": su["FF1"] - su["FF2"],
                   "dU_ns": a["uncertainty"] - b["uncertainty"],
                   "dCPR_ns": a["pessimism"] - b["pessimism"],
                   "clk_ns": b["end_clk"] - a["end_clk"],
                   "data_ns": a["datapath"] - b["datapath"],
-                  "ff2_delay_ns": b["datapath"]}
+                  "ff2_delay_ns": b["datapath"],
+                  # period at which the FF2 path would just meet setup in this corner, with the
+                  # same analysis terms removed as in Delta_si (data delay plus setup minus skew)
+                  "ff2_need_ns": b["requirement"] - (b["slack"] + b["uncertainty"] - b["pessimism"])}
     return out
 
 
@@ -87,7 +126,7 @@ def collect(npts: int = 3) -> list[dict]:
 
 def summarize(res: list[dict]) -> list[dict]:
     """Mean margin per (implementation, tap) over sweeps, with the STA prediction."""
-    models = {name: sta_model(d) for d, name in IMPLS.items()}
+    models = {name: sta_model(d) for name, d in BUILD_OF.items()}
     out = []
     for imp in sorted({r["impl"] for r in res}):
         for j in sorted({r["tap"] for r in res if r["impl"] == imp}):

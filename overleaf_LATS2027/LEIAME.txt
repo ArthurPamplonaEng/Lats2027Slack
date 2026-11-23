@@ -6,8 +6,9 @@ No Overleaf: New Project > Upload Project > este .zip. Arquivo principal: main.t
 - main.tex          texto do artigo
 - refs.bib          referencias (BibTeX, estilo IEEEtran)
 - figures/          figuras (PDF) e o diagrama da estrutura (fig_struct.tex, TikZ)
-- generated/        numeros (values.tex) e Tabela I (tab_taps.tex), gerados pelos
-                    scripts de analise (analysis/run_all.py no repositorio lats)
+- generated/        numeros (values.tex), Tabela I (tab_taps.tex) e Tabela II
+                    (tab_sta.tex), gerados pelos scripts de analise
+                    (analysis/run_all.py no repositorio lats)
 
 Os resultados entram no texto como macros (\vFitR, \vShiftmV, ...) definidas em
 generated/values.tex. Para mudar um numero, avise quem roda os scripts em vez de

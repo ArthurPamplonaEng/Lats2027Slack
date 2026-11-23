@@ -6,8 +6,9 @@ fig_tap_shmoo : reading versus VCCINT for the taps whose failure boundary falls 
                 the line through the lowest error-free readings extrapolated to the failure voltage,
                 and the readings of failing points at which every sweep still alarmed.
 fig_tap_offset: measured margin at failure (reading-zero minus first error, in ps) against the
-                static-timing prediction. Filled: the independent taps of the two placements without
-                guard (the model statistics use only these); hollow: the same taps with a guard.
+                static-timing prediction, for the independent taps of the four placements (each tap
+                once per placement, at the shortest period at which it fails inside the range).
+                Filled: 10 ns; hollow: 12-18 ns (same routing, MMCM dividers only).
 """
 from __future__ import annotations
 
@@ -17,11 +18,8 @@ import figstyle as fs
 from common import STEP_TAP_PS
 from tap_analysis import STAGES, margin_steps, vaxis
 
-STYLE = {"A": ("o", fs.C["blue"], True, "placement A"),
-         "B": ("^", fs.C["green"], True, "placement B"),
-         "A'": ("o", fs.C["blue"], False, "A + 250 ps guard"),
-         "B'": ("^", fs.C["green"], False, "B + 250 ps guard"),
-         "B''": ("D", fs.C["purple"], False, "B + 125 ps guard")}
+PLACE = {"A": ("o", fs.C["blue"]), "B": ("^", fs.C["green"]), "C": ("s", fs.C["orange"]),
+         "D": ("D", fs.C["purple"])}
 
 
 def _curve(sweep, j):
@@ -98,41 +96,43 @@ def shmoo(sweep, taps_sel, name="fig_tap_shmoo", guard=None, example=None):
     fs.save(fig, name)
 
 
-def offset(summary, name="fig_tap_offset", mark=None):
-    """mark: (implementation, stage) of a tap to label."""
+def offset(ind, name="fig_tap_offset"):
+    """ind: the independent taps (dicts with pl, T, pred_ps, m_ps, m_lo_ps, m_hi_ps)."""
     fs.setup()
-    fig, ax = fs.plt.subplots(figsize=(fs.COL_W, 2.35))
-    allx = []
-    for imp, (mk, col, filled, lab) in STYLE.items():
-        rs = [r for r in summary if r["impl"] == imp and np.isfinite(r["pred_ps"])]
-        if not rs:
-            continue
-        x = np.array([r["pred_ps"] for r in rs])
-        y = np.array([r["m_ps"] for r in rs])
-        e = np.clip(np.array([[r["m_ps"] - r["m_lo_ps"] for r in rs],
-                              [r["m_hi_ps"] - r["m_ps"] for r in rs]]), 0, None)
-        allx += list(x)
-        ax.errorbar(x, y, yerr=e, fmt=mk, color=col, ms=3.6, mfc=col if filled else "white",
-                    mew=0.9, lw=0.6, capsize=1.2, label=lab, alpha=1.0 if filled else 0.85,
-                    zorder=4 if filled else 3)
-    if mark is not None:
-        r = next((r for r in summary if (r["impl"], r["stage"]) == mark), None)
-        if r is not None:
-            ax.annotate(f"S{r['stage']} ({r['impl']}): late\nFF2 clock", (r["pred_ps"], r["m_ps"]),
-                        xytext=(-6, 6), textcoords="offset points", fontsize=6.3, ha="right",
-                        va="bottom", color=fs.C["blue"])
-    lo, hi = (min(allx) - 60, max(allx) + 60) if allx else (-300, 500)
-    ytop = max([r["m_hi_ps"] for r in summary if np.isfinite(r["pred_ps"])] + [hi]) + 40
-    ax.plot([lo, hi], [lo, hi], "k--", lw=0.6, label="$m=\\Delta_\\mathrm{STA}^{*}$")
+    fig, ax = fs.plt.subplots(figsize=(fs.COL_W, 2.55))
+    allx = [r["pred_ps"] for r in ind]
+    lo, hi = min(allx) - 50, max(allx) + 50
+    ax.fill_between([lo, hi], 0, -1000, color=fs.C["red"], alpha=0.06, lw=0)
+    ax.plot([lo, hi], [lo, hi], "k--", lw=0.6, zorder=2)
     ax.axhline(0, color=fs.C["grey"], lw=0.5)
     ax.axvline(0, color=fs.C["grey"], lw=0.5)
-    ax.fill_between([lo, hi], 0, -1000, color=fs.C["red"], alpha=0.06, lw=0)
-    ax.text(hi - 10, -20, "errors while $r>0$", fontsize=6.5, color=fs.C["red"], va="top", ha="right")
+    for pl, (mk, col) in PLACE.items():
+        for long_t in (False, True):
+            rs = [r for r in ind if r["pl"] == pl and (r["T"] > 10) == long_t]
+            if not rs:
+                continue
+            x = np.array([r["pred_ps"] for r in rs])
+            y = np.array([r["m_ps"] for r in rs])
+            e = np.clip(np.array([[r["m_ps"] - r["m_lo_ps"] for r in rs],
+                                  [r["m_hi_ps"] - r["m_ps"] for r in rs]]), 0, None)
+            n = sum(1 for r in ind if r["pl"] == pl)
+            ax.errorbar(x, y, yerr=e, fmt=mk, color=col, ms=3.0, mfc="white" if long_t else col,
+                        mew=0.8, lw=0.45, capsize=0, alpha=0.9, zorder=4,
+                        label=None if long_t else f"{pl} ({n})")
+    ax.plot([], [], "o", color="k", ms=3.0, label="10 ns")
+    ax.plot([], [], "o", color="k", mfc="white", mew=0.8, ms=3.0, label="12\u201318 ns")
+    ax.plot([], [], "k--", lw=0.6, label="$m=\\Delta_\\mathrm{STA}^{*}$")
+    ax.text(hi - 10, -18, "errors while $r>0$", fontsize=6.5, color=fs.C["red"], va="top", ha="right")
+    ytop = max(r["m_hi_ps"] for r in ind) + 30
+    ybot = min(r["m_lo_ps"] for r in ind) - 30
     ax.set_xlim(lo, hi)
-    ax.set_ylim(min(lo, -300), max(ytop, 450))
+    ax.set_ylim(min(ybot, lo), max(ytop, hi))
     ax.set_xlabel(r"predicted offset $\Delta^{*}_\mathrm{STA}$ (ps)")
     ax.set_ylabel("measured margin $m$ (ps)")
-    ax.legend(loc="upper left", fontsize=6.0, handlelength=1.5, ncol=1)
+    h, lab = ax.get_legend_handles_labels()
+    order = [lab.index(k) for k in lab if k[0] in "ABCD"] + [lab.index(k) for k in lab if k[0] not in "ABCD"]
+    ax.legend([h[i] for i in order], [lab[i] for i in order], loc="upper left", fontsize=6.0,
+              handlelength=1.4, ncol=2, columnspacing=0.8, borderaxespad=0.3)
     ax.grid(True, lw=0.3, alpha=0.4)
     sec = ax.secondary_yaxis("right", functions=(lambda ps: ps / STEP_TAP_PS, lambda st: st * STEP_TAP_PS))
     sec.set_ylabel("steps")

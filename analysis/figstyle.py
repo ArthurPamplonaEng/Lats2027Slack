@@ -37,6 +37,8 @@ def setup():
 
 def save(fig, name: str):
     os.makedirs(FIG, exist_ok=True)
-    fig.savefig(os.path.join(FIG, name + ".pdf"), bbox_inches="tight", pad_inches=0.02)
+    # no creation date in the PDF, so that rerunning the analysis rewrites identical files
+    fig.savefig(os.path.join(FIG, name + ".pdf"), bbox_inches="tight", pad_inches=0.02,
+                metadata={"CreationDate": None})
     fig.savefig(os.path.join(FIG, name + ".png"), bbox_inches="tight", pad_inches=0.02, dpi=200)
     plt.close(fig)
