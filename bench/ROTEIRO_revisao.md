@@ -259,21 +259,25 @@ O `tap_top_routed.dcp` das variantes de período não precisa ir para o git, por
     repositório;
   - a Fig. 3 ganha os pontos novos;
   - a Seção V-B e as Limitações são reescritas com o n novo;
-  - registrar que C e D foram construídos no Vivado 2025.2.1.
+  - registrar que C e D foram construídos no Vivado 2025.2, o mesmo de A e B (não no 2025.2.1; ver
+    o registro de 23/11).
 - A repetição `shmooArep` entra na repetibilidade de A (dias diferentes).
 
 ## 6. Registro da sessão (preencher)
 
+Sessão de 23/11/2026. O detalhe, com horários, builds, checksums e números preliminares, está em
+[`REGISTRO_bancada_2026-11-23.md`](REGISTRO_bancada_2026-11-23.md).
+
 | Campo | Valor |
 |---|---|
-| Data e hora de início/fim | |
-| Temperatura ambiente (termômetro, não o SYSMON) | |
-| Porta do STM32 / alvo JTAG | |
-| Vivado usado nos builds | 2025.2.1 |
-| Leitura de conferência com A a 0,85 V (S70…S86) | |
-| Shmoos feitos (tags) | |
-| Anomalias (paradas de segurança, JTAG, saltos de leitura) | |
-| Bitstream que ficou na SRAM no fim | |
+| Data e hora de início/fim | 23/11/2026, 15:28 a 17:56 |
+| Temperatura ambiente (termômetro, não o SYSMON) | não medida (sem termômetro); die 97–99 °C no SYSMON, como em 20/11 |
+| Porta do STM32 / alvo JTAG | `/dev/ttyACM1` / FT232H, DNA `40020000016069492D020285` (placa 2) |
+| Vivado usado nos builds | 2025.2 (não 2025.2.1) |
+| Leitura de conferência com A a 0,85 V (S70…S86) | 122,5 / 99,2 / 76,8 / 41,0 / 11,4 |
+| Shmoos feitos (tags) | `shmooArep`; `shmooA12`, `A14`, `A16`, `A18`; `shmooB12`, `B14`, `B16`, `B18`; `shmooC1`, `C2`, `D1`, `D2`; `shmooC14`, `C18`, `D14`, `D18` |
+| Anomalias (paradas de segurança, JTAG, saltos de leitura) | nenhuma parada nem falha de JTAG; o STM32 não respondeu uma vez a 0,73 V (`shmooArep`) e respondeu na segunda tentativa |
+| Bitstream que ficou na SRAM no fim | `impl_d18`, com Vcore em 0,85 V (VCCINT 0,879 V) |
 
 ## 7. Fora deste roteiro
 

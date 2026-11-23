@@ -3,3 +3,17 @@ b1e92b4f571f1cf7e209ebb0668820e9  impl_bguard125/tap_top.bit
 f43e941932ab94a69f062cbca3873c2a  impl_bguard/tap_top.bit
 9d14f54823cb0f725f974a967719b823  impl_b/tap_top.bit
 011b3b22cd6903296b2930a7cf1402ed  impl/tap_top.bit
+63ce5977598166736e392d56a1bd0793  impl_a12/tap_top.bit
+3a568ad4106614c2e5f91c3201660bac  impl_a14/tap_top.bit
+dcab9df191f3d250224ca2bec5907a23  impl_a16/tap_top.bit
+727b84637cd31f7603802e42b89695b6  impl_a18/tap_top.bit
+dc79fbd0a85cc9c0911bcea2f3b343e8  impl_b12/tap_top.bit
+54eae3912c8291752c2c8e36cfea1326  impl_b14/tap_top.bit
+0e1593b041376e86a754f7a49378e4b7  impl_b16/tap_top.bit
+397916f8a808c82d9fe6b1cd50ea955c  impl_b18/tap_top.bit
+9a40dec23ce41f82906a70adbc49f712  impl_c/tap_top.bit
+aa2022dd2ffa28072267e077bf23834f  impl_d/tap_top.bit
+db135f5e61eeb2f5da3c598f9f076df9  impl_c14/tap_top.bit
+26f119e55bc34d3bab7e81b1ff85aed2  impl_c18/tap_top.bit
+861d9f8b071e7d823aed10bca982cfdf  impl_d14/tap_top.bit
+90fb10d7434354cbbdfdd81063fd799d  impl_d18/tap_top.bit

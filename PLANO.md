@@ -96,6 +96,21 @@ previsto de −337 a +616 ps.
 4. **Eixo de temperatura** (depende do PID do forno, item 3 abaixo): fora até o forno estar ligado.
 5. **Placa 1** (a outra RV02A): fora enquanto só a placa 2 estiver conectada.
 
+**Bancada de 23/11 feita (itens 1 e 2).**
+
+- **O que foi medido:** 17 shmoos, com A e B a 12–18 ns e C e D a 10, 14 e 18 ns, sem nenhuma parada
+  de segurança. Registro, builds e checksums em
+  [`bench/REGISTRO_bancada_2026-11-23.md`](bench/REGISTRO_bancada_2026-11-23.md).
+- **Resultado preliminar:**
+  - São 81 derivações independentes. O Δ* dá r = 0,93 e 77 ps rms, sem parâmetro ajustado, contra
+    175 ps da melhor constante.
+  - C e D, com a previsão registrada antes da medida, dão 70 ps.
+  - Sem A-S74 continua r = 0,93.
+- **Falta:**
+  - Fazer a análise da seção 5 do roteiro.
+  - Reescrever as Seções V-B e V-C e as Limitações. O guarda de 254 ps não cobre B S118 a 16 ns nem
+    D S94–S106 a 14 ns, mas a STA previu essas derivações como atrasadas.
+
 ## Pendências para o usuário (decisões suas)
 
 1. **CFP do LATS 2027:** limite de páginas, revisão cega (há uma chave `\blindtrue` no `main.tex`),
@@ -104,8 +119,8 @@ previsto de −337 a +616 ps.
    situ. Confirmar com o grupo que não há sobreposição indesejada.
 3. **Forno:** se quiser o eixo de temperatura (desvio do sensor vs T), regravar o PID no Nano 33 IoT
    (`D&T 2027/10_DT_Monitor/firmware_forno`, na lixeira) — não fiz sem autorização.
-4. **Placa B:** está com o bitstream B″ (125 ps) na SRAM e Vcore 0,85 V; ao desligar/religar, volta o design
-   da flash. A flash nunca foi gravada.
+4. **Placa 2 (a da bancada):** desde 23/11 está com o bitstream `impl_d18` (D a 18 ns) na SRAM e Vcore
+   0,85 V. Ao desligar e religar, volta o design da flash, que nunca foi gravada.
 5. Revisar o texto; sugestões de estilo são bem-vindas antes de 30/11.
 6. **Depois da revisão de 23/11:** o repositório é privado e o artigo (modo não cego) aponta para
    ele; tornar público ou criar um repositório só com `hw/`, `bench/`, `data/` e `analysis/`.

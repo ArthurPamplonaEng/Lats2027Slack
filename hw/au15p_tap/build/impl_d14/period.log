@@ -1,0 +1,155 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Nov 23 15:36:21 2026
+# Process ID         : 2459039
+# Current directory  : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14
+# Command line       : vivado -mode batch -nojournal -log /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/period.log -source /home/andre/Documentos/GitHub/lats/hw/au15p_tap/scripts/make_period.tcl -tclargs /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d/tap_top_routed.dcp /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14 14
+# Log file           : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/period.log
+# Journal file       : 
+# Running On         : andre-V520S-08IKL
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.3
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 3967.943 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 84249 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 86396 MB
+# Available Virtual  : 72655 MB
+#-----------------------------------------------------------
+source /home/andre/Documentos/GitHub/lats/hw/au15p_tap/scripts/make_period.tcl
+# lassign $argv dcp out div
+# if {$div eq "" || $div < 10 || $div > 20} { error "divide must be 10..20 (period in ns at f_VCO = 1 GHz)" }
+# file mkdir $out
+# open_checkpoint $dcp
+Command: open_checkpoint /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d/tap_top_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1486.680 ; gain = 0.000 ; free physical = 23784 ; free virtual = 68486
+INFO: [Device 21-403] Loading part xcau15p-ffvb676-1-i
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1969.910 ; gain = 0.000 ; free physical = 22955 ; free virtual = 67657
+INFO: [Netlist 29-17] Analyzing 935 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2009.988 ; gain = 4.000 ; free physical = 22868 ; free virtual = 67570
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  general.maxThreads
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2472.344 ; gain = 0.000 ; free physical = 22277 ; free virtual = 66979
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2472.344 ; gain = 0.000 ; free physical = 22276 ; free virtual = 66978
+Read PlaceDB: Time (s): cpu = 00:00:00.54 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2472.344 ; gain = 0.000 ; free physical = 22238 ; free virtual = 66940
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2472.344 ; gain = 0.000 ; free physical = 22238 ; free virtual = 66940
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2580.562 ; gain = 108.219 ; free physical = 22063 ; free virtual = 66765
+Read Physdb Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2580.562 ; gain = 108.219 ; free physical = 22062 ; free virtual = 66764
+Restored from archive | CPU: 2.050000 secs | Memory: 99.911964 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2580.562 ; gain = 108.219 ; free physical = 22062 ; free virtual = 66764
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2580.562 ; gain = 0.000 ; free physical = 22062 ; free virtual = 66764
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2025.2 (64-bit) build 6299465
+open_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 2580.598 ; gain = 1093.918 ; free physical = 22061 ; free virtual = 66763
+# set m [get_cells u_clocks/u_mmcm]
+# if {[get_property CLKOUT1_PHASE $m] != 0 || [get_property CLKOUT2_PHASE $m] != 0} {
+#   error "use a checkpoint without guard (CLKOUT1/2_PHASE must be 0)"
+# }
+# set div0 [get_property CLKOUT0_DIVIDE_F $m]
+# set catch_ns [expr {[get_property CLKOUT0_PHASE $m] / 360.0 * $div0}]
+# set grid [expr {45.0 / $div}]
+# set catch_deg [expr {round($catch_ns * 360.0 / $div / $grid) * $grid}]
+# set_property CLKOUT0_DIVIDE_F $div $m
+# set_property CLKOUT0_PHASE    $catch_deg $m
+# set_property CLKOUT1_DIVIDE   $div $m
+# set_property CLKOUT2_DIVIDE   $div $m
+# puts "PERIOD catcher [format %.3f $catch_ns] ns after the system clock: CLKOUT0_PHASE $catch_deg deg"
+PERIOD catcher 1.750 ns after the system clock: CLKOUT0_PHASE 45.0 deg
+# puts "PERIOD MMCM CLKFBOUT_MULT_F=[get_property CLKFBOUT_MULT_F $m] DIVIDE=$div ->\
+#  catch [get_property CLKOUT0_DIVIDE_F $m] phase [get_property CLKOUT1_DIVIDE $m] sys [get_property CLKOUT2_DIVIDE $m]"
+PERIOD MMCM CLKFBOUT_MULT_F=10.000 DIVIDE=14 -> catch 14.000 phase 14 sys 14
+# foreach pin {CLKOUT0 CLKOUT1 CLKOUT2} {
+#   set c [get_clocks -of_objects [get_pins u_clocks/u_mmcm/$pin]]
+#   puts "PERIOD $pin $c period [get_property PERIOD $c] waveform [get_property WAVEFORM $c]"
+# }
+INFO: [Timing 38-2] Deriving generated clocks
+PERIOD CLKOUT0 c0 period 14.000 waveform 0.000 7.000
+PERIOD CLKOUT1 c1 period 14.000 waveform 0.000 7.000
+PERIOD CLKOUT2 c2 period 14.000 waveform 0.000 7.000
+# report_timing_summary -max_paths 10 -file $out/timing_summary.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: I, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+# report_drc -file $out/drc.rpt
+Command: report_drc -file /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/drc.rpt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/andre/2025.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/drc.rpt.
+report_drc completed successfully
+# foreach {from to kind} {FF2 FF3 setup FF1 FF3 setup FF1 FF3 hold} {
+#   set p [get_timing_paths -from [get_cells g_tap[12].u_sens/$from] -to [get_cells g_tap[12].u_sens/$to] -$kind]
+#   puts "PERIOD $from->$to $kind slack [get_property SLACK $p]"
+# }
+PERIOD FF2->FF3 setup slack 0.655
+PERIOD FF1->FF3 setup slack 1.008
+PERIOD FF1->FF3 hold slack 11.896
+# write_checkpoint -force $out/tap_top_routed.dcp
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21533 ; free virtual = 66249
+Wrote PlaceDB: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.82 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21504 ; free virtual = 66250
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21504 ; free virtual = 66250
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21492 ; free virtual = 66245
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21489 ; free virtual = 66244
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21489 ; free virtual = 66245
+Write Physdb Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2876.547 ; gain = 0.000 ; free physical = 21489 ; free virtual = 66245
+INFO: [Common 17-1381] The checkpoint '/home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/tap_top_routed.dcp' has been generated.
+# write_bitstream -force $out/tap_top.bit
+Command: write_bitstream -force /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/tap_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xcau15p'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcau15p'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Overwriting "TIMESTAMP" with "BDB4F94C" for option USR_ACCESS
+TIMESTAMP = Mon Nov 23 15:37:12 2026
+
+Creating bitmap...
+Creating bitstream...
+Bitstream compression saved 18371456 bits.
+Writing bitstream /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/tap_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 2981.164 ; gain = 104.617 ; free physical = 21228 ; free virtual = 65948
+# write_debug_probes -force $out/tap_top.ltx
+# puts "PERIOD done: $out/tap_top.bit"
+PERIOD done: /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/impl_d14/tap_top.bit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 23 15:37:19 2026...

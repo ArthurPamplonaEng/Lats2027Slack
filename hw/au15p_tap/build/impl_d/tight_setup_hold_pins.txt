@@ -1,0 +1,27 @@
++====================+===================+========================+
+| Launch Setup Clock | Launch Hold Clock | Pin                    |
++====================+===================+========================+
+| c2                 | c2                | g_tap[7].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[9].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[10].u_sens/FF1/D |
+| c2                 | c2                | g_tap[5].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[12].u_sens/FF1/D |
+| c2                 | c2                | g_tap[6].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[8].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[14].u_sens/FF1/D |
+| c2                 | c2                | g_tap[17].u_sens/FF1/D |
+| c2                 | c2                | g_tap[16].u_sens/FF1/D |
+| c2                 | c2                | g_tap[3].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[19].u_sens/FF1/D |
+| c2                 | c2                | g_tap[11].u_sens/FF1/D |
+| c2                 | c2                | g_tap[2].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[15].u_sens/FF1/D |
+| c2                 | c2                | g_tap[18].u_sens/FF1/D |
+| c2                 | c2                | g_tap[1].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[13].u_sens/FF1/D |
+| c2                 | c2                | g_tap[0].u_sens/FF1/D  |
+| c2                 | c2                | g_tap[20].u_sens/FF1/D |
+| c2                 | c2                | g_tap[21].u_sens/FF1/D |
+| c2                 | c2                | g_tap[22].u_sens/FF1/D |
+| c2                 | c2                | g_tap[4].u_sens/FF1/D  |
++--------------------+-------------------+------------------------+
