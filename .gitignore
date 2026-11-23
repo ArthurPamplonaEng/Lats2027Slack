@@ -1,0 +1,22 @@
+# Python: the environment is rebuilt from requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX build products (main.pdf is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.bbl
+paper/*.synctex.gz
+overleaf_LATS2027/*.aux
+overleaf_LATS2027/*.log
+overleaf_LATS2027/*.out
+overleaf_LATS2027/*.blg
+overleaf_LATS2027/*.bbl
+
+# Vivado scratch
+.Xil/
+*.jou
+*.backup.log

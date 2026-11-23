@@ -13,6 +13,9 @@ título e resumo: [`paper/SUBMISSAO_titulo_resumo.txt`](paper/SUBMISSAO_titulo_r
 Nogueira, Jarbas Silveira (UFC) e Fabian Vargas (IHP). A lista e as afiliações também estão no
 arquivo de submissão; o formulário vai pedir os e-mails.
 
+Repositório (privado): `github.com/ArthurPamplonaEng/Lats2027Slack`. A `.venv` não é versionada
+(recriar com `requirements.txt`); o README descreve a estrutura, os dados e como reproduzir.
+
 ## O que havia nesta máquina
 
 | Item | Situação |

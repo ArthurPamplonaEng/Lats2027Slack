@@ -1,0 +1,5 @@
+# Analysis and bench scripts (Python 3.12). Install: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+numpy==1.26.4
+scipy==1.13.1
+matplotlib==3.9.2
+pyserial==3.5
