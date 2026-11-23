@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Nov 20 02:43:27 2026
+# Process ID         : 2268481
+# Current directory  : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_tap_snap/xsim_script.tcl}
+# Log file           : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim/xsim.log
+# Journal file       : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim/xsim.jou
+# Running On         : andre-V520S-08IKL
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.3
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 3773.931 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 84249 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 86396 MB
+# Available Virtual  : 76161 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tap_snap/xsim_script.tcl
+run -all

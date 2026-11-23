@@ -1,0 +1,16 @@
+TITLE
+How Far from Failure Is a Zero Slack Reading? Predicting and Guard-Banding the Offset of an FPGA Aging Sensor
+
+AUTHORS (in this order)
+1. Arthur Pamplona — Universidade Federal do Ceará (UFC), Fortaleza, Brazil
+2. Danilo Alencar — Universidade Federal do Ceará (UFC), Fortaleza, Brazil
+3. Alisson Barros — Universidade Federal do Ceará (UFC), Fortaleza, Brazil
+4. Lucas Nogueira — Universidade Federal do Ceará (UFC), Fortaleza, Brazil
+5. Jarbas Silveira — Universidade Federal do Ceará (UFC), Fortaleza, Brazil
+6. Fabian Vargas — IHP – Leibniz Institute for High Performance Microelectronics, Frankfurt (Oder), Germany
+
+ABSTRACT (247 words)
+Phase-swept slack sensors report the timing margin of a path as a count of clock-manager phase steps, and silicon lifecycle management (SLM) acts on that count, yet whether a zero reading marks the functional failure of the path is rarely measured. We drive a delay chain on a 16 nm Artix UltraScale+ FPGA through failure by lowering the core voltage; each of its 23 taps carries the sensor and a functional checker on the same capture flip-flop. On 11 failing taps in two placements, the first error came between 108 ps before and 335 ps after the reading reached zero, and 7 taps failed while still reading positive. This offset is the sensor’s own sampling skew: static timing predicts it per tap (r = 0.84, 74 ps rms) once the clock uncertainty and pessimism charged to the sensor’s cross-clock path are removed. A static phase on the system clock turns it into a designed guard band: a 250 ps setting lowered every reading by 254 ps without moving the failure voltage, after which every tap read zero before failing. On a 28 nm Artix-7, a 214.6 h burn-in at 1.4 V and 125 °C took 71, 125 and 250 ps of slack from a 16-bit adder path at 1.1, 1.0 and 0.9 V, which a single supply shift of 14.3 mV accounts for. A zero reading is thus a failure warning only once its offset is known; static timing bounds it and one voltage sweep measures it.
+
+KEYWORDS
+Aging sensor, timing margin, FPGA, functional failure, guard band, burn-in, silicon lifecycle management

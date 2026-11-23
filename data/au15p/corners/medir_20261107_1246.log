@@ -1,0 +1,46 @@
+Corners 0.850, 0.900, 0.950, 0.850 V nas placas placa A, placa B; janelas em /home/andre/Documentos/GitHub/IC-Aging-Environment/D&T 2027/10_DT_Monitor/test_logs/corners/corners_20261107_124606.csv
+[12:46:12] placa B: início: Vc 0.846 V, VCCINT 0.8786 V, die 104.35 °C
+[12:46:13] placa A: início: Vc 0.846 V, VCCINT 0.8752 V, die 61.26 °C
+[12:46:17] placa B: Vcore 0.82 V → VCCINT 0.8487 V (alvo 0.850)
+[12:46:18] placa A: Vcore 0.82 V → VCCINT 0.8455 V (alvo 0.850)
+[12:48:17] placa B: assentou em 2.0 min (die 104.24 °C); medindo 3 min
+[12:48:18] placa A: assentou em 2.0 min (die 61.18 °C); medindo 3 min
+[12:51:18] placa B: ponto 1: VCCINT 0.84875 V (Vcore 0.82, ok), slack 405.0000 ± 0.0001, die 104.223 °C, Is 0.355 A
+[12:51:18] placa A: ponto 1: VCCINT 0.84549 V (Vcore 0.82, ok), slack 408.7175 ± 0.0452, die 61.162 °C, Is 0.594 A
+[12:51:21] placa B: Vcore 0.82 V → VCCINT 0.8487 V (alvo 0.900)
+[12:51:21] placa A: Vcore 0.82 V → VCCINT 0.8455 V (alvo 0.900)
+[12:51:25] placa B: Vcore 0.87 V → VCCINT 0.8987 V (alvo 0.900)
+[12:51:26] placa A: Vcore 0.87 V → VCCINT 0.8952 V (alvo 0.900)
+[12:53:25] placa B: assentou em 2.0 min (die 104.39 °C); medindo 3 min
+[12:53:26] placa A: assentou em 2.0 min (die 61.26 °C); medindo 3 min
+[12:56:25] placa B: ponto 2: VCCINT 0.89871 V (Vcore 0.87, ok), slack 411.0000 ± 0.0001, die 104.429 °C, Is 0.360 A
+[12:56:26] placa A: ponto 2: VCCINT 0.89525 V (Vcore 0.87, ok), slack 411.1863 ± 0.0463, die 61.285 °C, Is 0.587 A
+[12:56:28] placa B: Vcore 0.87 V → VCCINT 0.8987 V (alvo 0.950)
+[12:56:29] placa A: Vcore 0.87 V → VCCINT 0.8953 V (alvo 0.950)
+[12:56:33] placa B: Vcore 0.92 V → VCCINT 0.9486 V (alvo 0.950)
+[12:56:34] placa A: Vcore 0.92 V → VCCINT 0.9449 V (alvo 0.950)
+[12:56:39] placa A: Vcore 0.93 V → VCCINT 0.9582 V (alvo 0.950)
+[12:58:41] placa A: assentou em 2.0 min (die 61.43 °C); medindo 3 min
+[12:59:33] placa B: assentou em 3.0 min (die 104.77 °C); medindo 3 min
+[13:01:41] placa A: ponto 3: VCCINT 0.94492 V (Vcore 0.92, ok), slack 417.0000 ± 0.0000, die 61.488 °C, Is 0.576 A
+[13:01:44] placa A: Vcore 0.92 V → VCCINT 0.9450 V (alvo 0.850)
+[13:01:49] placa A: Vcore 0.83 V → VCCINT 0.8540 V (alvo 0.850)
+[13:02:33] placa B: ponto 3: VCCINT 0.94860 V (Vcore 0.92, ok), slack 415.0000 ± 0.0000, die 104.846 °C, Is 0.363 A
+[13:02:36] placa B: Vcore 0.92 V → VCCINT 0.9486 V (alvo 0.850)
+[13:02:41] placa B: Vcore 0.82 V → VCCINT 0.8487 V (alvo 0.850)
+[13:03:49] placa A: assentou em 2.0 min (die 61.36 °C); medindo 3 min
+[13:04:41] placa B: assentou em 2.0 min (die 104.52 °C); medindo 3 min
+[13:06:49] placa A: ponto 4: VCCINT 0.85390 V (Vcore 0.83, ok), slack 407.0000 ± 0.0000, die 61.316 °C, Is 0.571 A
+[13:06:49] placa A: Vcore de volta a 0.85 V
+[13:07:41] placa B: ponto 4: VCCINT 0.84874 V (Vcore 0.82, ok), slack 405.0000 ± 0.0001, die 104.420 °C, Is 0.358 A
+[13:07:41] placa B: Vcore de volta a 0.85 V
+
+Resumo em /home/andre/Documentos/GitHub/IC-Aging-Environment/D&T 2027/10_DT_Monitor/test_logs/corners/corners_20261107_124606_resumo.csv
+  placa A 0.850 V: VCCINT 0.84549, slack 408.7175 (± 0.0452), die 61.162 °C, Is 0.594 A, 180 janelas
+  placa A 0.900 V: VCCINT 0.89525, slack 411.1863 (± 0.0463), die 61.285 °C, Is 0.587 A, 180 janelas
+  placa A 0.950 V: VCCINT 0.94492, slack 417.0000 (± 0.0000), die 61.488 °C, Is 0.576 A, 180 janelas
+  placa A 0.850 V: VCCINT 0.85390, slack 407.0000 (± 0.0000), die 61.316 °C, Is 0.571 A, 180 janelas
+  placa B 0.850 V: VCCINT 0.84875, slack 405.0000 (± 0.0001), die 104.223 °C, Is 0.355 A, 180 janelas
+  placa B 0.900 V: VCCINT 0.89871, slack 411.0000 (± 0.0001), die 104.429 °C, Is 0.360 A, 180 janelas
+  placa B 0.950 V: VCCINT 0.94860, slack 415.0000 (± 0.0000), die 104.846 °C, Is 0.363 A, 180 janelas
+  placa B 0.850 V: VCCINT 0.84874, slack 405.0000 (± 0.0001), die 104.420 °C, Is 0.358 A, 180 janelas

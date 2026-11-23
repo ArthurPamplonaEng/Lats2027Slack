@@ -1,0 +1,23 @@
+Corners do slack - AU15P, 07/11/2026, ANTES da run Cornerdesabadoadomingo_20261107_212830.
+Temperatura ambiente (forno desligado), medido 12:46-13:08.
+Slack em contagens (media de 180 janelas de 1 s, 3 min por ponto). VCCINT lido pelo SYSMON.
+
+Placa A (DUT-0)
+Ponto        Vcore cmd  VCCINT    Slack    dp      Die     Is
+0,85 V       0,82 V     0,8455 V  408,72   0,045   61,2 C  0,59 A
+0,90 V       0,87 V     0,8953 V  411,19   0,046   61,3 C  0,59 A
+0,95 V       0,92 V     0,9449 V  417,00   0,000   61,5 C  0,58 A
+0,85 V volta 0,83 V     0,8539 V  407,00   0,000   61,3 C  0,57 A
+
+Placa B (DUT-1)
+Ponto        Vcore cmd  VCCINT    Slack    dp      Die      Is
+0,85 V       0,82 V     0,8488 V  405,00   0,000   104,2 C  0,36 A
+0,90 V       0,87 V     0,8987 V  411,00   0,000   104,4 C  0,36 A
+0,95 V       0,92 V     0,9486 V  415,00   0,000   104,8 C  0,36 A
+0,85 V volta 0,82 V     0,8487 V  405,00   0,000   104,4 C  0,36 A
+
+"volta": retorno a 0,85 V depois do 0,95 V.
+O die da B (~104 C em ambiente) e suspeito.
+dp = desvio padrao entre janelas. Nenhuma janela perdida, lock_loss 0.
+
+Arquivos: corners_20261107_124606.csv, corners_20261107_124606_resumo.csv, medir_20261107_1246.log

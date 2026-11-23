@@ -1,0 +1,153 @@
+#-----------------------------------------------------------
+# xsim v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Nov 20 02:43:27 2026
+# Process ID         : 2268481
+# Current directory  : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim
+# Command line       : xsim -mode tcl -source {xsim.dir/tb_tap_snap/xsim_script.tcl}
+# Log file           : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim/xsim.log
+# Journal file       : /home/andre/Documentos/GitHub/lats/hw/au15p_tap/build/sim/xsim.jou
+# Running On         : andre-V520S-08IKL
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.3
+# Processor Detail   : AMD Ryzen 7 3700X 8-Core Processor
+# CPU Frequency      : 3773.931 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 84249 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 86396 MB
+# Available Virtual  : 76161 MB
+#-----------------------------------------------------------
+source xsim.dir/tb_tap_snap/xsim_script.tcl
+# xsim {tb_tap_snap} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+TB: stage 0.083 ns, guard 0.250 ns, step 0.0179 ns
+TB tap  0 stage  24 delay  2.092 ns expected 429
+TB tap  1 stage  48 delay  4.084 ns expected 318
+TB tap  2 stage  70 delay  5.910 ns expected 216
+TB tap  3 stage  74 delay  6.242 ns expected 197
+TB tap  4 stage  78 delay  6.574 ns expected 178
+TB tap  5 stage  82 delay  6.906 ns expected 160
+TB tap  6 stage  86 delay  7.238 ns expected 141
+TB tap  7 stage  90 delay  7.570 ns expected 123
+TB tap  8 stage  94 delay  7.902 ns expected 104
+TB tap  9 stage  98 delay  8.234 ns expected 85
+TB tap 10 stage 102 delay  8.566 ns expected 67
+TB tap 11 stage 106 delay  8.898 ns expected 48
+TB tap 12 stage 110 delay  9.230 ns expected 30
+TB tap 13 stage 114 delay  9.562 ns expected 11
+TB tap 14 stage 118 delay  9.894 ns expected 0
+TB tap 15 stage 122 delay 10.226 ns expected -1
+TB tap 16 stage 126 delay 10.558 ns expected -1
+TB tap 17 stage 130 delay 10.890 ns expected -1
+TB tap 18 stage 134 delay 11.222 ns expected -1
+TB tap 19 stage 138 delay 11.554 ns expected -1
+TB tap 20 stage 142 delay 11.886 ns expected -1
+TB tap 21 stage 146 delay 12.218 ns expected 422
+TB tap 22 stage 150 delay 12.550 ns expected 404
+TB window 1: id 1 sweeps 3 sat 3 tmo 0 lock 0 flags 11011101 guard 0.250 ns
+TB   tap  0 S 24 got 0 min 65535 max 0 mean   -1.00 err 0 exp 429       ok
+TB   tap  1 S 48 got 3 min 336 max 336 mean  336.00 err 0 exp 318       ok
+TB   tap  2 S 70 got 3 min 234 max 234 mean  234.00 err 0 exp 216       ok
+TB   tap  3 S 74 got 3 min 216 max 216 mean  216.00 err 0 exp 197       ok
+TB   tap  4 S 78 got 3 min 197 max 197 mean  197.00 err 0 exp 178       ok
+TB   tap  5 S 82 got 3 min 178 max 178 mean  178.00 err 0 exp 160       ok
+TB   tap  6 S 86 got 3 min 160 max 160 mean  160.00 err 0 exp 141       ok
+TB   tap  7 S 90 got 3 min 141 max 141 mean  141.00 err 0 exp 123       ok
+TB   tap  8 S 94 got 3 min 123 max 123 mean  123.00 err 0 exp 104       ok
+TB   tap  9 S 98 got 3 min 104 max 104 mean  104.00 err 0 exp 85       ok
+TB   tap 10 S102 got 3 min 85 max 85 mean   85.00 err 0 exp 67       ok
+TB   tap 11 S106 got 3 min 67 max 67 mean   67.00 err 0 exp 48       ok
+TB   tap 12 S110 got 3 min 48 max 48 mean   48.00 err 0 exp 30       ok
+TB   tap 13 S114 got 3 min 30 max 30 mean   30.00 err 0 exp 11       ok
+TB   tap 14 S118 got 3 min 11 max 11 mean   11.00 err 0 exp 0       ok
+TB   tap 15 S122 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 16 S126 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 17 S130 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 18 S134 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 19 S138 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 20 S142 got 0 min 65535 max 0 mean   -1.00 err 58976 exp -1       ok
+TB   tap 21 S146 got 0 min 65535 max 0 mean   -1.00 err 58976 exp 422       ok
+TB   tap 22 S150 got 3 min 422 max 422 mean  422.00 err 58976 exp 404       ok
+TB window 2: id 2 sweeps 4 sat 4 tmo 0 lock 0 flags 11011101 guard -0.075 ns
+TB   tap  0 S 24 got 0 min 65535 max 0 mean   -1.00 err 0 exp -1       ok
+TB   tap  1 S 48 got 4 min 336 max 336 mean  336.00 err 0 exp 336       ok
+TB   tap  2 S 70 got 4 min 234 max 234 mean  234.00 err 0 exp 234       ok
+TB   tap  3 S 74 got 4 min 216 max 216 mean  216.00 err 0 exp 215       ok
+TB   tap  4 S 78 got 4 min 197 max 197 mean  197.00 err 0 exp 197       ok
+TB   tap  5 S 82 got 4 min 178 max 178 mean  178.00 err 0 exp 178       ok
+TB   tap  6 S 86 got 4 min 160 max 160 mean  160.00 err 0 exp 159       ok
+TB   tap  7 S 90 got 4 min 141 max 141 mean  141.00 err 0 exp 141       ok
+TB   tap  8 S 94 got 4 min 123 max 123 mean  123.00 err 0 exp 122       ok
+TB   tap  9 S 98 got 4 min 104 max 104 mean  104.00 err 0 exp 104       ok
+TB   tap 10 S102 got 4 min 85 max 85 mean   85.00 err 0 exp 85       ok
+TB   tap 11 S106 got 4 min 67 max 67 mean   67.00 err 0 exp 66       ok
+TB   tap 12 S110 got 4 min 48 max 48 mean   48.00 err 0 exp 48       ok
+TB   tap 13 S114 got 4 min 30 max 30 mean   30.00 err 0 exp 29       ok
+TB   tap 14 S118 got 4 min 11 max 11 mean   11.00 err 0 exp 11       ok
+TB   tap 15 S122 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 16 S126 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 17 S130 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 18 S134 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 19 S138 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 20 S142 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 21 S146 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 22 S150 got 4 min 422 max 422 mean  422.00 err 59999 exp 422       ok
+TB window 3: id 3 sweeps 3 sat 3 tmo 0 lock 0 flags 11011101 guard -0.075 ns
+TB   tap  0 S 24 got 0 min 65535 max 0 mean   -1.00 err 0 exp -1       ok
+TB   tap  1 S 48 got 3 min 336 max 336 mean  336.00 err 0 exp 336       ok
+TB   tap  2 S 70 got 3 min 234 max 234 mean  234.00 err 0 exp 234       ok
+TB   tap  3 S 74 got 3 min 216 max 216 mean  216.00 err 0 exp 215       ok
+TB   tap  4 S 78 got 3 min 197 max 197 mean  197.00 err 0 exp 197       ok
+TB   tap  5 S 82 got 3 min 178 max 178 mean  178.00 err 0 exp 178       ok
+TB   tap  6 S 86 got 3 min 160 max 160 mean  160.00 err 0 exp 159       ok
+TB   tap  7 S 90 got 3 min 141 max 141 mean  141.00 err 0 exp 141       ok
+TB   tap  8 S 94 got 3 min 123 max 123 mean  123.00 err 0 exp 122       ok
+TB   tap  9 S 98 got 3 min 104 max 104 mean  104.00 err 0 exp 104       ok
+TB   tap 10 S102 got 3 min 85 max 85 mean   85.00 err 0 exp 85       ok
+TB   tap 11 S106 got 3 min 67 max 67 mean   67.00 err 0 exp 66       ok
+TB   tap 12 S110 got 3 min 48 max 48 mean   48.00 err 0 exp 48       ok
+TB   tap 13 S114 got 3 min 30 max 30 mean   30.00 err 0 exp 29       ok
+TB   tap 14 S118 got 3 min 11 max 11 mean   11.00 err 0 exp 11       ok
+TB   tap 15 S122 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 16 S126 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 17 S130 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 18 S134 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 19 S138 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 20 S142 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 21 S146 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 22 S150 got 3 min 422 max 422 mean  422.00 err 59999 exp 422       ok
+TB window 4: id 4 sweeps 3 sat 3 tmo 0 lock 0 flags 11011101 guard -0.075 ns
+TB   tap  0 S 24 got 0 min 65535 max 0 mean   -1.00 err 0 exp -1       ok
+TB   tap  1 S 48 got 3 min 336 max 336 mean  336.00 err 0 exp 336       ok
+TB   tap  2 S 70 got 3 min 234 max 234 mean  234.00 err 0 exp 234       ok
+TB   tap  3 S 74 got 3 min 216 max 216 mean  216.00 err 0 exp 215       ok
+TB   tap  4 S 78 got 3 min 197 max 197 mean  197.00 err 0 exp 197       ok
+TB   tap  5 S 82 got 3 min 178 max 178 mean  178.00 err 0 exp 178       ok
+TB   tap  6 S 86 got 3 min 160 max 160 mean  160.00 err 0 exp 159       ok
+TB   tap  7 S 90 got 3 min 141 max 141 mean  141.00 err 0 exp 141       ok
+TB   tap  8 S 94 got 3 min 123 max 123 mean  123.00 err 0 exp 122       ok
+TB   tap  9 S 98 got 3 min 104 max 104 mean  104.00 err 0 exp 104       ok
+TB   tap 10 S102 got 3 min 85 max 85 mean   85.00 err 0 exp 85       ok
+TB   tap 11 S106 got 3 min 67 max 67 mean   67.00 err 0 exp 66       ok
+TB   tap 12 S110 got 3 min 48 max 48 mean   48.00 err 0 exp 48       ok
+TB   tap 13 S114 got 3 min 30 max 30 mean   30.00 err 0 exp 29       ok
+TB   tap 14 S118 got 3 min 11 max 11 mean   11.00 err 0 exp 11       ok
+TB   tap 15 S122 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 16 S126 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 17 S130 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 18 S134 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 19 S138 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 20 S142 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 21 S146 got 0 min 65535 max 0 mean   -1.00 err 59999 exp -1       ok
+TB   tap 22 S150 got 3 min 422 max 422 mean  422.00 err 59999 exp 422       ok
+TB RESULT: PASS (0 mismatches)
+$finish called at time : 2400605 ns : File "/home/andre/Documentos/GitHub/lats/hw/au15p_tap/sim/tb_tap.sv" Line 95
+run: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:30 . Memory (MB): peak = 1429.707 ; gain = 0.000 ; free physical = 27492 ; free virtual = 71149
+exit
+INFO: xsimkernel Simulation Memory Usage: 1650116 KB (Peak: 1715652 KB), Simulation CPU Usage: 30710 ms
+INFO: [Common 17-206] Exiting xsim at Fri Nov 20 02:44:00 2026...

@@ -1,0 +1,61 @@
+-------------------------------------
+| Tool Version : Vivado v.2025.2
+| Date         : Fri Nov 20 01:31:53 2026
+| Host         : andre-V520S-08IKL
+| Design       : design_1
+| Device       : xcau15p-ffvb676-1-I-
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+
+***********************
+Running Pre-CRP Checker
+***********************
+Number of global clocks: 5
+	Number of BUFGCE: 5
+	Number of BUFGCE_HDIO: 0
+	Number of BUFG_CTRL: 0
+	Number of BUFGCE_DIV: 0
+	Number of BUFG_GT: 0
+	Number of BUFG_PS: 0
+	Number of BUFG_FABRIC: 0
+	Running suboptimal placement checker for 3 clocks (and their loads) which do not have the CLOCK_LOW_FANOUT property but have a fanout less than 2000...
+Pre-CRP Checker took 0 secs
+
+**************************************
+Clock Nets/Source Overview (CRP Input)
+**************************************
+Clock 1: u_clocks/clk_board
+	Clock source type: BUFGCE
+	Clock source region: X0Y0
+	initial rect ((0, 0), (0, 2))
+
+Clock 2: u_clocks/clk_sys
+	Clock source type: BUFGCE
+	Clock source region: X0Y0
+	Clock regions with locked loads: X0Y0 
+	initial rect ((0, 0), (1, 2))
+
+Clock 3: dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i
+	Clock source type: BUFGCE
+	Clock source region: X0Y0
+	initial rect ((0, 0), (0, 1))
+
+Clock 4: u_clocks/clk_catch
+	Clock source type: BUFGCE
+	Clock source region: X0Y0
+	initial rect ((0, 0), (1, 1))
+
+Clock 5: u_clocks/clk_phase
+	Clock source type: BUFGCE
+	Clock source region: X0Y0
+	initial rect ((0, 0), (0, 1))
+
+
+
+*****************************
+Clocks With User Constraints:
+*****************************
+No clocks with user constraints found
+
+

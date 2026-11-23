@@ -1,0 +1,80 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{kashyap21,niemann20,vargas25}
+\citation{agarwal07}
+\citation{martins11}
+\citation{razor04}
+\citation{valdes13,sensible17}
+\citation{wong09}
+\citation{stott10}
+\citation{levine14}
+\citation{jiang22}
+\citation{vargas24}
+\citation{sbcci25}
+\citation{sbcci25}
+\citation{ug572}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Sensor and Reading}{1}{section.2}\protected@file@percent }
+\newlabel{sec:sensor}{{II}{1}{Sensor and Reading}{section.2}{}}
+\citation{sbcci25}
+\citation{sbcci25}
+\citation{ds931}
+\citation{sbcci26}
+\citation{ds181}
+\citation{jesd22a108}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Test structure (16\,nm). A ripple chain whose carry toggles every cycle feeds 23 taps ($S_j=24$, 48, and 70 to 150 in steps of 4); each tap has the sensor of~\cite  {sbcci25} and a checker that compares the capture flip-flop FF2 with a replica $t$ of the stimulus. One phase sweep reads every tap; the FPGA keeps 1\,s statistics per tap.}}{2}{figure.1}\protected@file@percent }
+\newlabel{fig:struct}{{1}{2}{Test structure (16\,nm). A ripple chain whose carry toggles every cycle feeds 23 taps ($S_j=24$, 48, and 70 to 150 in steps of 4); each tap has the sensor of~\cite {sbcci25} and a checker that compares the capture flip-flop FF2 with a replica $t$ of the stimulus. One phase sweep reads every tap; the FPGA keeps 1\,s statistics per tap}{figure.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Multi-Endpoint Test Structure}{2}{section.3}\protected@file@percent }
+\newlabel{sec:struct}{{III}{2}{Multi-Endpoint Test Structure}{section.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experimental Setup}{2}{section.4}\protected@file@percent }
+\newlabel{sec:setup}{{IV}{2}{Experimental Setup}{section.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Results}{2}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}16\,nm: Zero Reading Versus First Error}{2}{subsection.5.1}\protected@file@percent }
+\newlabel{sec:res16}{{\mbox  {V-A}}{2}{\texorpdfstring {16\,nm}{16 nm}: Zero Reading Versus First Error}{subsection.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces 16\,nm, one downward sweep. Top: reading of the taps whose failure boundary falls inside the sweep, in placement A (solid) and in the same routed design with the 250\,ps guard of Section~\ref {sec:guard} (dashed); a point is drawn while the tap's checker saw no error. Bottom: error rate of the failing points of placement A (fraction of cycles in which FF2 held the wrong value).}}{3}{figure.2}\protected@file@percent }
+\newlabel{fig:shmoo}{{2}{3}{16\,nm, one downward sweep. Top: reading of the taps whose failure boundary falls inside the sweep, in placement A (solid) and in the same routed design with the 250\,ps guard of Section~\ref {sec:guard} (dashed); a point is drawn while the tap's checker saw no error. Bottom: error rate of the failing points of placement A (fraction of cycles in which FF2 held the wrong value)}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Measured margin $m$ at failure versus the offset $\Delta ^{*}_\mathrm  {STA}$ predicted by STA without the uncertainty and pessimism terms (slow corner). Filled: the independent failing taps of the two placements; hollow: the same routed taps with a guard band ($\Delta ^{*}_\mathrm  {STA}$ from the STA of the guarded design). Error bars span the 10\,mV interval in which errors start. Below zero the path fails while the sensor still reads positive.}}{3}{figure.3}\protected@file@percent }
+\newlabel{fig:offset}{{3}{3}{Measured margin $m$ at failure versus the offset $\Dst $ predicted by STA without the uncertainty and pessimism terms (slow corner). Filled: the independent failing taps of the two placements; hollow: the same routed taps with a guard band ($\Dst $ from the STA of the guarded design). Error bars span the 10\,mV interval in which errors start. Below zero the path fails while the sensor still reads positive}{figure.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Per-tap results on 16\,nm: first failing voltage $V_f$ (V, SYSMON), measured margin $m$ and predicted offset $\Delta ^{*}_\mathrm  {STA}$ (ps); $m'$, $m''$: margin of the same routed design with the 250 and the 125\,ps guard. $m>0$: the reading reached zero before the first error.}}{3}{table.1}\protected@file@percent }
+\newlabel{tab:taps}{{I}{3}{Per-tap results on 16\,nm: first failing voltage $V_f$ (V, SYSMON), measured margin $m$ and predicted offset $\Dst $ (ps); $m'$, $m''$: margin of the same routed design with the 250 and the 125\,ps guard. $m>0$: the reading reached zero before the first error}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}What Sets the Offset}{3}{subsection.5.2}\protected@file@percent }
+\newlabel{sec:offset}{{\mbox  {V-B}}{3}{What Sets the Offset}{subsection.5.2}{}}
+\citation{wong09}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces 28\,nm, 16-bit adder path. Slack reading versus core voltage after the 214.6\,h burn-in (logged sweep, marker area $\propto $ samples, with its alpha-power fit), the same curve moved by the fitted 14.3\,mV towards lower voltage (dashed), the corners before the burn-in, and the cold corners after it. Labels: steps lost at each corner.}}{4}{figure.4}\protected@file@percent }
+\newlabel{fig:run1}{{4}{4}{28\,nm, 16-bit adder path. Slack reading versus core voltage after the \vRunDurH \,h burn-in (logged sweep, marker area $\propto $ samples, with its alpha-power fit), the same curve moved by the fitted \vShiftmV \,mV towards lower voltage (dashed), the corners before the burn-in, and the cold corners after it. Labels: steps lost at each corner}{figure.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}A Designed Guard Band}{4}{subsection.5.3}\protected@file@percent }
+\newlabel{sec:guard}{{\mbox  {V-C}}{4}{A Designed Guard Band}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}28\,nm: The Margin a Burn-In Consumes}{4}{subsection.5.4}\protected@file@percent }
+\newlabel{sec:res28}{{\mbox  {V-D}}{4}{\texorpdfstring {28\,nm}{28 nm}: The Margin a Burn-In Consumes}{subsection.5.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces 16\,nm corners before and after 37.4\,h (mean of 180 windows of 1\,s; steps of 19.84\,ps).}}{4}{table.2}\protected@file@percent }
+\newlabel{tab:us}{{II}{4}{16\,nm corners before and after \vUsDurH \,h (mean of 180 windows of 1\,s; steps of 19.84\,ps)}{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}16\,nm: Stress Bound}{4}{subsection.5.5}\protected@file@percent }
+\newlabel{sec:res16bound}{{\mbox  {V-E}}{4}{\texorpdfstring {16\,nm}{16 nm}: Stress Bound}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Discussion and Limitations}{4}{section.6}\protected@file@percent }
+\newlabel{sec:disc}{{VI}{4}{Discussion and Limitations}{section.6}{}}
+\bibstyle{IEEEtran}
+\bibdata{refs}
+\bibcite{kashyap21}{1}
+\bibcite{niemann20}{2}
+\bibcite{vargas25}{3}
+\bibcite{agarwal07}{4}
+\bibcite{martins11}{5}
+\bibcite{razor04}{6}
+\bibcite{valdes13}{7}
+\bibcite{sensible17}{8}
+\bibcite{wong09}{9}
+\bibcite{stott10}{10}
+\bibcite{levine14}{11}
+\bibcite{jiang22}{12}
+\bibcite{vargas24}{13}
+\bibcite{sbcci25}{14}
+\bibcite{ug572}{15}
+\bibcite{ds931}{16}
+\bibcite{sbcci26}{17}
+\bibcite{ds181}{18}
+\bibcite{jesd22a108}{19}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{5}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.1}\protected@file@percent }
+\gdef \@abspage@last{5}

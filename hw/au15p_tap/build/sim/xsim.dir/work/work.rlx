@@ -1,0 +1,13 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/andre/2025.2/data/verilog/src/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_chain.sv,1795147234,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_sensor.sv,,tap_chain,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_clocks.sv,1795148396,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_chain.sv,,tap_clocks,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_pkg.sv,1795147462,systemVerilog,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_top.sv;/home/andre/Documentos/GitHub/lats/hw/au15p_tap/sim/tb_tap.sv,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_clocks.sv,,tap_pkg,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_sensor.sv,1795147258,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_sweep.sv,,tap_sensor,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_stats.sv,1795147300,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_top.sv,,tap_stats,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_sweep.sv,1795147258,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_stats.sv,,tap_sweep,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/rtl/tap_top.sv,1795148396,systemVerilog,,/home/andre/Documentos/GitHub/lats/hw/au15p_tap/sim/tb_tap.sv,,tap_top,,,,TAP_SIM,,,,
+/home/andre/Documentos/GitHub/lats/hw/au15p_tap/sim/tb_tap.sv,1795153398,systemVerilog,,,,tb_tap,,,,TAP_SIM,,,,

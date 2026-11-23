@@ -1,0 +1,16 @@
+# Run 1 (Nexys 4 DDR, Artix-7, 16-bit RCA bitstream, 17.857 ps/step) corner readings transcribed by
+# hand from the App_Nexys screenshots in corners_screenshots/ (one instantaneous reading each; the
+# pre-burn-in screenshots have no date and no CSV). Transcribed 2026-11-20, values checked twice.
+# The "FALHA: SIM" flag shown in every screenshot is the known failure_holder bug (it compared two
+# different adders) and is ignored; the adder-canary "Erros" field reads 0 in all of them.
+# phase: pre = before the 214.6 h burn-in, post_hot = 2026-06-02 ~19:40, post_cold = 2026-06-02 20:45-20:47
+phase,file,vccint_v,die_c,oven_c,psu_meas_v,slack_inc
+pre,high-temp_high-volt.png,1.100,104.5,90.1,1.121,309
+pre,high-temp_normal-volt.png,0.999,103.4,90.1,1.017,271
+pre,high-temp_low-volt.png,0.900,103.5,90.2,0.912,200
+post_hot,high_temp_high_volt-end.png,1.099,104.7,90.7,1.118,305
+post_hot,high_temp_normal_volt-end.png,1.000,103.5,90.2,1.013,263
+post_hot,high_temp_low_volt-end.png,0.900,103.6,94.5,0.908,186
+post_cold,Captura de tela de 2026-06-02 20-46-59.png,1.099,46.5,38.5,1.104,315
+post_cold,Captura de tela de 2026-06-02 20-46-09.png,0.999,45.8,38.2,1.002,264
+post_cold,Captura de tela de 2026-06-02 20-45-03.png,0.899,45.5,38.1,0.902,168

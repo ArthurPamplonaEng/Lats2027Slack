@@ -1,0 +1,114 @@
+EXPORTAÇÃO DA CONVERSA COM O CLAUDE - ARTIGO JICS -> LATS 2027
+=================================================================
+
+CONTEXTO
+--------
+Objetivo do usuário: revisar e publicar o artigo do JICS (sensor de slack com phase shift dinâmico, RCA de 16 bits na Artix-7). Material de referência: HANDOFF_CLAUDE.md e Plano_Artigo_LATS2027.pdf na pasta data, além do .zip com medições de novos corners.
+
+Pontos levantados durante a análise do Claude:
+- O fonte LaTeX do JICS foi recuperado do histórico do git.
+- Os corners do .zip são da AU15P (16 nm), não da Nexys4.
+- A Fig. 10 e a Tabela I do rascunho do JICS são do SBCCI 2025, medidas na cadeia de 50 inversores; só a Fig. 11 é do somador RCA.
+- Os números dos corners novos batem com os resumos em .txt; o D&T não usa os corners da Run 1, então eles podem entrar neste artigo.
+- O CFP do LATS 2027 ainda não saiu. O LATS 2026 foi de 17 a 20/03/2026, em Florianópolis. Assume-se artigo regular de ~6 páginas IEEE. O site do LATS 2026 recusou a conexão, então o limite de páginas não foi confirmado. Taxa de aceitação de referência de 35-50% (estimativa típica de conferência regional, não um número do LATS).
+
+O artigo afirma: um sensor de slack com phase shift dinâmico se calibra sozinho em missão, acompanha o efeito de V, T e burn-in num RCA de 16 bits na Artix-7 e antecipa a falha funcional.
+
+
+PARECER (revisão como revisor do LATS)
+--------------------------------------
+Pontos fortes
+- Bancada completa: forno com PID, VCCINT em malha fechada pelo XADC e log a 1 Hz.
+- 214,6 h contínuas a 1,4 V e ~125 °C sem intervenção, registro raro para sensor em FPGA.
+- Corners da Run 1 com sinal físico coerente: a perda de slack cresce em V baixa, de -4 para -14 contagens entre 1,1 e 0,9 V, como se espera de BTI.
+
+Pontos fracos (do mais ao menos provável de um revisor levantar)
+1. BLOQUEADOR: material do SBCCI 2025 apresentado como novo. O resumo é idêntico, palavra por palavra. A Tabela I, a Fig. 10 e a seção de falha também vêm do SBCCI 2025, medidas na cadeia de 50 inversores, mas o texto diz que o CUT é o RCA. A checagem de similaridade vai acusar.
+2. BLOQUEADOR: a contribuição C5 ("o erro só aparece depois de slack ≈ 0") não tem evidência no RCA.
+   - No RTL, o failure_holder compara saídas de dois somadores diferentes.
+   - As capturas mostram "FALHA: SIM" junto com "Erros: 0".
+   - A 0,90 V e ~101 °C ainda sobram 186 contagens (3,3 ns): o RCA nem chegou perto de falhar.
+3. Revisão maior: unidades e escala.
+   - Os "278,5 ps" são contagens, ≈ 4,97 ns.
+   - O passo da Nexys4 é 17,857 ps, não 19,85 ps (clk_wiz_0.xci: VCO de 1 GHz; 19,85 ps vale para VCO de 900 MHz).
+   - A run durou 214,6 h, não 212,6 h.
+   - A Fig. 11B mostra a tensão da PSU (~1,48 V), não o VCCINT de 1,400 V.
+4. Revisão maior: o texto de física se contradiz (diz que o calor reduz o atraso e logo depois que o aumenta). Os dados do RCA mostram inversão térmica perto de 1,0 V: a 1,1 V o slack quente é 305 contra 315 no frio; a 0,9 V é 186 contra 168.
+5. Revisão maior: novidade e limites.
+   - Faltam duas referências próximas: medição de atraso em FPGA por varredura de clock (Wong et al., TRETS 2009) e medição de degradação sob estresse (Stott et al., FPGA 2010).
+   - Faltam a resolução e a incerteza do sensor.
+   - Não se discute que 1,4 V está acima do máximo absoluto nem que os dados são de uma única placa.
+   - O setup cita o termostato TLZ10, mas a run usou o PID.
+6. Forma. O rascunho tem 11 páginas; Lanzieri 2024 aparece duas vezes com chaves diferentes. O problema maior é a sobreposição: o run de 214,6 h é o dado novo do D&T (entra em 23/11). Este artigo tem que citar o D&T e não repetir a análise de deriva.
+
+Estimativa como está, mesmo cortado para 6 páginas: aceite ≤ 5%, borderline ~10%, rejeição ~85%. Os itens 1 e 2 derrubam o artigo sozinhos.
+
+
+SUGESTÕES (ordem de ganho por custo)
+------------------------------------
+1. Retirar todo o material da cadeia de inversores, ou atribuí-lo ao SBCCI 2025, e reescrever o resumo. Ganho +15-25 pp, custo 1-2 dias.
+2. Pôr no lugar os dados do RCA que já existem. Ganho +10-15 pp, custo 2-3 dias. Ressalva: os valores pré-burn-in são capturas de tela sem data.
+   - varredura pós-burn-in de 1,10 a 0,89 V (CSV);
+   - pré x pós em 3 tensões, de -71 a -250 ps;
+   - a inversão térmica;
+   - o run de 214,6 h em contagens.
+3. Seção de 16 nm com a AU15P: 2 placas e 3 tensões, sem mudança acima de ~0,5 contagem depois de 37,4 h. Ganho +3-8 pp, custo 1 dia.
+4. Posicionar contra Wong, Stott, Valdés-Peña e Sobas; declarar o sobre-estresse e a placa única; citar o D&T. Ganho +5-10 pp, custo 1 dia.
+5. Testar a C5 de verdade com a Run 2. Ganho +15-20 pp, custo ~4 semanas de bancada. A RTL multi-tap ainda está sem commit na máquina do laboratório.
+
+Decisão recomendada: não submeter como está. Com as sugestões 1 a 4, aceite ~35-45%; com a Run 2, ~55-65%.
+
+Opções apresentadas:
+- A) Escrever já com os dados existentes. Tese: "o sensor mede a perda de margem do burn-in: em 28 nm ela cresce em V baixa; em 16 nm não há nada detectável em 37 h". C5 sai; deixam-se espaços comentados para a Run 2.
+- B) Esperar a Run 2; escrever só as seções II-III e o pipeline de análise.
+
+Informações pedidas ao usuário: condições do run de 16 nm (tensão e temperatura do die durante Cornerdesabadoadomingo_20261107_212830, CUT e clock da "RTL v2" da AU15P); confirmação de que os corners não entram no D&T; autoria (André Venâncio mediu os dois conjuntos de corners e não está na lista de autores do JICS).
+
+Fontes: LATS 2026 (IEEE CEDA); Wong et al., TRETS 2009 (dblp); Stott et al., FPGA 2010.
+
+
+MENSAGEM DO USUÁRIO
+-------------------
+"Hoje é dia 19, tenho a bancada de testes comigo. Quero o máximo de chance possível para o paper ser aceito. As datas são:
+ Submission Deadline (Title and Abstract): November 23rd, 2026
+ Submission Deadline (Full Paper): November 30th, 2026.
+Não se restrinja muito às sugestões; se você tem uma ideia melhor para escrever o paper, faça. Então por enquanto quero que você pense nisso para termos a maior chance de ser aceito."
+
+(O site do LATS 2027 não carregou; pela busca, notificação em 20/01 e evento de 13 a 16/04/2027, em Lima.)
+
+
+RESPOSTA DO CLAUDE: NOVA IDEIA CENTRAL
+--------------------------------------
+A RTL multi-tap deixada pronta no laboratório (compilada e simulada, ainda não testada em placa) é a peça mais forte. Tem 7 derivações numa mesma cadeia de 40 estágios, cada uma com seu sensor e seu verificador de erro. Pela análise estática, cada derivação falha numa tensão diferente, entre ~0,82 e 1,11 V. Uma única varredura de VCCINT de ~40 min testa "slack ≈ 0 => erro" em 7 caminhos de uma vez, com erro real como prova e sem depender de envelhecimento.
+
+Envelhecimento: o BTI cresce de forma sublinear (∝ t^0,2-0,35). Com ~108 h de burn-in, devem-se ver ~75-85% do deslocamento da Run 1 em 215 h, ou seja, Vmin subindo ~10 mV. Com passo de 2 mV e contadores de erro por ciclo, é mensurável.
+
+Três caminhos
+A) Run 2 comprimida, em cascata (RECOMENDADO). Estimativa de aceite ~60-70%, mais com 2 placas.
+   Cronograma (bancada | Claude):
+   - 19/11: usuário publica o trabalho multi-tap | ferramenta de medição sem GUI, pipeline de análise, esqueleto do artigo
+   - 20/11: colocar a placa no ar (pacote/CRC, leituras no nominal, erros ao baixar V) | ajustes da ferramenta
+   - 21/11: shmoo pré, 3 níveis de forno (desligado, 60 e 94 °C) + 3 repetições | figuras com dados reais
+   - 21-26/11: burn-in de ~108 h a 1,4 V e die a 125 °C, checagens rápidas em 24, 48 e 72 h | seções I-IV
+   - 23/11: - | título e resumo, já com números de falha reais da etapa de 21/11
+   - 26/11: shmoo pós imediato (automático, ~6 h) | -
+   - 27-30/11: (opcional) recuperação após 24 h | resultados, revisão independente, submissão
+   Cada etapa fecha um artigo submetível. Se a placa não subir no dia 20, cai-se em C. Se o burn-in falhar, os dados do dia 21 formam o artigo B.
+B) Só validação de falha, sem burn-in novo (2-3 dias de bancada; envelhecimento via corners da Run 1). ~45-55%. É o recuo natural de A.
+C) Só os dados existentes, como na proposta anterior. ~35-45%.
+
+Novo enquadramento do artigo
+O "sensor auto-tuning" já saiu no SBCCI 2025 e a varredura de clock para medir atraso em FPGA já está em Wong et al. (2009). Para o público do LATS (teste, confiabilidade, SLM), a contribuição forte é validar a leitura de slack contra falha funcional real. Contribuições:
+1. Estrutura de teste com vários caminhos: 7 derivações, um verificador de erro por derivação e um canário.
+2. Margem de aviso por derivação, V0 - Vf (tensão em que a leitura chega a zero menos a tensão do primeiro erro). A análise estática prevê a margem; o artigo mede se ela se mantém em várias temperaturas, dos dois lados do ponto de inversão térmica (~1,0 V).
+3. Depois do burn-in, Vf sobe. Os checkpoints dão a cinética, e o ΔVf previsto pelo sensor é comparado com o medido em cada derivação.
+4. A Run 1, em implementação diferente, reproduz o sentido e a ordem de grandeza.
+Os corners de 16 nm entram como uma frase sobre portabilidade.
+
+O que o Claude pediu para começar
+1. Escolha do usuário entre A, B e C.
+2. Publicar hoje o trabalho multi-tap (RTL, PROTOCOL.md, decode_extended_packet) em origin/LATS-2027 (só existe sem commit na máquina do laboratório). Confirmar se o .bit compilado no 2026.1 está em artifacts/.
+3. Placas: quantas Nexys4 nunca estressadas, já com o resistor de 0 Ω removido? A bancada de 2 DUTs (IT6502D + E3634A) funciona? Rodar com n = 2 é o ganho mais barato contra a crítica de "dispositivo único".
+4. Limite de páginas e tipo de revisão (cega ou não) do CFP do LATS 2027.
+
+Fonte: LATS 2027

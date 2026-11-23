@@ -1,0 +1,1369 @@
+gravando em /home/andre/Documentos/GitHub/IC-Aging-Environment/D&T 2027/10_DT_Monitor/test_logs/sniffer (Ctrl+C para parar)
+[22:38:08] placaA: aberta /dev/serial/by-id/usb-STMicroelectronics_STM32_STLink_066CFF525056805087053318-if02 a 125000 baud
+[22:38:08] placaB: aberta /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0 a 115200 baud
+[22:39:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:39:08] placaA: 96 janelas (última 1791, há 0 s), 1 INFO, CRC 0, perdidos 0, lixo 43 B, 4300 B, reconexões 0
+[22:40:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:40:08] placaA: 156 janelas (última 1851, há 1 s), 2 INFO, CRC 0, perdidos 0, lixo 43 B, 6973 B, reconexões 0
+[22:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:41:09] placaA: 216 janelas (última 1911, há 1 s), 3 INFO, CRC 0, perdidos 0, lixo 43 B, 9646 B, reconexões 0
+[22:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:42:09] placaA: 276 janelas (última 1971, há 1 s), 4 INFO, CRC 0, perdidos 0, lixo 43 B, 12319 B, reconexões 0
+[22:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:43:09] placaA: 336 janelas (última 2031, há 0 s), 5 INFO, CRC 0, perdidos 0, lixo 43 B, 14992 B, reconexões 0
+[22:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:44:09] placaA: 396 janelas (última 2091, há 0 s), 6 INFO, CRC 0, perdidos 0, lixo 43 B, 17665 B, reconexões 0
+[22:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:45:09] placaA: 456 janelas (última 2151, há 1 s), 7 INFO, CRC 0, perdidos 0, lixo 43 B, 20338 B, reconexões 0
+[22:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:46:09] placaA: 516 janelas (última 2211, há 1 s), 8 INFO, CRC 0, perdidos 0, lixo 43 B, 23011 B, reconexões 0
+[22:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:47:09] placaA: 576 janelas (última 2271, há 1 s), 9 INFO, CRC 0, perdidos 0, lixo 43 B, 25684 B, reconexões 0
+[22:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:48:09] placaA: 636 janelas (última 2331, há 1 s), 10 INFO, CRC 0, perdidos 0, lixo 43 B, 28357 B, reconexões 0
+[22:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:49:09] placaA: 696 janelas (última 2391, há 0 s), 11 INFO, CRC 0, perdidos 0, lixo 43 B, 31030 B, reconexões 0
+[22:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:50:09] placaA: 756 janelas (última 2451, há 1 s), 12 INFO, CRC 0, perdidos 0, lixo 43 B, 33703 B, reconexões 0
+[22:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:51:09] placaA: 816 janelas (última 2511, há 1 s), 13 INFO, CRC 0, perdidos 0, lixo 43 B, 36376 B, reconexões 0
+[22:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:52:09] placaA: 876 janelas (última 2571, há 1 s), 14 INFO, CRC 0, perdidos 0, lixo 43 B, 39049 B, reconexões 0
+[22:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:53:09] placaA: 936 janelas (última 2631, há 1 s), 15 INFO, CRC 0, perdidos 0, lixo 43 B, 41722 B, reconexões 0
+[22:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:54:09] placaA: 996 janelas (última 2691, há 1 s), 16 INFO, CRC 0, perdidos 0, lixo 43 B, 44395 B, reconexões 0
+[22:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:55:09] placaA: 1056 janelas (última 2751, há 0 s), 17 INFO, CRC 0, perdidos 0, lixo 43 B, 47068 B, reconexões 0
+[22:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:56:09] placaA: 1116 janelas (última 2811, há 1 s), 18 INFO, CRC 0, perdidos 0, lixo 43 B, 49741 B, reconexões 0
+[22:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:57:09] placaA: 1176 janelas (última 2871, há 1 s), 19 INFO, CRC 0, perdidos 0, lixo 43 B, 52414 B, reconexões 0
+[22:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:58:09] placaA: 1236 janelas (última 2931, há 1 s), 20 INFO, CRC 0, perdidos 0, lixo 43 B, 55087 B, reconexões 0
+[22:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[22:59:09] placaA: 1296 janelas (última 2991, há 1 s), 21 INFO, CRC 0, perdidos 0, lixo 43 B, 57760 B, reconexões 0
+[23:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:00:09] placaA: 1356 janelas (última 3051, há 0 s), 22 INFO, CRC 0, perdidos 0, lixo 43 B, 60433 B, reconexões 0
+[23:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:01:09] placaA: 1416 janelas (última 3111, há 1 s), 23 INFO, CRC 0, perdidos 0, lixo 43 B, 63106 B, reconexões 0
+[23:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:02:09] placaA: 1476 janelas (última 3171, há 1 s), 24 INFO, CRC 0, perdidos 0, lixo 43 B, 65779 B, reconexões 0
+[23:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:03:09] placaA: 1536 janelas (última 3231, há 1 s), 25 INFO, CRC 0, perdidos 0, lixo 43 B, 68452 B, reconexões 0
+[23:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:04:09] placaA: 1553 janelas (última 3248, há 44 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:05:09] placaA: 1553 janelas (última 3248, há 104 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:06:09] placaA: 1553 janelas (última 3248, há 164 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:07:09] placaA: 1553 janelas (última 3248, há 224 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:08:09] placaA: 1553 janelas (última 3248, há 284 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:09:09] placaA: 1553 janelas (última 3248, há 344 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:10:09] placaA: 1553 janelas (última 3248, há 404 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:11:09] placaA: 1553 janelas (última 3248, há 464 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:12:09] placaA: 1553 janelas (última 3248, há 524 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:13:09] placaA: 1553 janelas (última 3248, há 584 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:14:09] placaA: 1553 janelas (última 3248, há 644 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:15:09] placaA: 1553 janelas (última 3248, há 704 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:16:09] placaA: 1553 janelas (última 3248, há 764 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:17:09] placaA: 1553 janelas (última 3248, há 824 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:18:09] placaA: 1553 janelas (última 3248, há 884 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:19:09] placaA: 1553 janelas (última 3248, há 944 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:20:09] placaA: 1553 janelas (última 3248, há 1004 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:21:09] placaA: 1553 janelas (última 3248, há 1064 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:22:09] placaA: 1553 janelas (última 3248, há 1124 s), 26 INFO, CRC 0, perdidos 0, lixo 45 B, 69235 B, reconexões 0
+[23:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:23:09] placaA: 1553 janelas (última 3248, há 1184 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:24:09] placaA: 1553 janelas (última 3248, há 1244 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:25:09] placaA: 1553 janelas (última 3248, há 1304 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:26:09] placaA: 1553 janelas (última 3248, há 1364 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:27:09] placaA: 1553 janelas (última 3248, há 1424 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:28:09] placaA: 1553 janelas (última 3248, há 1484 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:29:09] placaA: 1553 janelas (última 3248, há 1544 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:30:09] placaA: 1553 janelas (última 3248, há 1604 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:31:09] placaA: 1553 janelas (última 3248, há 1664 s), 26 INFO, CRC 0, perdidos 0, lixo 46 B, 69236 B, reconexões 0
+[23:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:32:09] placaA: 1553 janelas (última 3248, há 1724 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:33:09] placaA: 1553 janelas (última 3248, há 1784 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:34:09] placaA: 1553 janelas (última 3248, há 1844 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:35:09] placaA: 1553 janelas (última 3248, há 1904 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:36:09] placaA: 1553 janelas (última 3248, há 1964 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:37:09] placaA: 1553 janelas (última 3248, há 2024 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:38:09] placaA: 1553 janelas (última 3248, há 2084 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:39:09] placaA: 1553 janelas (última 3248, há 2144 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:40:09] placaA: 1553 janelas (última 3248, há 2204 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:41:09] placaA: 1553 janelas (última 3248, há 2264 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:42:09] placaA: 1553 janelas (última 3248, há 2324 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:43:09] placaA: 1553 janelas (última 3248, há 2384 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:44:09] placaA: 1553 janelas (última 3248, há 2444 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:45:09] placaA: 1553 janelas (última 3248, há 2504 s), 26 INFO, CRC 0, perdidos 0, lixo 47 B, 69237 B, reconexões 0
+[23:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:46:09] placaA: 1553 janelas (última 3248, há 2564 s), 26 INFO, CRC 0, perdidos 0, lixo 122 B, 69312 B, reconexões 0
+[23:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:47:09] placaA: 1553 janelas (última 3248, há 2624 s), 26 INFO, CRC 0, perdidos 0, lixo 122 B, 69312 B, reconexões 0
+[23:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:48:09] placaA: 1553 janelas (última 3248, há 2684 s), 26 INFO, CRC 0, perdidos 0, lixo 128 B, 69318 B, reconexões 0
+[23:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:49:09] placaA: 1553 janelas (última 3248, há 2744 s), 26 INFO, CRC 0, perdidos 0, lixo 365 B, 69555 B, reconexões 0
+[23:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:50:09] placaA: 1553 janelas (última 3248, há 2804 s), 26 INFO, CRC 0, perdidos 0, lixo 582 B, 69772 B, reconexões 0
+[23:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:51:09] placaA: 1553 janelas (última 3248, há 2864 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:52:09] placaA: 1553 janelas (última 3248, há 2924 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:53:09] placaA: 1553 janelas (última 3248, há 2984 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:54:09] placaA: 1553 janelas (última 3248, há 3044 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:55:09] placaA: 1553 janelas (última 3248, há 3104 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:56:09] placaA: 1553 janelas (última 3248, há 3164 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:57:09] placaA: 1553 janelas (última 3248, há 3224 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:58:09] placaA: 1553 janelas (última 3248, há 3284 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[23:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[23:59:09] placaA: 1553 janelas (última 3248, há 3344 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[00:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:00:09] placaA: 1553 janelas (última 3248, há 3404 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[00:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:01:09] placaA: 1553 janelas (última 3248, há 3464 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[00:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:02:09] placaA: 1553 janelas (última 3248, há 3524 s), 26 INFO, CRC 0, perdidos 0, lixo 660 B, 69850 B, reconexões 0
+[00:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:03:09] placaA: 1553 janelas (última 3248, há 3584 s), 26 INFO, CRC 0, perdidos 0, lixo 687 B, 69877 B, reconexões 0
+[00:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:04:09] placaA: 1553 janelas (última 3248, há 3644 s), 26 INFO, CRC 0, perdidos 0, lixo 687 B, 69877 B, reconexões 0
+[00:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:05:09] placaA: 1553 janelas (última 3248, há 3704 s), 26 INFO, CRC 0, perdidos 0, lixo 687 B, 69877 B, reconexões 0
+[00:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:06:09] placaA: 1553 janelas (última 3248, há 3764 s), 26 INFO, CRC 0, perdidos 0, lixo 688 B, 69878 B, reconexões 0
+[00:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:07:09] placaA: 1553 janelas (última 3248, há 3824 s), 26 INFO, CRC 0, perdidos 0, lixo 690 B, 69880 B, reconexões 0
+[00:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:08:09] placaA: 1553 janelas (última 3248, há 3884 s), 26 INFO, CRC 0, perdidos 0, lixo 690 B, 69880 B, reconexões 0
+[00:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:09:09] placaA: 1553 janelas (última 3248, há 3944 s), 26 INFO, CRC 0, perdidos 0, lixo 690 B, 69880 B, reconexões 0
+[00:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:10:09] placaA: 1553 janelas (última 3248, há 4004 s), 26 INFO, CRC 0, perdidos 0, lixo 693 B, 69883 B, reconexões 0
+[00:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:11:09] placaA: 1553 janelas (última 3248, há 4064 s), 26 INFO, CRC 0, perdidos 0, lixo 696 B, 69886 B, reconexões 0
+[00:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:12:09] placaA: 1553 janelas (última 3248, há 4124 s), 26 INFO, CRC 0, perdidos 0, lixo 696 B, 69886 B, reconexões 0
+[00:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:13:09] placaA: 1553 janelas (última 3248, há 4184 s), 26 INFO, CRC 0, perdidos 0, lixo 696 B, 69886 B, reconexões 0
+[00:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:14:09] placaA: 1553 janelas (última 3248, há 4244 s), 26 INFO, CRC 0, perdidos 0, lixo 696 B, 69886 B, reconexões 0
+[00:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:15:09] placaA: 1553 janelas (última 3248, há 4304 s), 26 INFO, CRC 0, perdidos 0, lixo 697 B, 69887 B, reconexões 0
+[00:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:16:09] placaA: 1554 janelas (última 7568, há 44 s), 26 INFO, CRC 0, perdidos 39, lixo 1909 B, 71143 B, reconexões 0
+[00:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:17:09] placaA: 1554 janelas (última 7568, há 104 s), 26 INFO, CRC 0, perdidos 39, lixo 4257 B, 73491 B, reconexões 0
+[00:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:18:09] placaA: 1562 janelas (última 7731, há 1 s), 27 INFO, CRC 0, perdidos 195, lixo 6538 B, 76157 B, reconexões 0
+[00:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:19:09] placaA: 1622 janelas (última 7792, há 0 s), 28 INFO, CRC 0, perdidos 196, lixo 6539 B, 78831 B, reconexões 0
+[00:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:20:09] placaA: 1679 janelas (última 7851, há 1 s), 29 INFO, CRC 0, perdidos 198, lixo 6628 B, 81461 B, reconexões 0
+[00:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:21:09] placaA: 1716 janelas (última 7888, há 24 s), 30 INFO, CRC 1, perdidos 198, lixo 7040 B, 83534 B, reconexões 0
+[00:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:22:09] placaA: 1735 janelas (última 7972, há 0 s), 30 INFO, CRC 2, perdidos 264, lixo 8905 B, 86235 B, reconexões 0
+[00:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:23:09] placaA: 1795 janelas (última 8032, há 0 s), 31 INFO, CRC 2, perdidos 264, lixo 8905 B, 88908 B, reconexões 0
+[00:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:24:09] placaA: 1855 janelas (última 8092, há 0 s), 32 INFO, CRC 2, perdidos 264, lixo 8905 B, 91581 B, reconexões 0
+[00:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:25:09] placaA: 1915 janelas (última 8152, há 0 s), 33 INFO, CRC 2, perdidos 264, lixo 8905 B, 94254 B, reconexões 0
+[00:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:26:09] placaA: 1974 janelas (última 8211, há 1 s), 34 INFO, CRC 2, perdidos 264, lixo 8905 B, 96883 B, reconexões 0
+[00:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:27:09] placaA: 2035 janelas (última 8272, há 0 s), 35 INFO, CRC 2, perdidos 264, lixo 8905 B, 99600 B, reconexões 0
+[00:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:28:09] placaA: 2095 janelas (última 8332, há 0 s), 36 INFO, CRC 2, perdidos 264, lixo 8905 B, 102273 B, reconexões 0
+[00:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:29:09] placaA: 2122 janelas (última 8386, há 6 s), 37 INFO, CRC 2, perdidos 291, lixo 10356 B, 104945 B, reconexões 0
+[00:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:30:09] placaA: 2166 janelas (última 8452, há 0 s), 38 INFO, CRC 2, perdidos 313, lixo 11059 B, 107617 B, reconexões 0
+[00:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:31:09] placaA: 2225 janelas (última 8511, há 1 s), 39 INFO, CRC 2, perdidos 313, lixo 11059 B, 110246 B, reconexões 0
+[00:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:32:09] placaA: 2286 janelas (última 8572, há 0 s), 40 INFO, CRC 2, perdidos 313, lixo 11059 B, 112963 B, reconexões 0
+[00:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:33:09] placaA: 2346 janelas (última 8632, há 0 s), 41 INFO, CRC 2, perdidos 313, lixo 11059 B, 115636 B, reconexões 0
+[00:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:34:09] placaA: 2406 janelas (última 8692, há 0 s), 42 INFO, CRC 2, perdidos 313, lixo 11059 B, 118309 B, reconexões 0
+[00:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:35:09] placaA: 2466 janelas (última 8752, há 0 s), 43 INFO, CRC 2, perdidos 313, lixo 11059 B, 120982 B, reconexões 0
+[00:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:36:09] placaA: 2525 janelas (última 8811, há 1 s), 44 INFO, CRC 2, perdidos 313, lixo 11059 B, 123647 B, reconexões 0
+[00:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:37:09] placaA: 2586 janelas (última 8872, há 0 s), 45 INFO, CRC 2, perdidos 313, lixo 11059 B, 126328 B, reconexões 0
+[00:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:38:09] placaA: 2646 janelas (última 8932, há 0 s), 46 INFO, CRC 2, perdidos 313, lixo 11059 B, 129001 B, reconexões 0
+[00:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:39:09] placaA: 2706 janelas (última 8992, há 0 s), 47 INFO, CRC 2, perdidos 313, lixo 11059 B, 131674 B, reconexões 0
+[00:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:40:09] placaA: 2766 janelas (última 9052, há 0 s), 48 INFO, CRC 2, perdidos 313, lixo 11059 B, 134347 B, reconexões 0
+[00:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:41:09] placaA: 2826 janelas (última 9112, há 0 s), 49 INFO, CRC 2, perdidos 313, lixo 11059 B, 137020 B, reconexões 0
+[00:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:42:09] placaA: 2886 janelas (última 9172, há 0 s), 50 INFO, CRC 2, perdidos 313, lixo 11059 B, 139693 B, reconexões 0
+[00:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:43:09] placaA: 2946 janelas (última 9232, há 0 s), 51 INFO, CRC 2, perdidos 313, lixo 11059 B, 142366 B, reconexões 0
+[00:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:44:09] placaA: 3002 janelas (última 9292, há 0 s), 52 INFO, CRC 2, perdidos 317, lixo 11199 B, 145003 B, reconexões 0
+[00:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:45:09] placaA: 3062 janelas (última 9352, há 0 s), 53 INFO, CRC 2, perdidos 317, lixo 11199 B, 147676 B, reconexões 0
+[00:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:46:09] placaA: 3122 janelas (última 9412, há 0 s), 54 INFO, CRC 2, perdidos 317, lixo 11199 B, 150349 B, reconexões 0
+[00:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:47:09] placaA: 3182 janelas (última 9472, há 0 s), 55 INFO, CRC 2, perdidos 317, lixo 11199 B, 153022 B, reconexões 0
+[00:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:48:09] placaA: 3242 janelas (última 9532, há 0 s), 56 INFO, CRC 2, perdidos 317, lixo 11199 B, 155695 B, reconexões 0
+[00:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:49:09] placaA: 3302 janelas (última 9592, há 0 s), 57 INFO, CRC 2, perdidos 317, lixo 11199 B, 158368 B, reconexões 0
+[00:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:50:09] placaA: 3362 janelas (última 9652, há 0 s), 58 INFO, CRC 2, perdidos 317, lixo 11199 B, 161041 B, reconexões 0
+[00:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:51:09] placaA: 3422 janelas (última 9712, há 0 s), 59 INFO, CRC 2, perdidos 317, lixo 11199 B, 163714 B, reconexões 0
+[00:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:52:09] placaA: 3482 janelas (última 9772, há 1 s), 60 INFO, CRC 2, perdidos 317, lixo 11199 B, 166387 B, reconexões 0
+[00:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:53:09] placaA: 3542 janelas (última 9832, há 0 s), 61 INFO, CRC 2, perdidos 317, lixo 11199 B, 169060 B, reconexões 0
+[00:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:54:09] placaA: 3602 janelas (última 9892, há 0 s), 62 INFO, CRC 2, perdidos 317, lixo 11199 B, 171733 B, reconexões 0
+[00:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:55:09] placaA: 3662 janelas (última 9952, há 0 s), 63 INFO, CRC 2, perdidos 317, lixo 11199 B, 174406 B, reconexões 0
+[00:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:56:09] placaA: 3722 janelas (última 10012, há 0 s), 64 INFO, CRC 2, perdidos 317, lixo 11199 B, 177079 B, reconexões 0
+[00:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:57:09] placaA: 3782 janelas (última 10072, há 1 s), 65 INFO, CRC 2, perdidos 317, lixo 11199 B, 179752 B, reconexões 0
+[00:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:58:09] placaA: 3842 janelas (última 10132, há 1 s), 66 INFO, CRC 2, perdidos 317, lixo 11199 B, 182425 B, reconexões 0
+[00:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[00:59:09] placaA: 3902 janelas (última 10192, há 0 s), 67 INFO, CRC 2, perdidos 317, lixo 11199 B, 185098 B, reconexões 0
+[01:00:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:00:08] placaA: 3961 janelas (última 10251, há 0 s), 68 INFO, CRC 2, perdidos 317, lixo 11199 B, 187727 B, reconexões 0
+[01:01:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:01:08] placaA: 4021 janelas (última 10311, há 0 s), 69 INFO, CRC 2, perdidos 317, lixo 11199 B, 190400 B, reconexões 0
+[01:02:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:02:08] placaA: 4081 janelas (última 10371, há 1 s), 70 INFO, CRC 2, perdidos 317, lixo 11199 B, 193073 B, reconexões 0
+[01:03:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:03:08] placaA: 4141 janelas (última 10431, há 1 s), 71 INFO, CRC 2, perdidos 317, lixo 11199 B, 195746 B, reconexões 0
+[01:04:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:04:08] placaA: 4201 janelas (última 10491, há 0 s), 72 INFO, CRC 2, perdidos 317, lixo 11199 B, 198419 B, reconexões 0
+[01:05:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:05:08] placaA: 4261 janelas (última 10551, há 0 s), 73 INFO, CRC 2, perdidos 317, lixo 11199 B, 201092 B, reconexões 0
+[01:06:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:06:08] placaA: 4321 janelas (última 10611, há 0 s), 74 INFO, CRC 2, perdidos 317, lixo 11199 B, 203765 B, reconexões 0
+[01:07:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:07:08] placaA: 4381 janelas (última 10671, há 1 s), 75 INFO, CRC 2, perdidos 317, lixo 11199 B, 206438 B, reconexões 0
+[01:08:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:08:08] placaA: 4441 janelas (última 10731, há 1 s), 76 INFO, CRC 2, perdidos 317, lixo 11199 B, 209111 B, reconexões 0
+[01:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:09:09] placaA: 4501 janelas (última 10791, há 1 s), 77 INFO, CRC 2, perdidos 317, lixo 11199 B, 211784 B, reconexões 0
+[01:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:10:09] placaA: 4561 janelas (última 10851, há 0 s), 78 INFO, CRC 2, perdidos 317, lixo 11199 B, 214457 B, reconexões 0
+[01:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:11:09] placaA: 4621 janelas (última 10911, há 0 s), 79 INFO, CRC 2, perdidos 317, lixo 11199 B, 217130 B, reconexões 0
+[01:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:12:09] placaA: 4681 janelas (última 10971, há 1 s), 80 INFO, CRC 2, perdidos 317, lixo 11199 B, 219803 B, reconexões 0
+[01:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:13:09] placaA: 4741 janelas (última 11031, há 1 s), 81 INFO, CRC 2, perdidos 317, lixo 11199 B, 222476 B, reconexões 0
+[01:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:14:09] placaA: 4801 janelas (última 11091, há 1 s), 82 INFO, CRC 2, perdidos 317, lixo 11199 B, 225149 B, reconexões 0
+[01:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:15:09] placaA: 4861 janelas (última 11151, há 0 s), 83 INFO, CRC 2, perdidos 317, lixo 11199 B, 227822 B, reconexões 0
+[01:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:16:09] placaA: 4921 janelas (última 11211, há 0 s), 84 INFO, CRC 2, perdidos 317, lixo 11199 B, 230495 B, reconexões 0
+[01:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:17:09] placaA: 4981 janelas (última 11271, há 1 s), 85 INFO, CRC 2, perdidos 317, lixo 11199 B, 233168 B, reconexões 0
+[01:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:18:09] placaA: 5041 janelas (última 11331, há 1 s), 86 INFO, CRC 2, perdidos 317, lixo 11199 B, 235841 B, reconexões 0
+[01:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:19:09] placaA: 5101 janelas (última 11391, há 1 s), 87 INFO, CRC 2, perdidos 317, lixo 11199 B, 238514 B, reconexões 0
+[01:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:20:09] placaA: 5161 janelas (última 11451, há 0 s), 88 INFO, CRC 2, perdidos 317, lixo 11199 B, 241187 B, reconexões 0
+[01:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:21:09] placaA: 5221 janelas (última 11511, há 0 s), 89 INFO, CRC 2, perdidos 317, lixo 11199 B, 243860 B, reconexões 0
+[01:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:22:09] placaA: 5281 janelas (última 11571, há 1 s), 90 INFO, CRC 2, perdidos 317, lixo 11199 B, 246533 B, reconexões 0
+[01:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:23:09] placaA: 5341 janelas (última 11631, há 0 s), 91 INFO, CRC 2, perdidos 317, lixo 11199 B, 249206 B, reconexões 0
+[01:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:24:09] placaA: 5401 janelas (última 11691, há 0 s), 92 INFO, CRC 2, perdidos 317, lixo 11199 B, 251879 B, reconexões 0
+[01:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:25:09] placaA: 5461 janelas (última 11751, há 1 s), 93 INFO, CRC 2, perdidos 317, lixo 11199 B, 254552 B, reconexões 0
+[01:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:26:09] placaA: 5521 janelas (última 11811, há 1 s), 94 INFO, CRC 2, perdidos 317, lixo 11199 B, 257225 B, reconexões 0
+[01:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:27:09] placaA: 5581 janelas (última 11871, há 1 s), 95 INFO, CRC 2, perdidos 317, lixo 11199 B, 259898 B, reconexões 0
+[01:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:28:09] placaA: 5641 janelas (última 11931, há 0 s), 96 INFO, CRC 2, perdidos 317, lixo 11199 B, 262571 B, reconexões 0
+[01:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:29:09] placaA: 5701 janelas (última 11991, há 0 s), 97 INFO, CRC 2, perdidos 317, lixo 11199 B, 265244 B, reconexões 0
+[01:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:30:09] placaA: 5761 janelas (última 12051, há 1 s), 98 INFO, CRC 2, perdidos 317, lixo 11199 B, 267917 B, reconexões 0
+[01:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:31:09] placaA: 5821 janelas (última 12111, há 1 s), 99 INFO, CRC 2, perdidos 317, lixo 11199 B, 270590 B, reconexões 0
+[01:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:32:09] placaA: 5881 janelas (última 12171, há 1 s), 100 INFO, CRC 2, perdidos 317, lixo 11199 B, 273263 B, reconexões 0
+[01:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:33:09] placaA: 5941 janelas (última 12231, há 0 s), 101 INFO, CRC 2, perdidos 317, lixo 11199 B, 275936 B, reconexões 0
+[01:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:34:09] placaA: 6001 janelas (última 12291, há 1 s), 102 INFO, CRC 2, perdidos 317, lixo 11199 B, 278609 B, reconexões 0
+[01:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:35:09] placaA: 6061 janelas (última 12351, há 1 s), 103 INFO, CRC 2, perdidos 317, lixo 11199 B, 281282 B, reconexões 0
+[01:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:36:09] placaA: 6121 janelas (última 12411, há 1 s), 104 INFO, CRC 2, perdidos 317, lixo 11199 B, 283955 B, reconexões 0
+[01:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:37:09] placaA: 6181 janelas (última 12471, há 1 s), 105 INFO, CRC 2, perdidos 317, lixo 11199 B, 286628 B, reconexões 0
+[01:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:38:09] placaA: 6241 janelas (última 12531, há 0 s), 106 INFO, CRC 2, perdidos 317, lixo 11199 B, 289301 B, reconexões 0
+[01:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:39:09] placaA: 6301 janelas (última 12591, há 1 s), 107 INFO, CRC 2, perdidos 317, lixo 11199 B, 291974 B, reconexões 0
+[01:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:40:09] placaA: 6361 janelas (última 12651, há 1 s), 108 INFO, CRC 2, perdidos 317, lixo 11199 B, 294647 B, reconexões 0
+[01:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:41:09] placaA: 6421 janelas (última 12711, há 1 s), 109 INFO, CRC 2, perdidos 317, lixo 11199 B, 297320 B, reconexões 0
+[01:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:42:09] placaA: 6481 janelas (última 12771, há 0 s), 110 INFO, CRC 2, perdidos 317, lixo 11199 B, 299993 B, reconexões 0
+[01:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:43:09] placaA: 6541 janelas (última 12831, há 1 s), 111 INFO, CRC 2, perdidos 317, lixo 11199 B, 302666 B, reconexões 0
+[01:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:44:09] placaA: 6601 janelas (última 12891, há 1 s), 112 INFO, CRC 2, perdidos 317, lixo 11199 B, 305339 B, reconexões 0
+[01:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:45:09] placaA: 6661 janelas (última 12951, há 1 s), 113 INFO, CRC 2, perdidos 317, lixo 11199 B, 308012 B, reconexões 0
+[01:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:46:09] placaA: 6721 janelas (última 13011, há 1 s), 114 INFO, CRC 2, perdidos 317, lixo 11199 B, 310685 B, reconexões 0
+[01:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:47:09] placaA: 6781 janelas (última 13071, há 1 s), 115 INFO, CRC 2, perdidos 317, lixo 11199 B, 313358 B, reconexões 0
+[01:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:48:09] placaA: 6841 janelas (última 13131, há 1 s), 116 INFO, CRC 2, perdidos 317, lixo 11199 B, 316031 B, reconexões 0
+[01:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:49:09] placaA: 6901 janelas (última 13191, há 1 s), 117 INFO, CRC 2, perdidos 317, lixo 11199 B, 318704 B, reconexões 0
+[01:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:50:09] placaA: 6961 janelas (última 13251, há 1 s), 118 INFO, CRC 2, perdidos 317, lixo 11199 B, 321377 B, reconexões 0
+[01:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:51:09] placaA: 7021 janelas (última 13311, há 1 s), 119 INFO, CRC 2, perdidos 317, lixo 11199 B, 324050 B, reconexões 0
+[01:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:52:09] placaA: 7081 janelas (última 13371, há 1 s), 120 INFO, CRC 2, perdidos 317, lixo 11199 B, 326723 B, reconexões 0
+[01:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:53:09] placaA: 7141 janelas (última 13431, há 1 s), 121 INFO, CRC 2, perdidos 317, lixo 11199 B, 329396 B, reconexões 0
+[01:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:54:09] placaA: 7201 janelas (última 13491, há 1 s), 122 INFO, CRC 2, perdidos 317, lixo 11199 B, 332069 B, reconexões 0
+[01:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:55:09] placaA: 7261 janelas (última 13551, há 1 s), 123 INFO, CRC 2, perdidos 317, lixo 11199 B, 334742 B, reconexões 0
+[01:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:56:09] placaA: 7321 janelas (última 13611, há 1 s), 124 INFO, CRC 2, perdidos 317, lixo 11199 B, 337415 B, reconexões 0
+[01:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:57:09] placaA: 7381 janelas (última 13671, há 1 s), 125 INFO, CRC 2, perdidos 317, lixo 11199 B, 340088 B, reconexões 0
+[01:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:58:09] placaA: 7441 janelas (última 13731, há 1 s), 126 INFO, CRC 2, perdidos 317, lixo 11199 B, 342761 B, reconexões 0
+[01:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[01:59:09] placaA: 7501 janelas (última 13791, há 1 s), 127 INFO, CRC 2, perdidos 317, lixo 11199 B, 345434 B, reconexões 0
+[02:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:00:09] placaA: 7561 janelas (última 13851, há 1 s), 128 INFO, CRC 2, perdidos 317, lixo 11199 B, 348107 B, reconexões 0
+[02:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:01:09] placaA: 7621 janelas (última 13911, há 1 s), 129 INFO, CRC 2, perdidos 317, lixo 11199 B, 350780 B, reconexões 0
+[02:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:02:09] placaA: 7681 janelas (última 13971, há 1 s), 130 INFO, CRC 2, perdidos 317, lixo 11199 B, 353453 B, reconexões 0
+[02:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:03:09] placaA: 7741 janelas (última 14031, há 1 s), 131 INFO, CRC 2, perdidos 317, lixo 11199 B, 356126 B, reconexões 0
+[02:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:04:09] placaA: 7801 janelas (última 14091, há 1 s), 132 INFO, CRC 2, perdidos 317, lixo 11199 B, 358799 B, reconexões 0
+[02:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:05:09] placaA: 7861 janelas (última 14151, há 1 s), 133 INFO, CRC 2, perdidos 317, lixo 11199 B, 361472 B, reconexões 0
+[02:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:06:09] placaA: 7921 janelas (última 14211, há 1 s), 134 INFO, CRC 2, perdidos 317, lixo 11199 B, 364145 B, reconexões 0
+[02:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:07:09] placaA: 7981 janelas (última 14271, há 1 s), 135 INFO, CRC 2, perdidos 317, lixo 11199 B, 366818 B, reconexões 0
+[02:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:08:09] placaA: 8041 janelas (última 14331, há 1 s), 136 INFO, CRC 2, perdidos 317, lixo 11199 B, 369491 B, reconexões 0
+[02:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:09:09] placaA: 8102 janelas (última 14392, há 0 s), 137 INFO, CRC 2, perdidos 317, lixo 11199 B, 372208 B, reconexões 0
+[02:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:10:09] placaA: 8161 janelas (última 14451, há 1 s), 138 INFO, CRC 2, perdidos 317, lixo 11199 B, 374837 B, reconexões 0
+[02:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:11:09] placaA: 8221 janelas (última 14511, há 1 s), 139 INFO, CRC 2, perdidos 317, lixo 11199 B, 377510 B, reconexões 0
+[02:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:12:09] placaA: 8281 janelas (última 14571, há 1 s), 140 INFO, CRC 2, perdidos 317, lixo 11199 B, 380183 B, reconexões 0
+[02:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:13:09] placaA: 8341 janelas (última 14631, há 1 s), 141 INFO, CRC 2, perdidos 317, lixo 11199 B, 382856 B, reconexões 0
+[02:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:14:09] placaA: 8401 janelas (última 14691, há 1 s), 142 INFO, CRC 2, perdidos 317, lixo 11199 B, 385529 B, reconexões 0
+[02:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:15:09] placaA: 8461 janelas (última 14751, há 1 s), 143 INFO, CRC 2, perdidos 317, lixo 11199 B, 388202 B, reconexões 0
+[02:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:16:09] placaA: 8521 janelas (última 14811, há 1 s), 144 INFO, CRC 2, perdidos 317, lixo 11199 B, 390875 B, reconexões 0
+[02:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:17:09] placaA: 8581 janelas (última 14871, há 1 s), 145 INFO, CRC 2, perdidos 317, lixo 11199 B, 393548 B, reconexões 0
+[02:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:18:09] placaA: 8641 janelas (última 14931, há 1 s), 146 INFO, CRC 2, perdidos 317, lixo 11199 B, 396221 B, reconexões 0
+[02:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:19:09] placaA: 8701 janelas (última 14991, há 1 s), 147 INFO, CRC 2, perdidos 317, lixo 11199 B, 398894 B, reconexões 0
+[02:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:20:09] placaA: 8761 janelas (última 15051, há 1 s), 148 INFO, CRC 2, perdidos 317, lixo 11199 B, 401567 B, reconexões 0
+[02:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:21:09] placaA: 8821 janelas (última 15111, há 1 s), 149 INFO, CRC 2, perdidos 317, lixo 11199 B, 404240 B, reconexões 0
+[02:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:22:09] placaA: 8881 janelas (última 15171, há 1 s), 150 INFO, CRC 2, perdidos 317, lixo 11199 B, 406913 B, reconexões 0
+[02:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:23:09] placaA: 8941 janelas (última 15231, há 1 s), 151 INFO, CRC 2, perdidos 317, lixo 11199 B, 409586 B, reconexões 0
+[02:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:24:09] placaA: 9001 janelas (última 15291, há 1 s), 152 INFO, CRC 2, perdidos 317, lixo 11199 B, 412259 B, reconexões 0
+[02:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:25:09] placaA: 9062 janelas (última 15352, há 0 s), 153 INFO, CRC 2, perdidos 317, lixo 11199 B, 414976 B, reconexões 0
+[02:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:26:09] placaA: 9121 janelas (última 15411, há 1 s), 154 INFO, CRC 2, perdidos 317, lixo 11199 B, 417605 B, reconexões 0
+[02:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:27:09] placaA: 9181 janelas (última 15471, há 1 s), 155 INFO, CRC 2, perdidos 317, lixo 11199 B, 420278 B, reconexões 0
+[02:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:28:09] placaA: 9241 janelas (última 15531, há 1 s), 156 INFO, CRC 2, perdidos 317, lixo 11199 B, 422951 B, reconexões 0
+[02:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:29:09] placaA: 9302 janelas (última 15592, há 0 s), 157 INFO, CRC 2, perdidos 317, lixo 11199 B, 425668 B, reconexões 0
+[02:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:30:09] placaA: 9361 janelas (última 15651, há 1 s), 158 INFO, CRC 2, perdidos 317, lixo 11199 B, 428297 B, reconexões 0
+[02:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:31:09] placaA: 9421 janelas (última 15711, há 1 s), 159 INFO, CRC 2, perdidos 317, lixo 11199 B, 430970 B, reconexões 0
+[02:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:32:09] placaA: 9481 janelas (última 15771, há 1 s), 160 INFO, CRC 2, perdidos 317, lixo 11199 B, 433643 B, reconexões 0
+[02:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:33:09] placaA: 9542 janelas (última 15832, há 0 s), 161 INFO, CRC 2, perdidos 317, lixo 11199 B, 436360 B, reconexões 0
+[02:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:34:09] placaA: 9601 janelas (última 15891, há 1 s), 162 INFO, CRC 2, perdidos 317, lixo 11199 B, 438989 B, reconexões 0
+[02:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:35:09] placaA: 9661 janelas (última 15951, há 1 s), 163 INFO, CRC 2, perdidos 317, lixo 11199 B, 441662 B, reconexões 0
+[02:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:36:09] placaA: 9721 janelas (última 16011, há 1 s), 164 INFO, CRC 2, perdidos 317, lixo 11199 B, 444335 B, reconexões 0
+[02:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:37:09] placaA: 9782 janelas (última 16072, há 0 s), 165 INFO, CRC 2, perdidos 317, lixo 11199 B, 447052 B, reconexões 0
+[02:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:38:09] placaA: 9841 janelas (última 16131, há 1 s), 166 INFO, CRC 2, perdidos 317, lixo 11199 B, 449681 B, reconexões 0
+[02:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:39:09] placaA: 9901 janelas (última 16191, há 1 s), 167 INFO, CRC 2, perdidos 317, lixo 11199 B, 452354 B, reconexões 0
+[02:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:40:09] placaA: 9961 janelas (última 16251, há 1 s), 168 INFO, CRC 2, perdidos 317, lixo 11199 B, 455027 B, reconexões 0
+[02:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:41:09] placaA: 10022 janelas (última 16312, há 0 s), 169 INFO, CRC 2, perdidos 317, lixo 11199 B, 457744 B, reconexões 0
+[02:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:42:09] placaA: 10082 janelas (última 16372, há 0 s), 170 INFO, CRC 2, perdidos 317, lixo 11199 B, 460417 B, reconexões 0
+[02:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:43:09] placaA: 10141 janelas (última 16431, há 1 s), 171 INFO, CRC 2, perdidos 317, lixo 11199 B, 463046 B, reconexões 0
+[02:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:44:09] placaA: 10201 janelas (última 16491, há 1 s), 172 INFO, CRC 2, perdidos 317, lixo 11199 B, 465719 B, reconexões 0
+[02:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:45:09] placaA: 10262 janelas (última 16552, há 0 s), 173 INFO, CRC 2, perdidos 317, lixo 11199 B, 468436 B, reconexões 0
+[02:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:46:09] placaA: 10322 janelas (última 16612, há 0 s), 174 INFO, CRC 2, perdidos 317, lixo 11199 B, 471109 B, reconexões 0
+[02:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:47:09] placaA: 10381 janelas (última 16671, há 1 s), 175 INFO, CRC 2, perdidos 317, lixo 11199 B, 473738 B, reconexões 0
+[02:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:48:09] placaA: 10442 janelas (última 16732, há 0 s), 176 INFO, CRC 2, perdidos 317, lixo 11199 B, 476455 B, reconexões 0
+[02:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:49:09] placaA: 10502 janelas (última 16792, há 0 s), 177 INFO, CRC 2, perdidos 317, lixo 11199 B, 479128 B, reconexões 0
+[02:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:50:09] placaA: 10561 janelas (última 16851, há 1 s), 178 INFO, CRC 2, perdidos 317, lixo 11199 B, 481757 B, reconexões 0
+[02:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:51:09] placaA: 10621 janelas (última 16911, há 1 s), 179 INFO, CRC 2, perdidos 317, lixo 11199 B, 484430 B, reconexões 0
+[02:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:52:09] placaA: 10680 janelas (última 16972, há 0 s), 180 INFO, CRC 3, perdidos 319, lixo 11334 B, 487194 B, reconexões 0
+[02:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:53:09] placaA: 10740 janelas (última 17032, há 0 s), 181 INFO, CRC 3, perdidos 319, lixo 11334 B, 489867 B, reconexões 0
+[02:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:54:09] placaA: 10799 janelas (última 17091, há 1 s), 182 INFO, CRC 3, perdidos 319, lixo 11334 B, 492496 B, reconexões 0
+[02:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:55:09] placaA: 10859 janelas (última 17151, há 1 s), 183 INFO, CRC 3, perdidos 319, lixo 11334 B, 495169 B, reconexões 0
+[02:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:56:09] placaA: 10920 janelas (última 17212, há 0 s), 184 INFO, CRC 3, perdidos 319, lixo 11334 B, 497886 B, reconexões 0
+[02:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:57:09] placaA: 10980 janelas (última 17272, há 0 s), 185 INFO, CRC 3, perdidos 319, lixo 11334 B, 500559 B, reconexões 0
+[02:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:58:09] placaA: 11039 janelas (última 17331, há 1 s), 186 INFO, CRC 3, perdidos 319, lixo 11334 B, 503188 B, reconexões 0
+[02:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[02:59:09] placaA: 11099 janelas (última 17391, há 1 s), 187 INFO, CRC 3, perdidos 319, lixo 11334 B, 505861 B, reconexões 0
+[03:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:00:09] placaA: 11160 janelas (última 17452, há 0 s), 188 INFO, CRC 3, perdidos 319, lixo 11334 B, 508578 B, reconexões 0
+[03:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:01:09] placaA: 11220 janelas (última 17512, há 0 s), 189 INFO, CRC 3, perdidos 319, lixo 11334 B, 511251 B, reconexões 0
+[03:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:02:09] placaA: 11279 janelas (última 17571, há 1 s), 190 INFO, CRC 3, perdidos 319, lixo 11334 B, 513880 B, reconexões 0
+[03:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:03:09] placaA: 11339 janelas (última 17631, há 1 s), 191 INFO, CRC 3, perdidos 319, lixo 11334 B, 516553 B, reconexões 0
+[03:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:04:09] placaA: 11400 janelas (última 17692, há 0 s), 192 INFO, CRC 3, perdidos 319, lixo 11334 B, 519270 B, reconexões 0
+[03:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:05:09] placaA: 11460 janelas (última 17752, há 0 s), 193 INFO, CRC 3, perdidos 319, lixo 11334 B, 521943 B, reconexões 0
+[03:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:06:09] placaA: 11520 janelas (última 17812, há 0 s), 194 INFO, CRC 3, perdidos 319, lixo 11334 B, 524616 B, reconexões 0
+[03:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:07:09] placaA: 11579 janelas (última 17871, há 1 s), 195 INFO, CRC 3, perdidos 319, lixo 11334 B, 527245 B, reconexões 0
+[03:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:08:09] placaA: 11640 janelas (última 17932, há 0 s), 196 INFO, CRC 3, perdidos 319, lixo 11334 B, 529962 B, reconexões 0
+[03:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:09:09] placaA: 11700 janelas (última 17992, há 0 s), 197 INFO, CRC 3, perdidos 319, lixo 11334 B, 532635 B, reconexões 0
+[03:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:10:09] placaA: 11760 janelas (última 18052, há 0 s), 198 INFO, CRC 3, perdidos 319, lixo 11334 B, 535308 B, reconexões 0
+[03:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:11:09] placaA: 11819 janelas (última 18111, há 1 s), 199 INFO, CRC 3, perdidos 319, lixo 11334 B, 537937 B, reconexões 0
+[03:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:12:09] placaA: 11880 janelas (última 18172, há 0 s), 200 INFO, CRC 3, perdidos 319, lixo 11334 B, 540654 B, reconexões 0
+[03:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:13:09] placaA: 11940 janelas (última 18232, há 0 s), 201 INFO, CRC 3, perdidos 319, lixo 11334 B, 543327 B, reconexões 0
+[03:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:14:09] placaA: 12000 janelas (última 18292, há 0 s), 202 INFO, CRC 3, perdidos 319, lixo 11334 B, 546000 B, reconexões 0
+[03:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:15:09] placaA: 12059 janelas (última 18351, há 1 s), 203 INFO, CRC 3, perdidos 319, lixo 11334 B, 548629 B, reconexões 0
+[03:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:16:09] placaA: 12120 janelas (última 18412, há 0 s), 204 INFO, CRC 3, perdidos 319, lixo 11334 B, 551346 B, reconexões 0
+[03:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:17:09] placaA: 12180 janelas (última 18472, há 0 s), 205 INFO, CRC 3, perdidos 319, lixo 11334 B, 554019 B, reconexões 0
+[03:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:18:09] placaA: 12240 janelas (última 18532, há 0 s), 206 INFO, CRC 3, perdidos 319, lixo 11334 B, 556692 B, reconexões 0
+[03:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:19:09] placaA: 12299 janelas (última 18591, há 1 s), 207 INFO, CRC 3, perdidos 319, lixo 11334 B, 559321 B, reconexões 0
+[03:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:20:09] placaA: 12360 janelas (última 18652, há 0 s), 208 INFO, CRC 3, perdidos 319, lixo 11334 B, 562038 B, reconexões 0
+[03:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:21:09] placaA: 12420 janelas (última 18712, há 0 s), 209 INFO, CRC 3, perdidos 319, lixo 11334 B, 564711 B, reconexões 0
+[03:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:22:09] placaA: 12480 janelas (última 18772, há 0 s), 210 INFO, CRC 3, perdidos 319, lixo 11334 B, 567384 B, reconexões 0
+[03:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:23:09] placaA: 12540 janelas (última 18832, há 0 s), 211 INFO, CRC 3, perdidos 319, lixo 11334 B, 570057 B, reconexões 0
+[03:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:24:09] placaA: 12599 janelas (última 18891, há 1 s), 212 INFO, CRC 3, perdidos 319, lixo 11334 B, 572702 B, reconexões 0
+[03:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:25:09] placaA: 12660 janelas (última 18952, há 0 s), 213 INFO, CRC 3, perdidos 319, lixo 11334 B, 575403 B, reconexões 0
+[03:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:26:09] placaA: 12720 janelas (última 19012, há 0 s), 214 INFO, CRC 3, perdidos 319, lixo 11334 B, 578076 B, reconexões 0
+[03:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:27:09] placaA: 12780 janelas (última 19072, há 0 s), 215 INFO, CRC 3, perdidos 319, lixo 11334 B, 580749 B, reconexões 0
+[03:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:28:09] placaA: 12840 janelas (última 19132, há 0 s), 216 INFO, CRC 3, perdidos 319, lixo 11334 B, 583422 B, reconexões 0
+[03:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:29:09] placaA: 12900 janelas (última 19192, há 0 s), 217 INFO, CRC 3, perdidos 319, lixo 11334 B, 586095 B, reconexões 0
+[03:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:30:09] placaA: 12960 janelas (última 19252, há 0 s), 218 INFO, CRC 3, perdidos 319, lixo 11334 B, 588768 B, reconexões 0
+[03:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:31:09] placaA: 13020 janelas (última 19312, há 0 s), 219 INFO, CRC 3, perdidos 319, lixo 11334 B, 591441 B, reconexões 0
+[03:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:32:09] placaA: 13080 janelas (última 19372, há 0 s), 220 INFO, CRC 3, perdidos 319, lixo 11334 B, 594114 B, reconexões 0
+[03:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:33:09] placaA: 13140 janelas (última 19432, há 0 s), 221 INFO, CRC 3, perdidos 319, lixo 11334 B, 596787 B, reconexões 0
+[03:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:34:09] placaA: 13200 janelas (última 19492, há 0 s), 222 INFO, CRC 3, perdidos 319, lixo 11334 B, 599460 B, reconexões 0
+[03:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:35:09] placaA: 13260 janelas (última 19552, há 0 s), 223 INFO, CRC 3, perdidos 319, lixo 11334 B, 602133 B, reconexões 0
+[03:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:36:09] placaA: 13320 janelas (última 19612, há 0 s), 224 INFO, CRC 3, perdidos 319, lixo 11334 B, 604806 B, reconexões 0
+[03:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:37:09] placaA: 13380 janelas (última 19672, há 0 s), 225 INFO, CRC 3, perdidos 319, lixo 11334 B, 607479 B, reconexões 0
+[03:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:38:09] placaA: 13440 janelas (última 19732, há 0 s), 226 INFO, CRC 3, perdidos 319, lixo 11334 B, 610152 B, reconexões 0
+[03:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:39:09] placaA: 13500 janelas (última 19792, há 0 s), 227 INFO, CRC 3, perdidos 319, lixo 11334 B, 612825 B, reconexões 0
+[03:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:40:09] placaA: 13560 janelas (última 19852, há 0 s), 228 INFO, CRC 3, perdidos 319, lixo 11334 B, 615498 B, reconexões 0
+[03:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:41:09] placaA: 13620 janelas (última 19912, há 0 s), 229 INFO, CRC 3, perdidos 319, lixo 11334 B, 618171 B, reconexões 0
+[03:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:42:09] placaA: 13680 janelas (última 19972, há 0 s), 230 INFO, CRC 3, perdidos 319, lixo 11334 B, 620844 B, reconexões 0
+[03:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:43:09] placaA: 13740 janelas (última 20032, há 0 s), 231 INFO, CRC 3, perdidos 319, lixo 11334 B, 623517 B, reconexões 0
+[03:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:44:09] placaA: 13800 janelas (última 20092, há 1 s), 232 INFO, CRC 3, perdidos 319, lixo 11334 B, 626190 B, reconexões 0
+[03:45:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:45:08] placaA: 13859 janelas (última 20151, há 0 s), 233 INFO, CRC 3, perdidos 319, lixo 11334 B, 628819 B, reconexões 0
+[03:46:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:46:08] placaA: 13919 janelas (última 20211, há 0 s), 234 INFO, CRC 3, perdidos 319, lixo 11334 B, 631492 B, reconexões 0
+[03:47:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:47:08] placaA: 13979 janelas (última 20271, há 0 s), 235 INFO, CRC 3, perdidos 319, lixo 11334 B, 634165 B, reconexões 0
+[03:48:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:48:08] placaA: 14039 janelas (última 20331, há 0 s), 236 INFO, CRC 3, perdidos 319, lixo 11334 B, 636838 B, reconexões 0
+[03:49:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:49:08] placaA: 14099 janelas (última 20391, há 1 s), 237 INFO, CRC 3, perdidos 319, lixo 11334 B, 639511 B, reconexões 0
+[03:50:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:50:08] placaA: 14159 janelas (última 20451, há 0 s), 238 INFO, CRC 3, perdidos 319, lixo 11334 B, 642184 B, reconexões 0
+[03:51:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:51:08] placaA: 14219 janelas (última 20511, há 0 s), 239 INFO, CRC 3, perdidos 319, lixo 11334 B, 644857 B, reconexões 0
+[03:52:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:52:08] placaA: 14279 janelas (última 20571, há 0 s), 240 INFO, CRC 3, perdidos 319, lixo 11334 B, 647530 B, reconexões 0
+[03:53:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:53:08] placaA: 14339 janelas (última 20631, há 0 s), 241 INFO, CRC 3, perdidos 319, lixo 11334 B, 650203 B, reconexões 0
+[03:54:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:54:08] placaA: 14399 janelas (última 20691, há 1 s), 242 INFO, CRC 3, perdidos 319, lixo 11334 B, 652876 B, reconexões 0
+[03:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:55:09] placaA: 14459 janelas (última 20751, há 0 s), 243 INFO, CRC 3, perdidos 319, lixo 11334 B, 655549 B, reconexões 0
+[03:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:56:09] placaA: 14519 janelas (última 20811, há 0 s), 244 INFO, CRC 3, perdidos 319, lixo 11334 B, 658222 B, reconexões 0
+[03:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:57:09] placaA: 14579 janelas (última 20871, há 0 s), 245 INFO, CRC 3, perdidos 319, lixo 11334 B, 660895 B, reconexões 0
+[03:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:58:09] placaA: 14639 janelas (última 20931, há 1 s), 246 INFO, CRC 3, perdidos 319, lixo 11334 B, 663568 B, reconexões 0
+[03:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[03:59:09] placaA: 14699 janelas (última 20991, há 1 s), 247 INFO, CRC 3, perdidos 319, lixo 11334 B, 666241 B, reconexões 0
+[04:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:00:09] placaA: 14759 janelas (última 21051, há 0 s), 248 INFO, CRC 3, perdidos 319, lixo 11334 B, 668914 B, reconexões 0
+[04:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:01:09] placaA: 14819 janelas (última 21111, há 0 s), 249 INFO, CRC 3, perdidos 319, lixo 11334 B, 671587 B, reconexões 0
+[04:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:02:09] placaA: 14879 janelas (última 21171, há 0 s), 250 INFO, CRC 3, perdidos 319, lixo 11334 B, 674260 B, reconexões 0
+[04:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:03:09] placaA: 14939 janelas (última 21231, há 1 s), 251 INFO, CRC 3, perdidos 319, lixo 11334 B, 676933 B, reconexões 0
+[04:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:04:09] placaA: 14999 janelas (última 21291, há 1 s), 252 INFO, CRC 3, perdidos 319, lixo 11334 B, 679606 B, reconexões 0
+[04:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:05:09] placaA: 15059 janelas (última 21351, há 0 s), 253 INFO, CRC 3, perdidos 319, lixo 11334 B, 682279 B, reconexões 0
+[04:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:06:09] placaA: 15119 janelas (última 21411, há 0 s), 254 INFO, CRC 3, perdidos 319, lixo 11334 B, 684952 B, reconexões 0
+[04:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:07:09] placaA: 15179 janelas (última 21471, há 0 s), 255 INFO, CRC 3, perdidos 319, lixo 11334 B, 687625 B, reconexões 0
+[04:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:08:09] placaA: 15239 janelas (última 21531, há 1 s), 256 INFO, CRC 3, perdidos 319, lixo 11334 B, 690298 B, reconexões 0
+[04:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:09:09] placaA: 15299 janelas (última 21591, há 1 s), 257 INFO, CRC 3, perdidos 319, lixo 11334 B, 692971 B, reconexões 0
+[04:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:10:09] placaA: 15359 janelas (última 21651, há 0 s), 258 INFO, CRC 3, perdidos 319, lixo 11334 B, 695644 B, reconexões 0
+[04:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:11:09] placaA: 15419 janelas (última 21711, há 0 s), 259 INFO, CRC 3, perdidos 319, lixo 11334 B, 698317 B, reconexões 0
+[04:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:12:09] placaA: 15479 janelas (última 21771, há 0 s), 260 INFO, CRC 3, perdidos 319, lixo 11334 B, 700990 B, reconexões 0
+[04:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:13:09] placaA: 15539 janelas (última 21831, há 1 s), 261 INFO, CRC 3, perdidos 319, lixo 11334 B, 703663 B, reconexões 0
+[04:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:14:09] placaA: 15599 janelas (última 21891, há 1 s), 262 INFO, CRC 3, perdidos 319, lixo 11334 B, 706336 B, reconexões 0
+[04:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:15:09] placaA: 15659 janelas (última 21951, há 0 s), 263 INFO, CRC 3, perdidos 319, lixo 11334 B, 709009 B, reconexões 0
+[04:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:16:09] placaA: 15719 janelas (última 22011, há 0 s), 264 INFO, CRC 3, perdidos 319, lixo 11334 B, 711682 B, reconexões 0
+[04:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:17:09] placaA: 15779 janelas (última 22071, há 1 s), 265 INFO, CRC 3, perdidos 319, lixo 11334 B, 714355 B, reconexões 0
+[04:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:18:09] placaA: 15839 janelas (última 22131, há 1 s), 266 INFO, CRC 3, perdidos 319, lixo 11334 B, 717028 B, reconexões 0
+[04:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:19:09] placaA: 15899 janelas (última 22191, há 1 s), 267 INFO, CRC 3, perdidos 319, lixo 11334 B, 719701 B, reconexões 0
+[04:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:20:09] placaA: 15959 janelas (última 22251, há 0 s), 268 INFO, CRC 3, perdidos 319, lixo 11334 B, 722374 B, reconexões 0
+[04:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:21:09] placaA: 16019 janelas (última 22311, há 0 s), 269 INFO, CRC 3, perdidos 319, lixo 11334 B, 725047 B, reconexões 0
+[04:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:22:09] placaA: 16079 janelas (última 22371, há 1 s), 270 INFO, CRC 3, perdidos 319, lixo 11334 B, 727720 B, reconexões 0
+[04:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:23:09] placaA: 16139 janelas (última 22431, há 1 s), 271 INFO, CRC 3, perdidos 319, lixo 11334 B, 730393 B, reconexões 0
+[04:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:24:09] placaA: 16199 janelas (última 22491, há 1 s), 272 INFO, CRC 3, perdidos 319, lixo 11334 B, 733066 B, reconexões 0
+[04:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:25:09] placaA: 16259 janelas (última 22551, há 0 s), 273 INFO, CRC 3, perdidos 319, lixo 11334 B, 735739 B, reconexões 0
+[04:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:26:09] placaA: 16319 janelas (última 22611, há 0 s), 274 INFO, CRC 3, perdidos 319, lixo 11334 B, 738412 B, reconexões 0
+[04:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:27:09] placaA: 16379 janelas (última 22671, há 1 s), 275 INFO, CRC 3, perdidos 319, lixo 11334 B, 741085 B, reconexões 0
+[04:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:28:09] placaA: 16439 janelas (última 22731, há 1 s), 276 INFO, CRC 3, perdidos 319, lixo 11334 B, 743758 B, reconexões 0
+[04:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:29:09] placaA: 16499 janelas (última 22791, há 1 s), 277 INFO, CRC 3, perdidos 319, lixo 11334 B, 746431 B, reconexões 0
+[04:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:30:09] placaA: 16559 janelas (última 22851, há 0 s), 278 INFO, CRC 3, perdidos 319, lixo 11334 B, 749104 B, reconexões 0
+[04:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:31:09] placaA: 16619 janelas (última 22911, há 0 s), 279 INFO, CRC 3, perdidos 319, lixo 11334 B, 751777 B, reconexões 0
+[04:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:32:09] placaA: 16679 janelas (última 22971, há 1 s), 280 INFO, CRC 3, perdidos 319, lixo 11334 B, 754450 B, reconexões 0
+[04:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:33:09] placaA: 16739 janelas (última 23031, há 1 s), 281 INFO, CRC 3, perdidos 319, lixo 11334 B, 757123 B, reconexões 0
+[04:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:34:09] placaA: 16799 janelas (última 23091, há 1 s), 282 INFO, CRC 3, perdidos 319, lixo 11334 B, 759796 B, reconexões 0
+[04:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:35:09] placaA: 16859 janelas (última 23151, há 0 s), 283 INFO, CRC 3, perdidos 319, lixo 11334 B, 762469 B, reconexões 0
+[04:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:36:09] placaA: 16919 janelas (última 23211, há 1 s), 284 INFO, CRC 3, perdidos 319, lixo 11334 B, 765142 B, reconexões 0
+[04:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:37:09] placaA: 16979 janelas (última 23271, há 1 s), 285 INFO, CRC 3, perdidos 319, lixo 11334 B, 767815 B, reconexões 0
+[04:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:38:09] placaA: 17039 janelas (última 23331, há 1 s), 286 INFO, CRC 3, perdidos 319, lixo 11334 B, 770488 B, reconexões 0
+[04:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:39:09] placaA: 17099 janelas (última 23391, há 1 s), 287 INFO, CRC 3, perdidos 319, lixo 11334 B, 773161 B, reconexões 0
+[04:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:40:09] placaA: 17159 janelas (última 23451, há 0 s), 288 INFO, CRC 3, perdidos 319, lixo 11334 B, 775834 B, reconexões 0
+[04:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:41:09] placaA: 17219 janelas (última 23511, há 1 s), 289 INFO, CRC 3, perdidos 319, lixo 11334 B, 778507 B, reconexões 0
+[04:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:42:09] placaA: 17279 janelas (última 23571, há 1 s), 290 INFO, CRC 3, perdidos 319, lixo 11334 B, 781180 B, reconexões 0
+[04:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:43:09] placaA: 17339 janelas (última 23631, há 1 s), 291 INFO, CRC 3, perdidos 319, lixo 11334 B, 783853 B, reconexões 0
+[04:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:44:09] placaA: 17399 janelas (última 23691, há 1 s), 292 INFO, CRC 3, perdidos 319, lixo 11334 B, 786526 B, reconexões 0
+[04:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:45:09] placaA: 17459 janelas (última 23751, há 0 s), 293 INFO, CRC 3, perdidos 319, lixo 11334 B, 789199 B, reconexões 0
+[04:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:46:09] placaA: 17519 janelas (última 23811, há 1 s), 294 INFO, CRC 3, perdidos 319, lixo 11334 B, 791872 B, reconexões 0
+[04:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:47:09] placaA: 17579 janelas (última 23871, há 1 s), 295 INFO, CRC 3, perdidos 319, lixo 11334 B, 794545 B, reconexões 0
+[04:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:48:09] placaA: 17639 janelas (última 23931, há 1 s), 296 INFO, CRC 3, perdidos 319, lixo 11334 B, 797218 B, reconexões 0
+[04:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:49:09] placaA: 17699 janelas (última 23991, há 1 s), 297 INFO, CRC 3, perdidos 319, lixo 11334 B, 799891 B, reconexões 0
+[04:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:50:09] placaA: 17759 janelas (última 24051, há 0 s), 298 INFO, CRC 3, perdidos 319, lixo 11334 B, 802564 B, reconexões 0
+[04:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:51:09] placaA: 17819 janelas (última 24111, há 1 s), 299 INFO, CRC 3, perdidos 319, lixo 11334 B, 805237 B, reconexões 0
+[04:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:52:09] placaA: 17879 janelas (última 24171, há 1 s), 300 INFO, CRC 3, perdidos 319, lixo 11334 B, 807910 B, reconexões 0
+[04:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:53:09] placaA: 17939 janelas (última 24231, há 1 s), 301 INFO, CRC 3, perdidos 319, lixo 11334 B, 810583 B, reconexões 0
+[04:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:54:09] placaA: 17999 janelas (última 24291, há 1 s), 302 INFO, CRC 3, perdidos 319, lixo 11334 B, 813256 B, reconexões 0
+[04:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:55:09] placaA: 18059 janelas (última 24351, há 0 s), 303 INFO, CRC 3, perdidos 319, lixo 11334 B, 815929 B, reconexões 0
+[04:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:56:09] placaA: 18119 janelas (última 24411, há 1 s), 304 INFO, CRC 3, perdidos 319, lixo 11334 B, 818602 B, reconexões 0
+[04:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:57:09] placaA: 18179 janelas (última 24471, há 1 s), 305 INFO, CRC 3, perdidos 319, lixo 11334 B, 821275 B, reconexões 0
+[04:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:58:09] placaA: 18239 janelas (última 24531, há 1 s), 306 INFO, CRC 3, perdidos 319, lixo 11334 B, 823948 B, reconexões 0
+[04:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[04:59:09] placaA: 18299 janelas (última 24591, há 1 s), 307 INFO, CRC 3, perdidos 319, lixo 11334 B, 826621 B, reconexões 0
+[05:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:00:09] placaA: 18359 janelas (última 24651, há 1 s), 308 INFO, CRC 3, perdidos 319, lixo 11334 B, 829294 B, reconexões 0
+[05:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:01:09] placaA: 18419 janelas (última 24711, há 1 s), 309 INFO, CRC 3, perdidos 319, lixo 11334 B, 831967 B, reconexões 0
+[05:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:02:09] placaA: 18479 janelas (última 24771, há 1 s), 310 INFO, CRC 3, perdidos 319, lixo 11334 B, 834640 B, reconexões 0
+[05:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:03:09] placaA: 18539 janelas (última 24831, há 1 s), 311 INFO, CRC 3, perdidos 319, lixo 11334 B, 837313 B, reconexões 0
+[05:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:04:09] placaA: 18599 janelas (última 24891, há 1 s), 312 INFO, CRC 3, perdidos 319, lixo 11334 B, 839986 B, reconexões 0
+[05:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:05:09] placaA: 18659 janelas (última 24951, há 1 s), 313 INFO, CRC 3, perdidos 319, lixo 11334 B, 842659 B, reconexões 0
+[05:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:06:09] placaA: 18719 janelas (última 25011, há 1 s), 314 INFO, CRC 3, perdidos 319, lixo 11336 B, 845334 B, reconexões 0
+[05:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:07:09] placaA: 18779 janelas (última 25071, há 1 s), 315 INFO, CRC 3, perdidos 319, lixo 11336 B, 848007 B, reconexões 0
+[05:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:08:09] placaA: 18839 janelas (última 25131, há 1 s), 316 INFO, CRC 3, perdidos 319, lixo 11336 B, 850680 B, reconexões 0
+[05:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:09:09] placaA: 18899 janelas (última 25191, há 1 s), 317 INFO, CRC 3, perdidos 319, lixo 11336 B, 853353 B, reconexões 0
+[05:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:10:09] placaA: 18960 janelas (última 25252, há 0 s), 318 INFO, CRC 3, perdidos 319, lixo 11336 B, 856070 B, reconexões 0
+[05:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:11:09] placaA: 19019 janelas (última 25311, há 1 s), 319 INFO, CRC 3, perdidos 319, lixo 11336 B, 858699 B, reconexões 0
+[05:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:12:09] placaA: 19079 janelas (última 25371, há 1 s), 320 INFO, CRC 3, perdidos 319, lixo 11336 B, 861372 B, reconexões 0
+[05:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:13:09] placaA: 19139 janelas (última 25431, há 1 s), 321 INFO, CRC 3, perdidos 319, lixo 11336 B, 864045 B, reconexões 0
+[05:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:14:09] placaA: 19199 janelas (última 25491, há 1 s), 322 INFO, CRC 3, perdidos 319, lixo 11336 B, 866718 B, reconexões 0
+[05:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:15:09] placaA: 19260 janelas (última 25552, há 0 s), 323 INFO, CRC 3, perdidos 319, lixo 11336 B, 869435 B, reconexões 0
+[05:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:16:09] placaA: 19319 janelas (última 25611, há 1 s), 324 INFO, CRC 3, perdidos 319, lixo 11336 B, 872064 B, reconexões 0
+[05:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:17:09] placaA: 19379 janelas (última 25671, há 1 s), 325 INFO, CRC 3, perdidos 319, lixo 11336 B, 874737 B, reconexões 0
+[05:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:18:09] placaA: 19439 janelas (última 25731, há 1 s), 326 INFO, CRC 3, perdidos 319, lixo 11336 B, 877410 B, reconexões 0
+[05:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:19:09] placaA: 19499 janelas (última 25791, há 1 s), 327 INFO, CRC 3, perdidos 319, lixo 11336 B, 880083 B, reconexões 0
+[05:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:20:09] placaA: 19560 janelas (última 25852, há 0 s), 328 INFO, CRC 3, perdidos 319, lixo 11336 B, 882800 B, reconexões 0
+[05:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:21:09] placaA: 19619 janelas (última 25911, há 1 s), 329 INFO, CRC 3, perdidos 319, lixo 11336 B, 885429 B, reconexões 0
+[05:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:22:09] placaA: 19679 janelas (última 25971, há 1 s), 330 INFO, CRC 3, perdidos 319, lixo 11336 B, 888102 B, reconexões 0
+[05:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:23:09] placaA: 19739 janelas (última 26031, há 1 s), 331 INFO, CRC 3, perdidos 319, lixo 11336 B, 890775 B, reconexões 0
+[05:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:24:09] placaA: 19799 janelas (última 26091, há 1 s), 332 INFO, CRC 3, perdidos 319, lixo 11336 B, 893448 B, reconexões 0
+[05:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:25:09] placaA: 19860 janelas (última 26152, há 0 s), 333 INFO, CRC 3, perdidos 319, lixo 11336 B, 896165 B, reconexões 0
+[05:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:26:09] placaA: 19919 janelas (última 26211, há 1 s), 334 INFO, CRC 3, perdidos 319, lixo 11336 B, 898794 B, reconexões 0
+[05:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:27:09] placaA: 19979 janelas (última 26271, há 1 s), 335 INFO, CRC 3, perdidos 319, lixo 11336 B, 901467 B, reconexões 0
+[05:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:28:09] placaA: 20039 janelas (última 26331, há 1 s), 336 INFO, CRC 3, perdidos 319, lixo 11336 B, 904140 B, reconexões 0
+[05:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:29:09] placaA: 20099 janelas (última 26391, há 1 s), 337 INFO, CRC 3, perdidos 319, lixo 11336 B, 906813 B, reconexões 0
+[05:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:30:09] placaA: 20160 janelas (última 26452, há 0 s), 338 INFO, CRC 3, perdidos 319, lixo 11336 B, 909530 B, reconexões 0
+[05:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:31:09] placaA: 20219 janelas (última 26511, há 1 s), 339 INFO, CRC 3, perdidos 319, lixo 11336 B, 912159 B, reconexões 0
+[05:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:32:09] placaA: 20279 janelas (última 26571, há 1 s), 340 INFO, CRC 3, perdidos 319, lixo 11336 B, 914832 B, reconexões 0
+[05:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:33:09] placaA: 20339 janelas (última 26631, há 1 s), 341 INFO, CRC 3, perdidos 319, lixo 11336 B, 917505 B, reconexões 0
+[05:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:34:09] placaA: 20399 janelas (última 26691, há 1 s), 342 INFO, CRC 3, perdidos 319, lixo 11336 B, 920178 B, reconexões 0
+[05:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:35:09] placaA: 20460 janelas (última 26752, há 0 s), 343 INFO, CRC 3, perdidos 319, lixo 11336 B, 922895 B, reconexões 0
+[05:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:36:09] placaA: 20519 janelas (última 26811, há 1 s), 344 INFO, CRC 3, perdidos 319, lixo 11336 B, 925524 B, reconexões 0
+[05:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:37:09] placaA: 20579 janelas (última 26871, há 1 s), 345 INFO, CRC 3, perdidos 319, lixo 11336 B, 928197 B, reconexões 0
+[05:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:38:09] placaA: 20639 janelas (última 26931, há 1 s), 346 INFO, CRC 3, perdidos 319, lixo 11336 B, 930870 B, reconexões 0
+[05:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:39:09] placaA: 20699 janelas (última 26991, há 1 s), 347 INFO, CRC 3, perdidos 319, lixo 11336 B, 933543 B, reconexões 0
+[05:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:40:09] placaA: 20760 janelas (última 27052, há 0 s), 348 INFO, CRC 3, perdidos 319, lixo 11336 B, 936260 B, reconexões 0
+[05:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:41:09] placaA: 20820 janelas (última 27112, há 0 s), 349 INFO, CRC 3, perdidos 319, lixo 11336 B, 938933 B, reconexões 0
+[05:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:42:09] placaA: 20879 janelas (última 27171, há 1 s), 350 INFO, CRC 3, perdidos 319, lixo 11336 B, 941562 B, reconexões 0
+[05:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:43:09] placaA: 20939 janelas (última 27231, há 1 s), 351 INFO, CRC 3, perdidos 319, lixo 11336 B, 944235 B, reconexões 0
+[05:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:44:09] placaA: 21000 janelas (última 27292, há 0 s), 352 INFO, CRC 3, perdidos 319, lixo 11336 B, 946952 B, reconexões 0
+[05:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:45:09] placaA: 21060 janelas (última 27352, há 0 s), 353 INFO, CRC 3, perdidos 319, lixo 11336 B, 949625 B, reconexões 0
+[05:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:46:09] placaA: 21120 janelas (última 27412, há 0 s), 354 INFO, CRC 3, perdidos 319, lixo 11336 B, 952298 B, reconexões 0
+[05:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:47:09] placaA: 21179 janelas (última 27471, há 1 s), 355 INFO, CRC 3, perdidos 319, lixo 11336 B, 954927 B, reconexões 0
+[05:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:48:09] placaA: 21239 janelas (última 27531, há 1 s), 356 INFO, CRC 3, perdidos 319, lixo 11336 B, 957600 B, reconexões 0
+[05:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:49:09] placaA: 21300 janelas (última 27592, há 0 s), 357 INFO, CRC 3, perdidos 319, lixo 11336 B, 960317 B, reconexões 0
+[05:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:50:09] placaA: 21360 janelas (última 27652, há 0 s), 358 INFO, CRC 3, perdidos 319, lixo 11336 B, 962990 B, reconexões 0
+[05:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:51:09] placaA: 21419 janelas (última 27711, há 1 s), 359 INFO, CRC 3, perdidos 319, lixo 11336 B, 965619 B, reconexões 0
+[05:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:52:09] placaA: 21479 janelas (última 27771, há 1 s), 360 INFO, CRC 3, perdidos 319, lixo 11336 B, 968292 B, reconexões 0
+[05:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:53:09] placaA: 21539 janelas (última 27831, há 1 s), 361 INFO, CRC 3, perdidos 319, lixo 11336 B, 970965 B, reconexões 0
+[05:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:54:09] placaA: 21600 janelas (última 27892, há 0 s), 362 INFO, CRC 3, perdidos 319, lixo 11336 B, 973682 B, reconexões 0
+[05:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:55:09] placaA: 21660 janelas (última 27952, há 0 s), 363 INFO, CRC 3, perdidos 319, lixo 11336 B, 976355 B, reconexões 0
+[05:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:56:09] placaA: 21720 janelas (última 28012, há 0 s), 364 INFO, CRC 3, perdidos 319, lixo 11336 B, 979028 B, reconexões 0
+[05:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:57:09] placaA: 21779 janelas (última 28071, há 1 s), 365 INFO, CRC 3, perdidos 319, lixo 11336 B, 981657 B, reconexões 0
+[05:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:58:09] placaA: 21839 janelas (última 28131, há 1 s), 366 INFO, CRC 3, perdidos 319, lixo 11336 B, 984330 B, reconexões 0
+[05:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[05:59:09] placaA: 21900 janelas (última 28192, há 0 s), 367 INFO, CRC 3, perdidos 319, lixo 11336 B, 987047 B, reconexões 0
+[06:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:00:09] placaA: 21960 janelas (última 28252, há 0 s), 368 INFO, CRC 3, perdidos 319, lixo 11336 B, 989720 B, reconexões 0
+[06:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:01:09] placaA: 22019 janelas (última 28311, há 1 s), 369 INFO, CRC 3, perdidos 319, lixo 11336 B, 992349 B, reconexões 0
+[06:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:02:09] placaA: 22079 janelas (última 28371, há 1 s), 370 INFO, CRC 3, perdidos 319, lixo 11336 B, 995022 B, reconexões 0
+[06:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:03:09] placaA: 22140 janelas (última 28432, há 0 s), 371 INFO, CRC 3, perdidos 319, lixo 11336 B, 997739 B, reconexões 0
+[06:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:04:09] placaA: 22200 janelas (última 28492, há 0 s), 372 INFO, CRC 3, perdidos 319, lixo 11336 B, 1000412 B, reconexões 0
+[06:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:05:09] placaA: 22260 janelas (última 28552, há 0 s), 373 INFO, CRC 3, perdidos 319, lixo 11336 B, 1003085 B, reconexões 0
+[06:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:06:09] placaA: 22319 janelas (última 28611, há 1 s), 374 INFO, CRC 3, perdidos 319, lixo 11336 B, 1005714 B, reconexões 0
+[06:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:07:09] placaA: 22379 janelas (última 28671, há 1 s), 375 INFO, CRC 3, perdidos 319, lixo 11336 B, 1008387 B, reconexões 0
+[06:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:08:09] placaA: 22440 janelas (última 28732, há 0 s), 376 INFO, CRC 3, perdidos 319, lixo 11336 B, 1011104 B, reconexões 0
+[06:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:09:09] placaA: 22500 janelas (última 28792, há 0 s), 377 INFO, CRC 3, perdidos 319, lixo 11336 B, 1013777 B, reconexões 0
+[06:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:10:09] placaA: 22560 janelas (última 28852, há 0 s), 378 INFO, CRC 3, perdidos 319, lixo 11336 B, 1016450 B, reconexões 0
+[06:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:11:09] placaA: 22620 janelas (última 28912, há 0 s), 379 INFO, CRC 3, perdidos 319, lixo 11336 B, 1019123 B, reconexões 0
+[06:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:12:09] placaA: 22679 janelas (última 28971, há 1 s), 380 INFO, CRC 3, perdidos 319, lixo 11336 B, 1021752 B, reconexões 0
+[06:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:13:09] placaA: 22740 janelas (última 29032, há 0 s), 381 INFO, CRC 3, perdidos 319, lixo 11336 B, 1024469 B, reconexões 0
+[06:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:14:09] placaA: 22800 janelas (última 29092, há 0 s), 382 INFO, CRC 3, perdidos 319, lixo 11336 B, 1027142 B, reconexões 0
+[06:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:15:09] placaA: 22860 janelas (última 29152, há 0 s), 383 INFO, CRC 3, perdidos 319, lixo 11336 B, 1029815 B, reconexões 0
+[06:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:16:09] placaA: 22920 janelas (última 29212, há 0 s), 384 INFO, CRC 3, perdidos 319, lixo 11336 B, 1032488 B, reconexões 0
+[06:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:17:09] placaA: 22979 janelas (última 29271, há 1 s), 385 INFO, CRC 3, perdidos 319, lixo 11336 B, 1035117 B, reconexões 0
+[06:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:18:09] placaA: 23040 janelas (última 29332, há 0 s), 386 INFO, CRC 3, perdidos 319, lixo 11336 B, 1037834 B, reconexões 0
+[06:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:19:09] placaA: 23100 janelas (última 29392, há 0 s), 387 INFO, CRC 3, perdidos 319, lixo 11336 B, 1040507 B, reconexões 0
+[06:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:20:09] placaA: 23160 janelas (última 29452, há 0 s), 388 INFO, CRC 3, perdidos 319, lixo 11336 B, 1043180 B, reconexões 0
+[06:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:21:09] placaA: 23220 janelas (última 29512, há 0 s), 389 INFO, CRC 3, perdidos 319, lixo 11336 B, 1045853 B, reconexões 0
+[06:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:22:09] placaA: 23279 janelas (última 29571, há 1 s), 390 INFO, CRC 3, perdidos 319, lixo 11336 B, 1048482 B, reconexões 0
+[06:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:23:09] placaA: 23340 janelas (última 29632, há 0 s), 391 INFO, CRC 3, perdidos 319, lixo 11336 B, 1051199 B, reconexões 0
+[06:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:24:09] placaA: 23400 janelas (última 29692, há 0 s), 392 INFO, CRC 3, perdidos 319, lixo 11336 B, 1053872 B, reconexões 0
+[06:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:25:09] placaA: 23460 janelas (última 29752, há 0 s), 393 INFO, CRC 3, perdidos 319, lixo 11336 B, 1056545 B, reconexões 0
+[06:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:26:09] placaA: 23520 janelas (última 29812, há 0 s), 394 INFO, CRC 3, perdidos 319, lixo 11336 B, 1059218 B, reconexões 0
+[06:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:27:09] placaA: 23579 janelas (última 29871, há 1 s), 395 INFO, CRC 3, perdidos 319, lixo 11336 B, 1061847 B, reconexões 0
+[06:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:28:09] placaA: 23640 janelas (última 29932, há 0 s), 396 INFO, CRC 3, perdidos 319, lixo 11336 B, 1064564 B, reconexões 0
+[06:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:29:09] placaA: 23700 janelas (última 29992, há 0 s), 397 INFO, CRC 3, perdidos 319, lixo 11336 B, 1067237 B, reconexões 0
+[06:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:30:09] placaA: 23760 janelas (última 30052, há 0 s), 398 INFO, CRC 3, perdidos 319, lixo 11336 B, 1069910 B, reconexões 0
+[06:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:31:09] placaA: 23820 janelas (última 30112, há 0 s), 399 INFO, CRC 3, perdidos 319, lixo 11336 B, 1072583 B, reconexões 0
+[06:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:32:09] placaA: 23880 janelas (última 30172, há 0 s), 400 INFO, CRC 3, perdidos 319, lixo 11336 B, 1075256 B, reconexões 0
+[06:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:33:09] placaA: 23940 janelas (última 30232, há 0 s), 401 INFO, CRC 3, perdidos 319, lixo 11336 B, 1077929 B, reconexões 0
+[06:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:34:09] placaA: 24000 janelas (última 30292, há 0 s), 402 INFO, CRC 3, perdidos 319, lixo 11336 B, 1080602 B, reconexões 0
+[06:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:35:09] placaA: 24060 janelas (última 30352, há 0 s), 403 INFO, CRC 3, perdidos 319, lixo 11336 B, 1083275 B, reconexões 0
+[06:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:36:09] placaA: 24120 janelas (última 30412, há 0 s), 404 INFO, CRC 3, perdidos 319, lixo 11336 B, 1085948 B, reconexões 0
+[06:37:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:37:08] placaA: 24179 janelas (última 30471, há 0 s), 405 INFO, CRC 3, perdidos 319, lixo 11336 B, 1088577 B, reconexões 0
+[06:38:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:38:08] placaA: 24239 janelas (última 30531, há 0 s), 406 INFO, CRC 3, perdidos 319, lixo 11336 B, 1091250 B, reconexões 0
+[06:39:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:39:08] placaA: 24299 janelas (última 30591, há 0 s), 407 INFO, CRC 3, perdidos 319, lixo 11336 B, 1093923 B, reconexões 0
+[06:40:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:40:08] placaA: 24359 janelas (última 30651, há 0 s), 408 INFO, CRC 3, perdidos 319, lixo 11336 B, 1096596 B, reconexões 0
+[06:41:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:41:08] placaA: 24419 janelas (última 30711, há 0 s), 409 INFO, CRC 3, perdidos 319, lixo 11336 B, 1099269 B, reconexões 0
+[06:42:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:42:08] placaA: 24479 janelas (última 30771, há 0 s), 410 INFO, CRC 3, perdidos 319, lixo 11336 B, 1101942 B, reconexões 0
+[06:43:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:43:08] placaA: 24539 janelas (última 30831, há 0 s), 411 INFO, CRC 3, perdidos 319, lixo 11336 B, 1104615 B, reconexões 0
+[06:44:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:44:08] placaA: 24599 janelas (última 30891, há 0 s), 412 INFO, CRC 3, perdidos 319, lixo 11336 B, 1107288 B, reconexões 0
+[06:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:45:09] placaA: 24659 janelas (última 30951, há 0 s), 413 INFO, CRC 3, perdidos 319, lixo 11336 B, 1109961 B, reconexões 0
+[06:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:46:09] placaA: 24719 janelas (última 31011, há 0 s), 414 INFO, CRC 3, perdidos 319, lixo 11336 B, 1112634 B, reconexões 0
+[06:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:47:09] placaA: 24779 janelas (última 31071, há 1 s), 415 INFO, CRC 3, perdidos 319, lixo 11336 B, 1115307 B, reconexões 0
+[06:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:48:09] placaA: 24839 janelas (última 31131, há 0 s), 416 INFO, CRC 3, perdidos 319, lixo 11336 B, 1117980 B, reconexões 0
+[06:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:49:09] placaA: 24899 janelas (última 31191, há 0 s), 417 INFO, CRC 3, perdidos 319, lixo 11336 B, 1120653 B, reconexões 0
+[06:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:50:09] placaA: 24959 janelas (última 31251, há 0 s), 418 INFO, CRC 3, perdidos 319, lixo 11336 B, 1123326 B, reconexões 0
+[06:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:51:09] placaA: 25019 janelas (última 31311, há 0 s), 419 INFO, CRC 3, perdidos 319, lixo 11336 B, 1125999 B, reconexões 0
+[06:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:52:09] placaA: 25079 janelas (última 31371, há 1 s), 420 INFO, CRC 3, perdidos 319, lixo 11336 B, 1128672 B, reconexões 0
+[06:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:53:09] placaA: 25139 janelas (última 31431, há 0 s), 421 INFO, CRC 3, perdidos 319, lixo 11336 B, 1131345 B, reconexões 0
+[06:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:54:09] placaA: 25199 janelas (última 31491, há 0 s), 422 INFO, CRC 3, perdidos 319, lixo 11336 B, 1134018 B, reconexões 0
+[06:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:55:09] placaA: 25259 janelas (última 31551, há 0 s), 423 INFO, CRC 3, perdidos 319, lixo 11336 B, 1136691 B, reconexões 0
+[06:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:56:09] placaA: 25319 janelas (última 31611, há 1 s), 424 INFO, CRC 3, perdidos 319, lixo 11336 B, 1139364 B, reconexões 0
+[06:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:57:09] placaA: 25379 janelas (última 31671, há 1 s), 425 INFO, CRC 3, perdidos 319, lixo 11336 B, 1142037 B, reconexões 0
+[06:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:58:09] placaA: 25439 janelas (última 31731, há 0 s), 426 INFO, CRC 3, perdidos 319, lixo 11336 B, 1144710 B, reconexões 0
+[06:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[06:59:09] placaA: 25499 janelas (última 31791, há 0 s), 427 INFO, CRC 3, perdidos 319, lixo 11336 B, 1147383 B, reconexões 0
+[07:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:00:09] placaA: 25559 janelas (última 31851, há 0 s), 428 INFO, CRC 3, perdidos 319, lixo 11336 B, 1150056 B, reconexões 0
+[07:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:01:09] placaA: 25619 janelas (última 31911, há 1 s), 429 INFO, CRC 3, perdidos 319, lixo 11336 B, 1152729 B, reconexões 0
+[07:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:02:09] placaA: 25679 janelas (última 31971, há 1 s), 430 INFO, CRC 3, perdidos 319, lixo 11336 B, 1155402 B, reconexões 0
+[07:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:03:09] placaA: 25739 janelas (última 32031, há 0 s), 431 INFO, CRC 3, perdidos 319, lixo 11336 B, 1158075 B, reconexões 0
+[07:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:04:09] placaA: 25799 janelas (última 32091, há 0 s), 432 INFO, CRC 3, perdidos 319, lixo 11336 B, 1160748 B, reconexões 0
+[07:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:05:09] placaA: 25859 janelas (última 32151, há 0 s), 433 INFO, CRC 3, perdidos 319, lixo 11336 B, 1163421 B, reconexões 0
+[07:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:06:09] placaA: 25919 janelas (última 32211, há 1 s), 434 INFO, CRC 3, perdidos 319, lixo 11336 B, 1166094 B, reconexões 0
+[07:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:07:09] placaA: 25979 janelas (última 32271, há 1 s), 435 INFO, CRC 3, perdidos 319, lixo 11336 B, 1168767 B, reconexões 0
+[07:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:08:09] placaA: 26039 janelas (última 32331, há 0 s), 436 INFO, CRC 3, perdidos 319, lixo 11336 B, 1171440 B, reconexões 0
+[07:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:09:09] placaA: 26099 janelas (última 32391, há 0 s), 437 INFO, CRC 3, perdidos 319, lixo 11336 B, 1174113 B, reconexões 0
+[07:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:10:09] placaA: 26159 janelas (última 32451, há 0 s), 438 INFO, CRC 3, perdidos 319, lixo 11336 B, 1176786 B, reconexões 0
+[07:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:11:09] placaA: 26219 janelas (última 32511, há 1 s), 439 INFO, CRC 3, perdidos 319, lixo 11336 B, 1179459 B, reconexões 0
+[07:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:12:09] placaA: 26279 janelas (última 32571, há 1 s), 440 INFO, CRC 3, perdidos 319, lixo 11336 B, 1182132 B, reconexões 0
+[07:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:13:09] placaA: 26339 janelas (última 32631, há 0 s), 441 INFO, CRC 3, perdidos 319, lixo 11336 B, 1184805 B, reconexões 0
+[07:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:14:09] placaA: 26399 janelas (última 32691, há 0 s), 442 INFO, CRC 3, perdidos 319, lixo 11336 B, 1187478 B, reconexões 0
+[07:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:15:09] placaA: 26459 janelas (última 32751, há 0 s), 443 INFO, CRC 3, perdidos 319, lixo 11336 B, 1190151 B, reconexões 0
+[07:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:16:09] placaA: 26519 janelas (última 32811, há 1 s), 444 INFO, CRC 3, perdidos 319, lixo 11336 B, 1192824 B, reconexões 0
+[07:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:17:09] placaA: 26579 janelas (última 32871, há 1 s), 445 INFO, CRC 3, perdidos 319, lixo 11336 B, 1195497 B, reconexões 0
+[07:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:18:09] placaA: 26639 janelas (última 32931, há 0 s), 446 INFO, CRC 3, perdidos 319, lixo 11336 B, 1198170 B, reconexões 0
+[07:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:19:09] placaA: 26699 janelas (última 32991, há 0 s), 447 INFO, CRC 3, perdidos 319, lixo 11336 B, 1200843 B, reconexões 0
+[07:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:20:09] placaA: 26759 janelas (última 33051, há 1 s), 448 INFO, CRC 3, perdidos 319, lixo 11336 B, 1203516 B, reconexões 0
+[07:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:21:09] placaA: 26819 janelas (última 33111, há 1 s), 449 INFO, CRC 3, perdidos 319, lixo 11336 B, 1206189 B, reconexões 0
+[07:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:22:09] placaA: 26879 janelas (última 33171, há 0 s), 450 INFO, CRC 3, perdidos 319, lixo 11336 B, 1208862 B, reconexões 0
+[07:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:23:09] placaA: 26939 janelas (última 33231, há 1 s), 451 INFO, CRC 3, perdidos 319, lixo 11336 B, 1211535 B, reconexões 0
+[07:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:24:09] placaA: 26999 janelas (última 33291, há 1 s), 452 INFO, CRC 3, perdidos 319, lixo 11336 B, 1214208 B, reconexões 0
+[07:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:25:09] placaA: 27059 janelas (última 33351, há 1 s), 453 INFO, CRC 3, perdidos 319, lixo 11336 B, 1216881 B, reconexões 0
+[07:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:26:09] placaA: 27119 janelas (última 33411, há 0 s), 454 INFO, CRC 3, perdidos 319, lixo 11336 B, 1219554 B, reconexões 0
+[07:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:27:09] placaA: 27179 janelas (última 33471, há 0 s), 455 INFO, CRC 3, perdidos 319, lixo 11336 B, 1222227 B, reconexões 0
+[07:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:28:09] placaA: 27239 janelas (última 33531, há 1 s), 456 INFO, CRC 3, perdidos 319, lixo 11336 B, 1224900 B, reconexões 0
+[07:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:29:09] placaA: 27299 janelas (última 33591, há 1 s), 457 INFO, CRC 3, perdidos 319, lixo 11336 B, 1227573 B, reconexões 0
+[07:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:30:09] placaA: 27359 janelas (última 33651, há 1 s), 458 INFO, CRC 3, perdidos 319, lixo 11336 B, 1230246 B, reconexões 0
+[07:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:31:09] placaA: 27419 janelas (última 33711, há 0 s), 459 INFO, CRC 3, perdidos 319, lixo 11336 B, 1232919 B, reconexões 0
+[07:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:32:09] placaA: 27479 janelas (última 33771, há 0 s), 460 INFO, CRC 3, perdidos 319, lixo 11336 B, 1235592 B, reconexões 0
+[07:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:33:09] placaA: 27539 janelas (última 33831, há 1 s), 461 INFO, CRC 3, perdidos 319, lixo 11336 B, 1238265 B, reconexões 0
+[07:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:34:09] placaA: 27599 janelas (última 33891, há 1 s), 462 INFO, CRC 3, perdidos 319, lixo 11336 B, 1240938 B, reconexões 0
+[07:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:35:09] placaA: 27659 janelas (última 33951, há 1 s), 463 INFO, CRC 3, perdidos 319, lixo 11336 B, 1243611 B, reconexões 0
+[07:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:36:09] placaA: 27719 janelas (última 34011, há 0 s), 464 INFO, CRC 3, perdidos 319, lixo 11336 B, 1246284 B, reconexões 0
+[07:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:37:09] placaA: 27779 janelas (última 34071, há 1 s), 465 INFO, CRC 3, perdidos 319, lixo 11336 B, 1248957 B, reconexões 0
+[07:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:38:09] placaA: 27839 janelas (última 34131, há 1 s), 466 INFO, CRC 3, perdidos 319, lixo 11336 B, 1251630 B, reconexões 0
+[07:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:39:09] placaA: 27899 janelas (última 34191, há 1 s), 467 INFO, CRC 3, perdidos 319, lixo 11336 B, 1254303 B, reconexões 0
+[07:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:40:09] placaA: 27959 janelas (última 34251, há 1 s), 468 INFO, CRC 3, perdidos 319, lixo 11336 B, 1256976 B, reconexões 0
+[07:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:41:09] placaA: 28019 janelas (última 34311, há 0 s), 469 INFO, CRC 3, perdidos 319, lixo 11336 B, 1259649 B, reconexões 0
+[07:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:42:09] placaA: 28079 janelas (última 34371, há 1 s), 470 INFO, CRC 3, perdidos 319, lixo 11336 B, 1262322 B, reconexões 0
+[07:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:43:09] placaA: 28139 janelas (última 34431, há 1 s), 471 INFO, CRC 3, perdidos 319, lixo 11336 B, 1264995 B, reconexões 0
+[07:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:44:09] placaA: 28199 janelas (última 34491, há 1 s), 472 INFO, CRC 3, perdidos 319, lixo 11336 B, 1267668 B, reconexões 0
+[07:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:45:09] placaA: 28259 janelas (última 34551, há 1 s), 473 INFO, CRC 3, perdidos 319, lixo 11336 B, 1270341 B, reconexões 0
+[07:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:46:09] placaA: 28319 janelas (última 34611, há 0 s), 474 INFO, CRC 3, perdidos 319, lixo 11336 B, 1273014 B, reconexões 0
+[07:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:47:09] placaA: 28379 janelas (última 34671, há 1 s), 475 INFO, CRC 3, perdidos 319, lixo 11336 B, 1275687 B, reconexões 0
+[07:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:48:09] placaA: 28439 janelas (última 34731, há 1 s), 476 INFO, CRC 3, perdidos 319, lixo 11336 B, 1278360 B, reconexões 0
+[07:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:49:09] placaA: 28499 janelas (última 34791, há 1 s), 477 INFO, CRC 3, perdidos 319, lixo 11336 B, 1281033 B, reconexões 0
+[07:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:50:09] placaA: 28559 janelas (última 34851, há 1 s), 478 INFO, CRC 3, perdidos 319, lixo 11336 B, 1283706 B, reconexões 0
+[07:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:51:09] placaA: 28619 janelas (última 34911, há 0 s), 479 INFO, CRC 3, perdidos 319, lixo 11336 B, 1286379 B, reconexões 0
+[07:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:52:09] placaA: 28679 janelas (última 34971, há 1 s), 480 INFO, CRC 3, perdidos 319, lixo 11336 B, 1289052 B, reconexões 0
+[07:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:53:09] placaA: 28739 janelas (última 35031, há 1 s), 481 INFO, CRC 3, perdidos 319, lixo 11336 B, 1291725 B, reconexões 0
+[07:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:54:09] placaA: 28799 janelas (última 35091, há 1 s), 482 INFO, CRC 3, perdidos 319, lixo 11336 B, 1294398 B, reconexões 0
+[07:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:55:09] placaA: 28859 janelas (última 35151, há 1 s), 483 INFO, CRC 3, perdidos 319, lixo 11336 B, 1297071 B, reconexões 0
+[07:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:56:09] placaA: 28919 janelas (última 35211, há 0 s), 484 INFO, CRC 3, perdidos 319, lixo 11336 B, 1299744 B, reconexões 0
+[07:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:57:09] placaA: 28979 janelas (última 35271, há 1 s), 485 INFO, CRC 3, perdidos 319, lixo 11336 B, 1302417 B, reconexões 0
+[07:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:58:09] placaA: 29039 janelas (última 35331, há 1 s), 486 INFO, CRC 3, perdidos 319, lixo 11336 B, 1305090 B, reconexões 0
+[07:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[07:59:09] placaA: 29099 janelas (última 35391, há 1 s), 487 INFO, CRC 3, perdidos 319, lixo 11336 B, 1307763 B, reconexões 0
+[08:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:00:09] placaA: 29159 janelas (última 35451, há 1 s), 488 INFO, CRC 3, perdidos 319, lixo 11336 B, 1310436 B, reconexões 0
+[08:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:01:09] placaA: 29219 janelas (última 35511, há 1 s), 489 INFO, CRC 3, perdidos 319, lixo 11336 B, 1313109 B, reconexões 0
+[08:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:02:09] placaA: 29279 janelas (última 35571, há 1 s), 490 INFO, CRC 3, perdidos 319, lixo 11336 B, 1315782 B, reconexões 0
+[08:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:03:09] placaA: 29339 janelas (última 35631, há 1 s), 491 INFO, CRC 3, perdidos 319, lixo 11336 B, 1318455 B, reconexões 0
+[08:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:04:09] placaA: 29399 janelas (última 35691, há 1 s), 492 INFO, CRC 3, perdidos 319, lixo 11336 B, 1321128 B, reconexões 0
+[08:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:05:09] placaA: 29459 janelas (última 35751, há 1 s), 493 INFO, CRC 3, perdidos 319, lixo 11336 B, 1323801 B, reconexões 0
+[08:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:06:09] placaA: 29519 janelas (última 35811, há 1 s), 494 INFO, CRC 3, perdidos 319, lixo 11336 B, 1326474 B, reconexões 0
+[08:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:07:09] placaA: 29579 janelas (última 35871, há 1 s), 495 INFO, CRC 3, perdidos 319, lixo 11336 B, 1329147 B, reconexões 0
+[08:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:08:09] placaA: 29639 janelas (última 35931, há 1 s), 496 INFO, CRC 3, perdidos 319, lixo 11336 B, 1331820 B, reconexões 0
+[08:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:09:09] placaA: 29699 janelas (última 35991, há 1 s), 497 INFO, CRC 3, perdidos 319, lixo 11336 B, 1334493 B, reconexões 0
+[08:10:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:10:09] placaA: 29759 janelas (última 36051, há 1 s), 498 INFO, CRC 3, perdidos 319, lixo 11336 B, 1337166 B, reconexões 0
+[08:11:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:11:09] placaA: 29820 janelas (última 36112, há 0 s), 499 INFO, CRC 3, perdidos 319, lixo 11336 B, 1339883 B, reconexões 0
+[08:12:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:12:09] placaA: 29879 janelas (última 36171, há 1 s), 500 INFO, CRC 3, perdidos 319, lixo 11336 B, 1342512 B, reconexões 0
+[08:13:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:13:09] placaA: 29939 janelas (última 36231, há 1 s), 501 INFO, CRC 3, perdidos 319, lixo 11336 B, 1345185 B, reconexões 0
+[08:14:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:14:09] placaA: 29999 janelas (última 36291, há 1 s), 502 INFO, CRC 3, perdidos 319, lixo 11336 B, 1347858 B, reconexões 0
+[08:15:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:15:09] placaA: 30059 janelas (última 36351, há 1 s), 503 INFO, CRC 3, perdidos 319, lixo 11336 B, 1350531 B, reconexões 0
+[08:16:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:16:09] placaA: 30120 janelas (última 36412, há 0 s), 504 INFO, CRC 3, perdidos 319, lixo 11336 B, 1353248 B, reconexões 0
+[08:17:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:17:09] placaA: 30179 janelas (última 36471, há 1 s), 505 INFO, CRC 3, perdidos 319, lixo 11336 B, 1355877 B, reconexões 0
+[08:18:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:18:09] placaA: 30239 janelas (última 36531, há 1 s), 506 INFO, CRC 3, perdidos 319, lixo 11336 B, 1358550 B, reconexões 0
+[08:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:19:09] placaA: 30299 janelas (última 36591, há 1 s), 507 INFO, CRC 3, perdidos 319, lixo 11336 B, 1361223 B, reconexões 0
+[08:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:20:09] placaA: 30359 janelas (última 36651, há 1 s), 508 INFO, CRC 3, perdidos 319, lixo 11336 B, 1363896 B, reconexões 0
+[08:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:21:09] placaA: 30420 janelas (última 36712, há 0 s), 509 INFO, CRC 3, perdidos 319, lixo 11336 B, 1366613 B, reconexões 0
+[08:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:22:09] placaA: 30479 janelas (última 36771, há 1 s), 510 INFO, CRC 3, perdidos 319, lixo 11336 B, 1369242 B, reconexões 0
+[08:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:23:09] placaA: 30539 janelas (última 36831, há 1 s), 511 INFO, CRC 3, perdidos 319, lixo 11336 B, 1371915 B, reconexões 0
+[08:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:24:09] placaA: 30599 janelas (última 36891, há 1 s), 512 INFO, CRC 3, perdidos 319, lixo 11336 B, 1374588 B, reconexões 0
+[08:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:25:09] placaA: 30660 janelas (última 36952, há 0 s), 513 INFO, CRC 3, perdidos 319, lixo 11336 B, 1377305 B, reconexões 0
+[08:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:26:09] placaA: 30720 janelas (última 37012, há 0 s), 514 INFO, CRC 3, perdidos 319, lixo 11336 B, 1379978 B, reconexões 0
+[08:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:27:09] placaA: 30779 janelas (última 37071, há 1 s), 515 INFO, CRC 3, perdidos 319, lixo 11336 B, 1382607 B, reconexões 0
+[08:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:28:09] placaA: 30839 janelas (última 37131, há 1 s), 516 INFO, CRC 3, perdidos 319, lixo 11336 B, 1385280 B, reconexões 0
+[08:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:29:09] placaA: 30899 janelas (última 37191, há 1 s), 517 INFO, CRC 3, perdidos 319, lixo 11336 B, 1387953 B, reconexões 0
+[08:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:30:09] placaA: 30960 janelas (última 37252, há 0 s), 518 INFO, CRC 3, perdidos 319, lixo 11336 B, 1390670 B, reconexões 0
+[08:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:31:09] placaA: 31020 janelas (última 37312, há 0 s), 519 INFO, CRC 3, perdidos 319, lixo 11336 B, 1393343 B, reconexões 0
+[08:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:32:09] placaA: 31079 janelas (última 37371, há 1 s), 520 INFO, CRC 3, perdidos 319, lixo 11336 B, 1395972 B, reconexões 0
+[08:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:33:09] placaA: 31139 janelas (última 37431, há 1 s), 521 INFO, CRC 3, perdidos 319, lixo 11336 B, 1398645 B, reconexões 0
+[08:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:34:09] placaA: 31199 janelas (última 37491, há 1 s), 522 INFO, CRC 3, perdidos 319, lixo 11336 B, 1401318 B, reconexões 0
+[08:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:35:09] placaA: 31260 janelas (última 37552, há 0 s), 523 INFO, CRC 3, perdidos 319, lixo 11336 B, 1404035 B, reconexões 0
+[08:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:36:09] placaA: 31320 janelas (última 37612, há 0 s), 524 INFO, CRC 3, perdidos 319, lixo 11336 B, 1406708 B, reconexões 0
+[08:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:37:09] placaA: 31379 janelas (última 37671, há 1 s), 525 INFO, CRC 3, perdidos 319, lixo 11336 B, 1409337 B, reconexões 0
+[08:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:38:09] placaA: 31439 janelas (última 37731, há 1 s), 526 INFO, CRC 3, perdidos 319, lixo 11336 B, 1412010 B, reconexões 0
+[08:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:39:09] placaA: 31499 janelas (última 37791, há 1 s), 527 INFO, CRC 3, perdidos 319, lixo 11336 B, 1414683 B, reconexões 0
+[08:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:40:09] placaA: 31560 janelas (última 37852, há 0 s), 528 INFO, CRC 3, perdidos 319, lixo 11336 B, 1417400 B, reconexões 0
+[08:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:41:09] placaA: 31620 janelas (última 37912, há 0 s), 529 INFO, CRC 3, perdidos 319, lixo 11336 B, 1420073 B, reconexões 0
+[08:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:42:09] placaA: 31679 janelas (última 37971, há 1 s), 530 INFO, CRC 3, perdidos 319, lixo 11336 B, 1422702 B, reconexões 0
+[08:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:43:09] placaA: 31739 janelas (última 38031, há 1 s), 531 INFO, CRC 3, perdidos 319, lixo 11336 B, 1425375 B, reconexões 0
+[08:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:44:09] placaA: 31799 janelas (última 38091, há 1 s), 532 INFO, CRC 3, perdidos 319, lixo 11336 B, 1428048 B, reconexões 0
+[08:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:45:09] placaA: 31860 janelas (última 38152, há 0 s), 533 INFO, CRC 3, perdidos 319, lixo 11336 B, 1430765 B, reconexões 0
+[08:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:46:09] placaA: 31920 janelas (última 38212, há 0 s), 534 INFO, CRC 3, perdidos 319, lixo 11336 B, 1433438 B, reconexões 0
+[08:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:47:09] placaA: 31979 janelas (última 38271, há 1 s), 535 INFO, CRC 3, perdidos 319, lixo 11336 B, 1436067 B, reconexões 0
+[08:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:48:09] placaA: 32039 janelas (última 38331, há 1 s), 536 INFO, CRC 3, perdidos 319, lixo 11336 B, 1438740 B, reconexões 0
+[08:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:49:09] placaA: 32099 janelas (última 38391, há 1 s), 537 INFO, CRC 3, perdidos 319, lixo 11336 B, 1441413 B, reconexões 0
+[08:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:50:09] placaA: 32160 janelas (última 38452, há 0 s), 538 INFO, CRC 3, perdidos 319, lixo 11336 B, 1444130 B, reconexões 0
+[08:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:51:09] placaA: 32220 janelas (última 38512, há 0 s), 539 INFO, CRC 3, perdidos 319, lixo 11336 B, 1446803 B, reconexões 0
+[08:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:52:09] placaA: 32280 janelas (última 38572, há 0 s), 540 INFO, CRC 3, perdidos 319, lixo 11336 B, 1449476 B, reconexões 0
+[08:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:53:09] placaA: 32339 janelas (última 38631, há 1 s), 541 INFO, CRC 3, perdidos 319, lixo 11336 B, 1452105 B, reconexões 0
+[08:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:54:09] placaA: 32400 janelas (última 38692, há 0 s), 542 INFO, CRC 3, perdidos 319, lixo 11336 B, 1454822 B, reconexões 0
+[08:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:55:09] placaA: 32460 janelas (última 38752, há 0 s), 543 INFO, CRC 3, perdidos 319, lixo 11336 B, 1457495 B, reconexões 0
+[08:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:56:09] placaA: 32520 janelas (última 38812, há 0 s), 544 INFO, CRC 3, perdidos 319, lixo 11336 B, 1460168 B, reconexões 0
+[08:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:57:09] placaA: 32580 janelas (última 38872, há 0 s), 545 INFO, CRC 3, perdidos 319, lixo 11336 B, 1462841 B, reconexões 0
+[08:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:58:09] placaA: 32639 janelas (última 38931, há 1 s), 546 INFO, CRC 3, perdidos 319, lixo 11336 B, 1465470 B, reconexões 0
+[08:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[08:59:09] placaA: 32699 janelas (última 38991, há 1 s), 547 INFO, CRC 3, perdidos 319, lixo 11336 B, 1468143 B, reconexões 0
+[09:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:00:09] placaA: 32760 janelas (última 39052, há 0 s), 548 INFO, CRC 3, perdidos 319, lixo 11336 B, 1470860 B, reconexões 0
+[09:01:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:01:09] placaA: 32820 janelas (última 39112, há 0 s), 549 INFO, CRC 3, perdidos 319, lixo 11336 B, 1473533 B, reconexões 0
+[09:02:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:02:09] placaA: 32880 janelas (última 39172, há 0 s), 550 INFO, CRC 3, perdidos 319, lixo 11336 B, 1476206 B, reconexões 0
+[09:03:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:03:09] placaA: 32939 janelas (última 39231, há 1 s), 551 INFO, CRC 3, perdidos 319, lixo 11336 B, 1478835 B, reconexões 0
+[09:04:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:04:09] placaA: 33000 janelas (última 39292, há 0 s), 552 INFO, CRC 3, perdidos 319, lixo 11336 B, 1481552 B, reconexões 0
+[09:05:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:05:09] placaA: 33060 janelas (última 39352, há 0 s), 553 INFO, CRC 3, perdidos 319, lixo 11336 B, 1484225 B, reconexões 0
+[09:06:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:06:09] placaA: 33120 janelas (última 39412, há 0 s), 554 INFO, CRC 3, perdidos 319, lixo 11336 B, 1486898 B, reconexões 0
+[09:07:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:07:09] placaA: 33180 janelas (última 39472, há 0 s), 555 INFO, CRC 3, perdidos 319, lixo 11336 B, 1489571 B, reconexões 0
+[09:08:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:08:09] placaA: 33240 janelas (última 39532, há 0 s), 556 INFO, CRC 3, perdidos 319, lixo 11336 B, 1492244 B, reconexões 0
+[09:09:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:09:09] placaA: 33300 janelas (última 39592, há 0 s), 557 INFO, CRC 3, perdidos 319, lixo 11336 B, 1494917 B, reconexões 0
+[09:10:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:10:08] placaA: 33359 janelas (última 39651, há 0 s), 558 INFO, CRC 3, perdidos 319, lixo 11336 B, 1497546 B, reconexões 0
+[09:11:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:11:08] placaA: 33419 janelas (última 39711, há 0 s), 559 INFO, CRC 3, perdidos 319, lixo 11336 B, 1500219 B, reconexões 0
+[09:12:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:12:08] placaA: 33479 janelas (última 39771, há 0 s), 560 INFO, CRC 3, perdidos 319, lixo 11336 B, 1502892 B, reconexões 0
+[09:13:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:13:08] placaA: 33509 janelas (última 39808, há 23 s), 561 INFO, CRC 3, perdidos 326, lixo 11873 B, 1504782 B, reconexões 0
+[09:14:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:14:08] placaA: 33525 janelas (última 39857, há 34 s), 561 INFO, CRC 3, perdidos 360, lixo 13484 B, 1507097 B, reconexões 0
+[09:15:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:15:08] placaA: 33525 janelas (última 39857, há 94 s), 561 INFO, CRC 3, perdidos 360, lixo 14524 B, 1508137 B, reconexões 0
+[09:16:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:16:08] placaA: 33525 janelas (última 39857, há 154 s), 561 INFO, CRC 3, perdidos 360, lixo 14831 B, 1508444 B, reconexões 0
+[09:17:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:17:08] placaA: 33525 janelas (última 39857, há 214 s), 561 INFO, CRC 3, perdidos 360, lixo 15585 B, 1509198 B, reconexões 0
+[09:18:08] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:18:08] placaA: 33525 janelas (última 39857, há 274 s), 561 INFO, CRC 3, perdidos 360, lixo 15976 B, 1509589 B, reconexões 0
+[09:19:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:19:09] placaA: 33525 janelas (última 39857, há 334 s), 561 INFO, CRC 3, perdidos 360, lixo 17480 B, 1511093 B, reconexões 0
+[09:20:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:20:09] placaA: 33525 janelas (última 39857, há 394 s), 561 INFO, CRC 3, perdidos 360, lixo 19626 B, 1513239 B, reconexões 0
+[09:21:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:21:09] placaA: 33525 janelas (última 39857, há 454 s), 562 INFO, CRC 3, perdidos 513, lixo 21988 B, 1515634 B, reconexões 0
+[09:22:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:22:09] placaA: 33528 janelas (última 40370, há 1 s), 562 INFO, CRC 3, perdidos 621, lixo 24403 B, 1518181 B, reconexões 0
+[09:23:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:23:09] placaA: 33575 janelas (última 40431, há 0 s), 563 INFO, CRC 3, perdidos 635, lixo 24975 B, 1520854 B, reconexões 0
+[09:24:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:24:09] placaA: 33635 janelas (última 40491, há 0 s), 564 INFO, CRC 3, perdidos 635, lixo 24975 B, 1523527 B, reconexões 0
+[09:25:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:25:09] placaA: 33695 janelas (última 40551, há 0 s), 565 INFO, CRC 3, perdidos 635, lixo 24975 B, 1526200 B, reconexões 0
+[09:26:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:26:09] placaA: 33755 janelas (última 40611, há 0 s), 566 INFO, CRC 3, perdidos 635, lixo 24975 B, 1528873 B, reconexões 0
+[09:27:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:27:09] placaA: 33815 janelas (última 40671, há 0 s), 567 INFO, CRC 3, perdidos 635, lixo 24975 B, 1531546 B, reconexões 0
+[09:28:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:28:09] placaA: 33875 janelas (última 40731, há 0 s), 568 INFO, CRC 3, perdidos 635, lixo 24975 B, 1534219 B, reconexões 0
+[09:29:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:29:09] placaA: 33935 janelas (última 40791, há 0 s), 569 INFO, CRC 3, perdidos 635, lixo 24975 B, 1536892 B, reconexões 0
+[09:30:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:30:09] placaA: 33995 janelas (última 40851, há 0 s), 570 INFO, CRC 3, perdidos 635, lixo 24975 B, 1539565 B, reconexões 0
+[09:31:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:31:09] placaA: 34055 janelas (última 40911, há 0 s), 571 INFO, CRC 3, perdidos 635, lixo 24975 B, 1542238 B, reconexões 0
+[09:32:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:32:09] placaA: 34115 janelas (última 40971, há 0 s), 572 INFO, CRC 3, perdidos 635, lixo 24975 B, 1544911 B, reconexões 0
+[09:33:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:33:09] placaA: 34159 janelas (última 41031, há 0 s), 573 INFO, CRC 3, perdidos 651, lixo 25680 B, 1547585 B, reconexões 0
+[09:34:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:34:09] placaA: 34219 janelas (última 41091, há 0 s), 574 INFO, CRC 3, perdidos 651, lixo 25680 B, 1550258 B, reconexões 0
+[09:35:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:35:09] placaA: 34279 janelas (última 41151, há 0 s), 575 INFO, CRC 3, perdidos 651, lixo 25680 B, 1552931 B, reconexões 0
+[09:36:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:36:09] placaA: 34339 janelas (última 41211, há 0 s), 576 INFO, CRC 3, perdidos 651, lixo 25680 B, 1555604 B, reconexões 0
+[09:37:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:37:09] placaA: 34399 janelas (última 41271, há 1 s), 577 INFO, CRC 3, perdidos 651, lixo 25680 B, 1558277 B, reconexões 0
+[09:38:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:38:09] placaA: 34459 janelas (última 41331, há 0 s), 578 INFO, CRC 3, perdidos 651, lixo 25680 B, 1560950 B, reconexões 0
+[09:39:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:39:09] placaA: 34519 janelas (última 41391, há 0 s), 579 INFO, CRC 3, perdidos 651, lixo 25680 B, 1563623 B, reconexões 0
+[09:40:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:40:09] placaA: 34579 janelas (última 41451, há 0 s), 580 INFO, CRC 3, perdidos 651, lixo 25680 B, 1566296 B, reconexões 0
+[09:41:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:41:09] placaA: 34639 janelas (última 41511, há 1 s), 581 INFO, CRC 3, perdidos 651, lixo 25680 B, 1568969 B, reconexões 0
+[09:42:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:42:09] placaA: 34699 janelas (última 41571, há 0 s), 582 INFO, CRC 3, perdidos 651, lixo 25681 B, 1571643 B, reconexões 0
+[09:43:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:43:09] placaA: 34759 janelas (última 41631, há 0 s), 583 INFO, CRC 3, perdidos 651, lixo 25681 B, 1574316 B, reconexões 0
+[09:44:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:44:09] placaA: 34819 janelas (última 41691, há 1 s), 584 INFO, CRC 3, perdidos 651, lixo 25681 B, 1576989 B, reconexões 0
+[09:45:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:45:09] placaA: 34879 janelas (última 41751, há 0 s), 585 INFO, CRC 3, perdidos 651, lixo 25681 B, 1579662 B, reconexões 0
+[09:46:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:46:09] placaA: 34939 janelas (última 41811, há 0 s), 586 INFO, CRC 3, perdidos 651, lixo 25681 B, 1582335 B, reconexões 0
+[09:47:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:47:09] placaA: 34999 janelas (última 41871, há 0 s), 587 INFO, CRC 3, perdidos 651, lixo 25681 B, 1585008 B, reconexões 0
+[09:48:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:48:09] placaA: 35059 janelas (última 41931, há 1 s), 588 INFO, CRC 3, perdidos 651, lixo 25681 B, 1587681 B, reconexões 0
+[09:49:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:49:09] placaA: 35119 janelas (última 41991, há 0 s), 589 INFO, CRC 3, perdidos 651, lixo 25681 B, 1590354 B, reconexões 0
+[09:50:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:50:09] placaA: 35179 janelas (última 42051, há 0 s), 590 INFO, CRC 3, perdidos 651, lixo 25681 B, 1593027 B, reconexões 0
+[09:51:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:51:09] placaA: 35239 janelas (última 42111, há 0 s), 591 INFO, CRC 3, perdidos 651, lixo 25681 B, 1595700 B, reconexões 0
+[09:52:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:52:09] placaA: 35299 janelas (última 42171, há 1 s), 592 INFO, CRC 3, perdidos 651, lixo 25681 B, 1598373 B, reconexões 0
+[09:53:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:53:09] placaA: 35359 janelas (última 42231, há 0 s), 593 INFO, CRC 3, perdidos 651, lixo 25681 B, 1601046 B, reconexões 0
+[09:54:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:54:09] placaA: 35419 janelas (última 42291, há 0 s), 594 INFO, CRC 3, perdidos 651, lixo 25681 B, 1603719 B, reconexões 0
+[09:55:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:55:09] placaA: 35479 janelas (última 42351, há 0 s), 595 INFO, CRC 3, perdidos 651, lixo 25681 B, 1606392 B, reconexões 0
+[09:56:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:56:09] placaA: 35539 janelas (última 42411, há 1 s), 596 INFO, CRC 3, perdidos 651, lixo 25681 B, 1609065 B, reconexões 0
+[09:57:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:57:09] placaA: 35599 janelas (última 42471, há 1 s), 597 INFO, CRC 3, perdidos 651, lixo 25681 B, 1611738 B, reconexões 0
+[09:58:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:58:09] placaA: 35659 janelas (última 42531, há 0 s), 598 INFO, CRC 3, perdidos 651, lixo 25681 B, 1614411 B, reconexões 0
+[09:59:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[09:59:09] placaA: 35719 janelas (última 42591, há 0 s), 599 INFO, CRC 3, perdidos 651, lixo 25681 B, 1617084 B, reconexões 0
+[10:00:09] placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+[10:00:09] placaA: 35779 janelas (última 42651, há 0 s), 600 INFO, CRC 3, perdidos 651, lixo 25681 B, 1619757 B, reconexões 0
+placaB: 0 janelas (última None, —), 0 INFO, CRC 0, perdidos 0, lixo 0 B, 0 B, reconexões 0
+placaA: 35805 janelas (última 42677, há 0 s), 601 INFO, CRC 3, perdidos 651, lixo 25681 B, 1620934 B, reconexões 0

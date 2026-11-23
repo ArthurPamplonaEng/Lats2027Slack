@@ -1,0 +1,54 @@
+% Fig. 1: multi-endpoint test structure (TikZ, one column, ~8.6 cm wide)
+\begin{tikzpicture}[font=\scriptsize, >={Latex[length=1.4mm,width=1.1mm]}, x=1cm, y=1cm,
+  lut/.style={draw, minimum width=4.2mm, minimum height=4.2mm, inner sep=0pt},
+  ff/.style={draw, minimum width=7mm, minimum height=5mm, inner sep=0pt, font=\tiny},
+  blk/.style={draw, rounded corners=1pt, inner sep=2pt, align=center, font=\tiny},
+  w/.style={->, line width=0.45pt}, l/.style={line width=0.45pt}]
+% ---------------------------------------------------------------- chain
+\node[blk, minimum height=5mm] (stim) at (0.15,0) {stimulus\\$a,b$, $t$};
+\node[lut] (c1) at (1.25,0) {};
+\node[lut] (c2) at (1.85,0) {};
+\node (d1) at (2.45,0) {$\cdots$};
+\node[lut, fill=black!8] (cj) at (3.05,0) {};
+\node (d2) at (3.65,0) {$\cdots$};
+\node[lut] (cn) at (4.25,0) {};
+\draw[w] (stim) -- (c1); \draw[w] (c1) -- (c2); \draw[l] (c2) -- (d1); \draw[w] (d1) -- (cj);
+\draw[l] (cj) -- (d2); \draw[w] (d2) -- (cn);
+\node[font=\tiny, above=0.3mm of c1] {1};
+\node[font=\tiny, above=0.3mm of cj] {$S_j$};
+\node[font=\tiny, above=0.3mm of cn] {160};
+\node[font=\tiny, anchor=west, align=left] at (4.55,0) {ripple chain, one LUT3\\(carry) per stage,\\toggles every cycle};
+% ---------------------------------------------------------------- tap j
+\draw[dashed, line width=0.35pt, rounded corners=2pt] (0.95,-0.55) rectangle (5.6,-3.65);
+\node[font=\tiny, anchor=north west] at (1.0,-0.6) {tap $j$ (one of 23)};
+\node[lut] (s) at (3.05,-0.9) {$\oplus$};
+\draw[w] (cj) -- (s);
+\node[font=\tiny, anchor=west] at (3.25,-0.9) {sum bit $S_j$};
+\node[ff] (f1) at (1.75,-1.75) {FF1};
+\node[ff] (f2) at (3.05,-1.75) {FF2};
+\coordinate (sp) at (3.05,-1.3);
+\draw[l] (s) -- (sp); \draw[w] (sp) -- (f2);
+\draw[w] (sp) -| (f1);
+\node[lut] (x) at (2.4,-2.55) {$\oplus$};
+\draw[w] (f1) |- (x); \draw[w] (f2) |- (x);
+\node[ff] (f3) at (2.4,-3.25) {FF3};
+\draw[w] (x) -- (f3);
+\node[font=\tiny, anchor=east] at (1.95,-3.25) {catcher clk};
+\node[lut] (k) at (3.95,-2.55) {$\oplus$};
+\draw[w] (f2.east) -| (k);
+\node[font=\tiny] (t) at (4.6,-2.55) {$t$};
+\draw[w] (t) -- (k);
+\node[ff] (e) at (3.95,-3.25) {$e_j$};
+\draw[w] (k) -- (e);
+\node[font=\tiny, anchor=west, align=left] at (4.4,-3.2) {functional\\checker};
+\node[font=\tiny, anchor=west] at (3.12,-2.12) {sys clk};
+% ---------------------------------------------------------------- clock manager and readout
+\node[blk, minimum width=7mm, minimum height=5mm] (mm) at (0.15,-1.75) {MMCM};
+\draw[w] (mm) -- (f1) node[midway, above, font=\tiny] {$\phi$-swept};
+\node[blk, minimum width=2.7cm, minimum height=6mm] (sw) at (1.55,-4.3) {sweep engine: first-alarm\\step $r_j$ of every tap};
+\node[blk, minimum width=3.0cm, minimum height=6mm] (st) at (4.95,-4.3) {1\,s window per tap: alarms,\\$\bar r_j, r_{j,\min}, r_{j,\max}$, error cycles};
+\draw[w] (f3) -- (f3 |- sw.north);
+\draw[w] (e) -- (e |- st.north);
+\draw[w] (sw) -- (st);
+\draw[w] (sw.west) -- ++(-0.25,0) -- ++(0,0) |- ([yshift=-1mm]mm.south) node[pos=0.25, left, font=\tiny] {PSEN};
+\end{tikzpicture}
