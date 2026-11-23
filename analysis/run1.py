@@ -15,6 +15,7 @@ from common import DATA, STEP_NEXYS_PS, V, read_csv_dicts, read_csv_numeric
 
 D = os.path.join(DATA, "nexys4_run1")
 CORNERS_V = (1.10, 1.00, 0.90)
+ALPHA = 1.3            # velocity-saturation exponent of the alpha-power fit
 
 
 def burnin() -> dict:
@@ -72,7 +73,7 @@ def post_sweep() -> dict:
     from scipy.optimize import curve_fit
 
     def alpha(Vv, a, b, vt):
-        return a - b * Vv / np.clip(Vv - vt, 1e-3, None) ** 1.3
+        return a - b * Vv / np.clip(Vv - vt, 1e-3, None) ** ALPHA
     pa, _ = curve_fit(alpha, levels, mean, p0=(500, 100, 0.4), sigma=1 / np.sqrt(n), maxfev=20000)
     for v in CORNERS_V:
         h = 1e-4
@@ -91,18 +92,25 @@ def post_at(ps: dict, v: float, T_ref: float, tol: float = 0.5) -> tuple[float, 
     return float(np.median(x)), float(x.std()), int(m.sum())
 
 
-def alpha_curve(ps: dict):
-    a, b, vt = ps["alpha"]
-    return lambda Vv: a - b * Vv / np.clip(Vv - vt, 1e-3, None) ** 1.3
+def alpha_curve(ps: dict, alpha: float = ALPHA):
+    """Alpha-power curve of the post-burn-in sweep; refitted when alpha is not the default."""
+    if alpha == ALPHA:
+        a, b, vt = ps["alpha"]
+    else:
+        from scipy.optimize import curve_fit
+        (a, b, vt), _ = curve_fit(lambda Vv, a, b, vt: a - b * Vv / np.clip(Vv - vt, 1e-3, None) ** alpha,
+                                  ps["levels"], ps["mean"], p0=tuple(ps["alpha"]),
+                                  sigma=1 / np.sqrt(ps["n"]), maxfev=20000)
+    return lambda Vv: a - b * Vv / np.clip(Vv - vt, 1e-3, None) ** alpha
 
 
-def voltage_shift(ps: dict, cs: dict) -> dict:
+def voltage_shift(ps: dict, cs: dict, alpha: float = ALPHA) -> dict:
     """One-parameter test of how the burn-in acted: the pre-burn-in readings are compared with the
     post-burn-in curve (alpha-power fit of the logged sweep) moved by dV along the voltage axis,
     pre(V) = post(V + dV), and with a constant slack offset, pre(V) = post(V) + c. The spread of
     dV comes from +-1 step on each single pre-burn-in reading."""
     from scipy.optimize import minimize_scalar
-    f = alpha_curve(ps)
+    f = alpha_curve(ps, alpha)
     Vv = np.array(CORNERS_V)
     pre = np.array([cs["pre"][v][0] for v in CORNERS_V])
 
@@ -117,6 +125,21 @@ def voltage_shift(ps: dict, cs: dict) -> dict:
     res_c = f(Vv) + c - pre
     return {"dv": dv, "dv_sd": float(np.std(dvs)), "res": res, "res_rms": float(np.sqrt(np.mean(res ** 2))),
             "c": c, "res_c": res_c, "res_c_rms": float(np.sqrt(np.mean(res_c ** 2))), "f": f}
+
+
+def xadc_drift() -> list[float]:
+    """Change of (supply readback - XADC reading) between the pre- and post-burn-in corners, in mV.
+
+    The supply is trimmed against the XADC, so an XADC that drifted during the burn-in would show
+    up as a supply shift; the supply's own readback bounds that drift (it also contains the IR drop
+    of the cables and board, so it is an upper bound on the XADC part)."""
+    rows = read_csv_dicts(os.path.join(D, "corners_from_screenshots.csv"))
+    d = {}
+    for r in rows:
+        if r["phase"] in ("pre", "post_hot"):
+            d.setdefault(r["phase"], {})[round(float(r["vccint_v"]), 1)] = \
+                float(r["psu_meas_v"]) - float(r["vccint_v"])
+    return [(d["post_hot"][v] - d["pre"][v]) * 1000.0 for v in CORNERS_V]
 
 
 def corners() -> dict:
@@ -180,6 +203,25 @@ def run() -> dict:
     V.put("ShiftResRms", shift["res_rms"], "{:.1f}")
     V.put("OffsetResMax", np.max(np.abs(shift["res_c"])), "{:.1f}")
     V.put("OffsetResRms", shift["res_c_rms"], "{:.1f}")
+    # how the single shift depends on the exponent of the alpha-power fit
+    alt = [voltage_shift(ps, cs, a) for a in (1.1, 1.5, 2.0)]
+    V.put("ShiftAlphaLo", min(x["dv"] for x in alt + [shift]) * 1000, "{:.1f}")
+    V.put("ShiftAlphaHi", max(x["dv"] for x in alt + [shift]) * 1000, "{:.1f}")
+    V.put("ShiftResMaxAlpha", max(np.max(np.abs(x["res"])) for x in alt + [shift]), "{:.1f}")
+    V.put("Alpha", ALPHA, "{:.1f}")
+    # and without the alpha-power form: a cubic polynomial through the same sweep
+    from scipy.optimize import minimize_scalar
+    fc = np.poly1d(np.polyfit(ps["levels"], ps["mean"], 3, w=np.sqrt(ps["n"])))
+    Vv = np.array(CORNERS_V)
+    pre = np.array([cs["pre"][v][0] for v in CORNERS_V])
+    dvc = minimize_scalar(lambda d: np.sum((fc(Vv + d) - pre) ** 2), bounds=(-0.05, 0.08),
+                          method="bounded").x
+    V.put("ShiftCubicmV", dvc * 1000, "{:.1f}")
+    V.put("ShiftCubicResMax", np.max(np.abs(fc(Vv + dvc) - pre)), "{:.1f}")
+    # the XADC the supply loop trusts, checked against the supply readback
+    dr = [abs(x) for x in xadc_drift()]
+    V.put("XadcDriftLo", min(dr), "{:.0f}")
+    V.put("XadcDriftHi", max(dr), "{:.0f}")
     V.put("SweepLo", ps["levels"].min(), "{:.2f}")
     V.put("SweepHi", ps["levels"].max(), "{:.2f}")
     V.put("DVminRangeLo", min(dvm.values()), "{:.0f}")

@@ -50,14 +50,18 @@ def sta_model(impl_dir: str, corner: str = "Slow") -> dict[int, dict]:
         a, b = by[(j, "FF1")], by[(j, "FF2")]
         d_sta = b["slack"] - a["slack"]
         d_si = (b["slack"] + b["uncertainty"] - b["pessimism"]) - (a["slack"] + a["uncertainty"] - a["pessimism"])
+        # Delta_si splits into the arrival of the capture clock at FF2 minus FF1 (clock part) and
+        # the data route to FF1 minus the route to FF2 (routing part); the setup times nearly cancel
         out[j] = {"delta_sta_ns": d_sta, "delta_si_ns": d_si,
                   "dU_ns": a["uncertainty"] - b["uncertainty"],
                   "dCPR_ns": a["pessimism"] - b["pessimism"],
+                  "clk_ns": b["end_clk"] - a["end_clk"],
+                  "data_ns": a["datapath"] - b["datapath"],
                   "ff2_delay_ns": b["datapath"]}
     return out
 
 
-def collect() -> list[dict]:
+def collect(npts: int = 3) -> list[dict]:
     res = []
     for f in sorted(glob.glob(os.path.join(TAPDIR, "tap_*.csv"))):
         js = f + ".json"
@@ -74,7 +78,7 @@ def collect() -> list[dict]:
             if len(sw) < 5:
                 continue
             for j in range(len(STAGES)):
-                m = margin_steps(sw, j)
+                m = margin_steps(sw, j, npts)
                 if m:
                     m.update({"impl": imp, "file": os.path.basename(f), "sweep": k})
                     res.append(m)

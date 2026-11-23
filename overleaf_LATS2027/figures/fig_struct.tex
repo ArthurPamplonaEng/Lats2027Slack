@@ -1,54 +1,84 @@
-% Fig. 1: multi-endpoint test structure (TikZ, one column, ~8.6 cm wide)
-\begin{tikzpicture}[font=\scriptsize, >={Latex[length=1.4mm,width=1.1mm]}, x=1cm, y=1cm,
-  lut/.style={draw, minimum width=4.2mm, minimum height=4.2mm, inner sep=0pt},
-  ff/.style={draw, minimum width=7mm, minimum height=5mm, inner sep=0pt, font=\tiny},
-  blk/.style={draw, rounded corners=1pt, inner sep=2pt, align=center, font=\tiny},
-  w/.style={->, line width=0.45pt}, l/.style={line width=0.45pt}]
-% ---------------------------------------------------------------- chain
-\node[blk, minimum height=5mm] (stim) at (0.15,0) {stimulus\\$a,b$, $t$};
-\node[lut] (c1) at (1.25,0) {};
-\node[lut] (c2) at (1.85,0) {};
-\node (d1) at (2.45,0) {$\cdots$};
-\node[lut, fill=black!8] (cj) at (3.05,0) {};
-\node (d2) at (3.65,0) {$\cdots$};
-\node[lut] (cn) at (4.25,0) {};
+% Fig. 1: (a) multi-endpoint test structure, (b) timing of one tap (TikZ, one column)
+\begin{tikzpicture}[font=\footnotesize, >={Latex[length=1.5mm,width=1.2mm]}, x=1cm, y=1cm,
+  lut/.style={draw, minimum width=4.6mm, minimum height=4.6mm, inner sep=0pt},
+  ff/.style={draw, minimum width=8.5mm, minimum height=5.2mm, inner sep=0pt, font=\scriptsize},
+  blk/.style={draw, rounded corners=1pt, inner sep=2pt, align=center, font=\scriptsize},
+  lab/.style={font=\scriptsize},
+  w/.style={->, line width=0.5pt}, l/.style={line width=0.5pt}]
+% ================================================================ (a) structure
+\node[font=\footnotesize\bfseries, anchor=south west] at (-0.75,0.32) {(a)};
+\node[blk, minimum height=6mm] (stim) at (0.15,-0.05) {stimulus\\$a,b$; $t$};
+\node[lut] (c1) at (1.35,0) {};
+\node[lut] (c2) at (1.95,0) {};
+\node (d1) at (2.55,0) {$\cdots$};
+\node[lut, fill=black!8] (cj) at (3.15,0) {};
+\node (d2) at (3.75,0) {$\cdots$};
+\node[lut] (cn) at (4.35,0) {};
 \draw[w] (stim) -- (c1); \draw[w] (c1) -- (c2); \draw[l] (c2) -- (d1); \draw[w] (d1) -- (cj);
 \draw[l] (cj) -- (d2); \draw[w] (d2) -- (cn);
-\node[font=\tiny, above=0.3mm of c1] {1};
-\node[font=\tiny, above=0.3mm of cj] {$S_j$};
-\node[font=\tiny, above=0.3mm of cn] {160};
-\node[font=\tiny, anchor=west, align=left] at (4.55,0) {ripple chain, one LUT3\\(carry) per stage,\\toggles every cycle};
-% ---------------------------------------------------------------- tap j
-\draw[dashed, line width=0.35pt, rounded corners=2pt] (0.95,-0.55) rectangle (5.6,-3.65);
-\node[font=\tiny, anchor=north west] at (1.0,-0.6) {tap $j$ (one of 23)};
-\node[lut] (s) at (3.05,-0.9) {$\oplus$};
+\node[lab, above=0.3mm of c1] {1};
+\node[lab, above=0.3mm of cj] {$S_j$};
+\node[lab, above=0.3mm of cn] {160};
+\node[lab, anchor=west, align=left] at (4.7,0) {ripple chain: one\\LUT3 (carry) per\\stage, toggles\\every cycle};
+% tap j
+\draw[dashed, line width=0.35pt, rounded corners=2pt] (0.85,-0.6) rectangle (6.05,-3.95);
+\node[lab, anchor=north west] at (0.9,-0.65) {tap $j$ (one of 23)};
+\node[lut] (s) at (3.15,-1.0) {$\oplus$};
 \draw[w] (cj) -- (s);
-\node[font=\tiny, anchor=west] at (3.25,-0.9) {sum bit $S_j$};
-\node[ff] (f1) at (1.75,-1.75) {FF1};
-\node[ff] (f2) at (3.05,-1.75) {FF2};
-\coordinate (sp) at (3.05,-1.3);
+\node[lab, anchor=west] at (3.4,-1.0) {sum bit $S_j$};
+\node[ff] (f1) at (1.8,-1.9) {FF1};
+\node[ff] (f2) at (3.15,-1.9) {FF2};
+\coordinate (sp) at (3.15,-1.42);
 \draw[l] (s) -- (sp); \draw[w] (sp) -- (f2);
 \draw[w] (sp) -| (f1);
-\node[lut] (x) at (2.4,-2.55) {$\oplus$};
+\node[lut] (x) at (2.45,-2.75) {$\oplus$};
 \draw[w] (f1) |- (x); \draw[w] (f2) |- (x);
-\node[ff] (f3) at (2.4,-3.25) {FF3};
+\node[ff] (f3) at (2.45,-3.5) {FF3};
 \draw[w] (x) -- (f3);
-\node[font=\tiny, anchor=east] at (1.95,-3.25) {catcher clk};
-\node[lut] (k) at (3.95,-2.55) {$\oplus$};
+\node[lab, anchor=east] at (1.95,-3.5) {catcher clk};
+\node[lut] (k) at (4.2,-2.75) {$\oplus$};
 \draw[w] (f2.east) -| (k);
-\node[font=\tiny] (t) at (4.6,-2.55) {$t$};
+\node[lab] (t) at (4.95,-2.75) {$t$};
 \draw[w] (t) -- (k);
-\node[ff] (e) at (3.95,-3.25) {$e_j$};
+\node[ff] (e) at (4.2,-3.5) {$e_j$};
 \draw[w] (k) -- (e);
-\node[font=\tiny, anchor=west, align=left] at (4.4,-3.2) {functional\\checker};
-\node[font=\tiny, anchor=west] at (3.12,-2.12) {sys clk};
-% ---------------------------------------------------------------- clock manager and readout
-\node[blk, minimum width=7mm, minimum height=5mm] (mm) at (0.15,-1.75) {MMCM};
-\draw[w] (mm) -- (f1) node[midway, above, font=\tiny] {$\phi$-swept};
-\node[blk, minimum width=2.7cm, minimum height=6mm] (sw) at (1.55,-4.3) {sweep engine: first-alarm\\step $r_j$ of every tap};
-\node[blk, minimum width=3.0cm, minimum height=6mm] (st) at (4.95,-4.3) {1\,s window per tap: alarms,\\$\bar r_j, r_{j,\min}, r_{j,\max}$, error cycles};
+\node[lab, anchor=west, align=left] at (4.7,-3.45) {functional\\checker};
+\node[lab, anchor=west] at (3.6,-1.62) {sys clk};
+% clock manager and readout
+\node[blk, minimum width=8mm, minimum height=5.5mm] (mm) at (0.15,-1.9) {MMCM};
+\draw[w] (mm) -- (f1) node[midway, above, font=\scriptsize] {$\phi$};
+\node[blk, minimum width=2.9cm, minimum height=7mm] (sw) at (1.55,-4.65) {sweep engine: first-alarm\\step $r_j$ of every tap};
+\node[blk, minimum width=3.3cm, minimum height=7mm] (st) at (5.1,-4.65) {1\,s window per tap: alarms,\\$\bar r_j, r_{j,\min}, r_{j,\max}$, errors};
 \draw[w] (f3) -- (f3 |- sw.north);
 \draw[w] (e) -- (e |- st.north);
 \draw[w] (sw) -- (st);
-\draw[w] (sw.west) -- ++(-0.25,0) -- ++(0,0) |- ([yshift=-1mm]mm.south) node[pos=0.25, left, font=\tiny] {PSEN};
+\draw[w] (sw.west) -- ++(-0.3,0) |- ([yshift=-1mm]mm.south) node[pos=0.25, left, font=\scriptsize] {PSEN};
+% ================================================================ (b) timing of one tap
+\begin{scope}[yshift=-5.75cm]
+\node[font=\footnotesize\bfseries, anchor=north west] at (-0.75,0.45) {(b)};
+% rows: data at FF2, clock of FF2, data at FF1, clock of FF1 (swept)
+\def\xa{1.75} \def\xb{7.45}
+\def\dtwo{3.6} \def\done{4.4} \def\etwo{6.55} \def\eone{6.25} \def\dphi{0.27}
+% data waveforms (bus with a transition)
+\foreach \y/\d/\nm in {0/\dtwo/{data at FF2}, -1.2/\done/{data at FF1}} {
+  \draw[l] (\xa,\y+0.13) -- (\d-0.09,\y+0.13) -- (\d+0.09,\y-0.13) -- (\xb,\y-0.13);
+  \draw[l] (\xa,\y-0.13) -- (\d-0.09,\y-0.13) -- (\d+0.09,\y+0.13) -- (\xb,\y+0.13);
+  \node[lab, anchor=east] at (\xa-0.05,\y) {\nm};
+}
+% clock of FF2 (system clock) and of FF1 at phase step 0
+\draw[l] (\xa,-0.68) -- (\etwo,-0.68) -- (\etwo,-0.42) -- (\xb,-0.42);
+\node[lab, anchor=east] at (\xa-0.05,-0.55) {clk of FF2};
+\draw[l] (\xa,-1.88) -- (\eone,-1.88) -- (\eone,-1.62) -- (\xb,-1.62);
+\node[lab, anchor=east] at (\xa-0.05,-1.75) {clk of FF1};
+% swept FF1 edges: one step earlier each; the first edge before the data transition alarms
+\foreach \k in {1,...,6} { \draw[densely dotted, line width=0.4pt] (\eone-\k*\dphi,-1.9) -- (\eone-\k*\dphi,-1.6); }
+\draw[line width=0.9pt, red!70!black] (\eone-7*\dphi,-1.92) -- (\eone-7*\dphi,-1.58);
+\draw[->, line width=0.45pt] (\eone,-2.08) -- (\eone-7*\dphi,-2.08) node[midway, below=-0.4mm, font=\scriptsize] {$r\,\delta\phi$: first alarm at step $r$};
+% slacks
+\draw[<->, line width=0.45pt] (\dtwo,0.28) -- (\etwo,0.28) node[midway, above=-0.5mm, font=\scriptsize] {$s_2$};
+\draw[densely dashed, line width=0.3pt] (\etwo,0.36) -- (\etwo,-0.42);
+\draw[<->, line width=0.45pt] (\done,-0.92) -- (\eone,-0.92) node[midway, above=-0.5mm, font=\scriptsize] {$s_1$};
+\draw[densely dashed, line width=0.3pt] (\eone,-0.84) -- (\eone,-1.62);
+\node[lab, anchor=west] at (\eone+0.1,-0.9) {$\Delta=s_2-s_1$};
+\end{scope}
 \end{tikzpicture}

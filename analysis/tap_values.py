@@ -16,7 +16,7 @@ from scipy import stats
 
 import fig_tap
 from common import GEN, STEP_TAP_PS, V
-from tap_analysis import TAPDIR, load, split_sweeps, vaxis
+from tap_analysis import STAGES, TAPDIR, load, split_sweeps, vaxis
 from tap_offsets import collect, impl_of, sta_model, summarize
 
 GUARDS = {"A'": ("A", 250.0), "B'": ("B", 250.0), "B''": ("B", 125.0)}
@@ -78,7 +78,9 @@ def run() -> dict:
     pts, _ = load(f)
     V.put("TapVlo", min(vaxis(p) for p in pts), "{:.3f}")
     V.put("TapVhi", max(vaxis(p) for p in pts), "{:.3f}")
-    V.put("TapSweepsPerS", np.mean([p.sweeps / p.windows for p in pts]), "{:,.0f}")
+    rate = np.mean([p.sweeps / p.windows for p in pts])
+    # SI style: no separator up to four digits, a thin space from five on (as \vRunN)
+    V.put("TapSweepsPerS", f"{rate:,.0f}".replace(",", "\\," if rate >= 1e4 else ""))
     V.put("TapDie", np.mean([p.temp for p in pts]), "{:.0f}")
     nshmoo = len([g for g in glob.glob(os.path.join(TAPDIR, "tap_shmoo*.csv"))])
     V.put("TapShmoos", nshmoo, "{}")
@@ -107,10 +109,11 @@ def run() -> dict:
     V.put("TapVfLo", min(r["V_f"] for r in NG), "{:.3f}")
     V.put("TapVfHi", max(r["V_f"] for r in NG), "{:.3f}")
 
-    # STA terms (placement A) and the model on the independent taps
+    # STA terms of placement A over its modelled (failing) taps, and the model on the independent taps
     mA = sta_model("impl")
-    V.put("StaDU", np.mean([v["dU_ns"] for v in mA.values()]) * 1000, "{:.0f}")
-    V.put("StaDCPR", -np.mean([v["dCPR_ns"] for v in mA.values()]) * 1000, "{:.0f}")
+    tA = [r["tap"] for r in by_imp["A"]]
+    V.put("StaDU", np.mean([mA[j]["dU_ns"] for j in tA]) * 1000, "{:.0f}")
+    V.put("StaDCPR", -np.mean([mA[j]["dCPR_ns"] for j in tA]) * 1000, "{:.0f}")
     x = np.array([r["pred_ps"] for r in NG])
     y = np.array([r["m_ps"] for r in NG])
     k, b = np.polyfit(x, y, 1)
@@ -150,6 +153,101 @@ def run() -> dict:
     V.put("FitRmsA", np.sqrt(np.mean((np.array([r["m_ps"] for r in by_imp["A"]]) -
                                        np.array([r["pred_ps"] for r in by_imp["A"]])) ** 2)), "{:.0f}")
 
+    def rms(v):
+        return float(np.sqrt(np.mean(np.asarray(v) ** 2)))
+
+    # correction terms of placement B (the text gives A's in StaDU / StaDCPR) and the total
+    # correction (raw minus corrected prediction) of each placement
+    mB = sta_model("impl_b")
+    tB = [r["tap"] for r in by_imp["B"]]
+    V.put("StaDUB", np.mean([mB[j]["dU_ns"] for j in tB]) * 1000, "{:.0f}")
+    V.put("StaDCPRB", -np.mean([mB[j]["dCPR_ns"] for j in tB]) * 1000, "{:.0f}")
+    for imp in ("A", "B"):
+        V.put(f"StaCorr{imp}", np.mean([r["sta_ps"] - r["pred_ps"] for r in by_imp[imp]]), "{:.0f}")
+    # the raw slack difference: correlation, and raw plus the best constant
+    V.put("FitRawR", stats.pearsonr(raw, y).statistic, "{:.2f}")
+    V.put("FitRawConstRms", rms(y - raw - (y - raw).mean()), "{:.0f}")
+
+    # leave-one-out: the tap whose removal lowers r most, and the model without it
+    loo = []
+    for i in range(len(NG)):
+        keep = np.arange(len(NG)) != i
+        pr_i = stats.pearsonr(x[keep], y[keep])
+        loo.append((pr_i.statistic, pr_i.pvalue, rms(y[keep] - x[keep]),
+                    rms(y[keep] - y[keep].mean()), i))
+    lo = min(loo)
+    out = NG[lo[4]]
+    V.put("LooImpl", out["impl"])
+    V.put("LooStage", out["stage"], "{}")
+    V.put("LooR", lo[0], "{:.2f}")
+    V.put("LooP", lo[1], "{:.2f}")
+    V.put("LooRms", lo[2], "{:.0f}")
+    V.put("LooNullRms", lo[3], "{:.0f}")
+    others = [t for t in loo if t[4] != lo[4]]
+    V.put("LooOtherRLo", min(t[0] for t in others), "{:.2f}")
+    V.put("LooOtherRHi", max(t[0] for t in others), "{:.2f}")
+    # within each placement, without that tap: STA ranks the taps but overstates their spread
+    for imp in ("A", "B"):
+        rs = [r for r in by_imp[imp] if r is not out]
+        xx = np.array([r["pred_ps"] for r in rs])
+        yy = np.array([r["m_ps"] for r in rs])
+        V.put(f"FitSlopeIn{imp}", np.polyfit(xx, yy, 1)[0], "{:.2f}")
+        V.put(f"FitRIn{imp}", np.corrcoef(xx, yy)[0, 1], "{:.2f}")
+    # out of sample: B predicted from what A gave (its mean margin) versus the STA of B
+    yA = np.array([r["m_ps"] for r in by_imp["A"]])
+    yA_no = np.array([r["m_ps"] for r in by_imp["A"] if r is not out])
+    V.put("FitOosConstRmsB", rms(yb - yA.mean()), "{:.0f}")
+    V.put("FitOosConstNoRmsB", rms(yb - yA_no.mean()), "{:.0f}")
+    V.put("FitNullRmsB", rms(yb - yb.mean()), "{:.0f}")
+    # what Delta* is made of: clock arrival at FF2 minus FF1, and data route to FF1 minus FF2
+    models = {"A": mA, "B": mB}
+    clk = {imp: {r["tap"]: models[imp][r["tap"]]["clk_ns"] * 1000 for r in by_imp[imp]} for imp in ("A", "B")}
+    dat = {imp: {r["tap"]: models[imp][r["tap"]]["data_ns"] * 1000 for r in by_imp[imp]} for imp in ("A", "B")}
+    rest = [c for j, c in clk[out["impl"]].items() if j != out["tap"]]
+    V.put("ClkOutPs", clk[out["impl"]][out["tap"]] - np.median(rest), "{:.0f}")
+    V.put("ClkSpreadPs", max(max(c for j, c in clk[imp].items() if not (imp == out["impl"] and j == out["tap"])) -
+                             min(c for j, c in clk[imp].items() if not (imp == out["impl"] and j == out["tap"]))
+                             for imp in ("A", "B")), "{:.0f}")
+    V.put("RouteSpreadPs", max(max(dat[imp].values()) - min(dat[imp].values()) for imp in ("A", "B")), "{:.0f}")
+    for imp in ("A", "B"):
+        V.put(f"ClkLevel{imp}", np.median([c for j, c in clk[imp].items()
+                                           if not (imp == out["impl"] and j == out["tap"])]), "{:+.0f}")
+
+    # how much the margins depend on the number of points of the extrapolated line
+    sens = {}
+    for npts in (2, 4):
+        alt = {(r["impl"], r["tap"]): r for r in summarize(collect(npts))}
+        for r in s:
+            a = alt.get((r["impl"], r["tap"]))
+            if a is not None:
+                key = "NoG" if r["impl"] in ("A", "B") else "G"
+                sens[key] = max(sens.get(key, 0.0), abs(a["m_ps"] - r["m_ps"]))
+    V.put("ExtrapSensPs", sens["NoG"], "{:.0f}")
+    V.put("ExtrapSensGPs", sens["G"], "{:.0f}")
+    V.put("TapGZeroPtsMax", max(r["zero_points"] for r in by_imp["A'"] + by_imp["B'"]), "{}")
+
+    # failing points at which every sweep still alarmed with a positive reading, at an error
+    # rate of one half (one edge fails in every cycle in which it occurs, the other passes)
+    half = {}
+    for f in sorted(glob.glob(os.path.join(TAPDIR, "tap_*.csv"))):
+        meta = json.load(open(f + ".json"))
+        imp = impl_of(meta)
+        if imp not in ("A", "B") or meta.get("mode") != "shmoo":
+            continue
+        taps = {r["tap"] for r in by_imp[imp]}
+        for sw in split_sweeps(load(f)[0]):
+            for p in sw:
+                for j in taps:
+                    if (p.state(j) == "FAIL" and abs(p.err_rate[j] - 0.5) < 0.02 and p.got_frac[j] > 0.999
+                            and p.reading[j] >= 1.0):
+                        half.setdefault((imp, j), []).append(p.reading[j])
+    hr = [np.mean(v) for v in half.values()]
+    V.put("HalfN", len(half), "{}")
+    V.put("HalfRLo", min(hr), "{:.1f}")
+    V.put("HalfRHi", max(hr), "{:.1f}")
+    V.put("HalfStages", " and ".join(f"S{STAGES[j]}" for (_, j) in sorted(half, key=lambda t: t[1])))
+    V.put("HalfImpl", "/".join(sorted({imp for imp, _ in half})))
+
     # guard: drop of the reading at identical (tap, voltage) points, and V_f change
     rd = readings_by_impl()
     gsum = {}
@@ -184,20 +282,26 @@ def run() -> dict:
         V.put("GuardHPtN", x["n"], "{}")
         V.put("GuardHDesignSt", 125.0 / STEP_TAP_PS, "{:.1f}")
         V.put("GuardHDVfmV", x["dvf"], "{:.1f}")
+        if "B'" in gsum:
+            V.put("GuardStepTwoPs", (gsum["B'"]["mean"] - x["mean"]) * STEP_TAP_PS, "{:.0f}")
 
     table(s, os.path.join(GEN, "tab_taps.tex"))
-    fig_tap.offset(s)
+    fig_tap.offset(s, mark=(out["impl"], out["stage"]))
     shm = sorted(glob.glob(os.path.join(TAPDIR, "tap_shmoo2_*.csv")))
     gua = sorted(glob.glob(os.path.join(TAPDIR, "tap_shmooAguard_*.csv")))
     if shm:
         p2, _ = load(shm[-1])
         pg = split_sweeps(load(gua[-1])[0])[0] if gua else None
-        fig_tap.shmoo(split_sweeps(p2)[0], [2, 3, 4, 5, 6, 7, 8], guard=pg)
+        sel = sorted({r["tap"] for r in by_imp["A"]})          # taps that fail inside the sweep
+        fig_tap.shmoo(split_sweeps(p2)[0], sel, guard=pg, example=out["stage"])
     return {"summary": s, "guards": gsum}
 
 
 def table(summary, path):
-    """paper/generated/tab_taps.tex: per-tap results of the two placements and their guards."""
+    """paper/generated/tab_taps.tex: per-tap results of the two placements and their guards.
+
+    The margins of the placements without guard carry their interval (from the last passing and
+    the first failing voltage) as super- and subscripts: m^{+(m_hi - m)}_{-(m - m_lo)}."""
     by = {(r["impl"], r["stage"]): r for r in summary}
     stages = sorted({r["stage"] for r in summary if r["impl"] in ("A", "B")})
     lines = [r"\begin{tabular}{@{}r@{\hspace{4pt}}ccc@{\hspace{5pt}}c@{\hspace{7pt}}ccc@{\hspace{5pt}}cc@{}}",
@@ -207,21 +311,29 @@ def table(summary, path):
              r"$S$ & $V_f$ & $m$ & $\Dst$ & $m'$ & $V_f$ & $m$ & $\Dst$ & $m''$ & $m'$ \\",
              r"\midrule"]
 
-    def cell(imp, s, key, fmt):
+    def num(v, fmt="{:+.0f}"):
+        t = fmt.format(v)
+        if fmt == "{:+.0f}" and abs(v) < 0.5:
+            return "0"
+        return t.replace("-", "$-$")
+
+    def cell(imp, s, key, fmt="{:+.0f}"):
+        r = by.get((imp, s))
+        return num(r[key], fmt) if r else "--"
+
+    def mcell(imp, s):
         r = by.get((imp, s))
         if not r:
             return "--"
-        v = r[key]
-        if fmt == "{:+.0f}" and abs(v) < 0.5:
-            return "0"
-        return fmt.format(v)
+        up = r["m_hi_ps"] - r["m_ps"]
+        dn = r["m_ps"] - r["m_lo_ps"]
+        return (f"{num(r['m_ps'])}$^{{\\text{{+{abs(up):.0f}}}}}_{{\\text{{$-${abs(dn):.0f}}}}}$")
     for s in stages:
         row = [f"{s}",
-               cell("A", s, "V_f", "{:.3f}"), cell("A", s, "m_ps", "{:+.0f}"), cell("A", s, "pred_ps", "{:+.0f}"),
-               cell("A'", s, "m_ps", "{:+.0f}"),
-               cell("B", s, "V_f", "{:.3f}"), cell("B", s, "m_ps", "{:+.0f}"), cell("B", s, "pred_ps", "{:+.0f}"),
-               cell("B''", s, "m_ps", "{:+.0f}"), cell("B'", s, "m_ps", "{:+.0f}")]
-        lines.append(" & ".join(row).replace("-", "$-$").replace("$-$$-$", "--") + r" \\")
+               cell("A", s, "V_f", "{:.3f}"), mcell("A", s), cell("A", s, "pred_ps"), cell("A'", s, "m_ps"),
+               cell("B", s, "V_f", "{:.3f}"), mcell("B", s), cell("B", s, "pred_ps"),
+               cell("B''", s, "m_ps"), cell("B'", s, "m_ps")]
+        lines.append(" & ".join(row) + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     with open(path, "w") as f:
         f.write("% generated by analysis/tap_values.py -- do not edit\n" + "\n".join(lines) + "\n")

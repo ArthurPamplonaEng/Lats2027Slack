@@ -38,21 +38,18 @@ Jarbas Silveira\IEEEauthorrefmark{1}, and Fabian Vargas\IEEEauthorrefmark{2}}
 \maketitle
 
 \begin{abstract}
-Phase-swept slack sensors report the timing margin of a path as a count of clock-manager phase
-steps, and silicon lifecycle management (SLM) acts on that count, yet whether a zero reading marks
-the functional failure of the path is rarely measured. We drive a delay chain on a 16\,nm Artix
-UltraScale+ FPGA through failure by lowering the core voltage; each of its \vTapN{} taps carries
-the sensor and a functional checker on the same capture flip-flop. On \vTapNoGN{} failing taps in
-two placements, the first error came between \vWorstLatePs\,ps before and \vTapNoGMaxPsAbs\,ps after
-the reading reached zero, and \vTapNoGLateSure{} taps failed while still reading positive. This
-offset is the sensor's own sampling skew: static timing predicts it per tap ($r=\vFitR$,
-\vFitRms\,ps rms) once the clock uncertainty and pessimism charged to the sensor's cross-clock path
-are removed. A static phase on the system clock turns it into a designed guard band: a 250\,ps
-setting lowered every reading by \vGuardPtPs\,ps without moving the failure voltage, after which
-every tap read zero before failing. On a 28\,nm Artix-7, a \vRunDurH\,h burn-in at 1.4\,V and
-125\,\textdegree C took \vDpsHiAbs, \vDpsMidAbs{} and \vDpsLoAbs\,ps of slack from a 16-bit adder
-path at 1.1, 1.0 and 0.9\,V, which a single supply shift of \vShiftmV\,mV accounts for. A zero
-reading is thus a failure warning only once its offset is known; static timing bounds it and one
+Silicon lifecycle management (SLM) acts on the readings of phase-swept slack sensors, yet whether a
+zero reading marks the functional failure of the monitored path is rarely measured. We drive a
+tapped delay chain on a 16\,nm Artix UltraScale+ FPGA through failure by lowering the core voltage,
+each tap carrying the sensor and a functional checker on one capture flip-flop. On \vTapNoGN{}
+failing taps in two placements, the zero reading and the first error were $-$\vWorstLatePs{} to
+$+$\vTapNoGMaxPsAbs\,ps of slack apart (negative: error first), and most taps failed while still
+reading positive. This offset is the sensor's own sampling skew: without the analysis-only margins
+charged to its cross-clock path, static timing predicts it to \vFitRms\,ps rms, whereas the raw
+analysis overstates it by \vFitRawBiasAbs\,ps. A static phase on the system clock turns it into a
+designed guard band without moving the failure voltage. On a 28\,nm Artix-7, the slack a burn-in
+took from an adder path at three core voltages amounts to one supply shift of \vShiftmV\,mV. A zero
+reading is thus a failure warning only once its offset is known: static timing predicts it, and one
 voltage sweep measures it.
 \end{abstract}
 
@@ -66,19 +63,26 @@ management
 
 On-chip monitors are moving from characterization chips into products, where SLM software reads
 them to set adaptive voltage scaling (AVS), raise margin alarms and estimate remaining
-life~\cite{kashyap21,niemann20,vargas25}. A timing-margin sensor serves those loops only if its
-reading means what they assume: that a zero reading marks the operating point at which the
-monitored path starts to fail. In ASICs, failure prediction from a guard band ahead of the capture
-edge~\cite{agarwal07}, error-prediction flip-flops whose guard band adapts to
-aging~\cite{martins11}, and error detection at the capture flip-flop~\cite{razor04} are
+life~\cite{kashyap21,niemann20,vargas25,lanzieri24}. A timing-margin sensor serves those loops only
+if its reading means what they assume: that a zero reading marks the operating point at which the
+monitored path starts to fail. Processors face the same question with replica monitors, which must
+be matched to the paths they stand for: the critical-path monitor of POWER6 tracks the real paths to
+within three FO2 delays~\cite{drake07} and drives guard-band management in POWER7~\cite{lefurgy11},
+tunable replica circuits are trimmed to fail before the critical paths~\cite{tschanz09}, and
+silicon odometers separate the aging mechanisms~\cite{keane10}. In situ, failure prediction from a
+guard band ahead of the capture edge~\cite{agarwal07}, error-prediction flip-flops whose guard band
+adapts to aging~\cite{martins11}, and error detection at the capture flip-flop~\cite{razor04} are
 established. On FPGAs, aging sensors based on phase-shifted sampling have been validated under
 stress~\cite{valdes13,sensible17}; clock-sweep self-measurement of path delays goes back to Wong
-\textit{et al.}~\cite{wong09} and was used to track degradation~\cite{stott10}; online slack
-measurement with phase-shifted shadow registers has driven voltage and frequency
-scaling~\cite{levine14}; and online delay monitors now reach every timing path, with an average
-error of 1.5\,\%~\cite{jiang22}. These works track degradation or set the operating point from the
-reading; to our knowledge, none measures, path by path, how far a zero reading lies from the first
-functional error of the path being watched.
+\textit{et al.}~\cite{wong09} and was used to track degradation~\cite{stott10}, as were ring
+oscillators~\cite{amouri14}; online
+slack measurement with phase-shifted shadow registers has driven voltage and frequency
+scaling~\cite{levine14}; voltage scaling has been made safe by calibrating the actual failing points
+of each application on each device~\cite{ahmed16}; and online delay monitors now reach every timing
+path, with an average error of 1.5\,\%~\cite{jiang22}. These works track degradation, match a
+monitor to its paths at test time, or measure the failure point itself; to our knowledge, none
+measures, path by path, how far the zero reading of an in-situ sensor lies from the first
+functional error of the path it watches, or predicts that distance from static timing.
 
 A dynamic phase shift added to the sensor of~\cite{vargas24} lets it measure the slack of a path
 continuously, without recalibration~\cite{sbcci25}. The question SLM needs answered remains open:
@@ -91,36 +95,38 @@ This paper answers the question with measurements on two FPGA generations:
 \item A multi-endpoint test structure (Section~\ref{sec:struct}): taps of graded length on one
 ripple chain, each with the sensor and a functional checker on the same capture flip-flop, so one
 core-voltage sweep moves the failure boundary across many paths under the same conditions.
-\item The answer on 16\,nm (Section~\ref{sec:res16}): the zero reading and the first error coincide
-to within an offset of $-$\vWorstLatePs{} to $+$\vTapNoGMaxPsAbs\,ps that belongs to the sensor's
-implementation, not to the path. Static timing analysis (STA) predicts it per tap, also on a second
-placement, and a static clock phase moves it by design without touching the failure voltage, so
-the guard band an SLM loop must add can be bounded at design time and checked with one shmoo.
+\item The answer on 16\,nm (Sections~\ref{sec:res16}--\ref{sec:guard}): the zero reading and the
+first error differ by $-$\vWorstLatePs{} to $+$\vTapNoGMaxPsAbs\,ps of slack, an offset that belongs
+to the sensor's implementation, not to the path. Static timing analysis (STA) predicts it to
+\vFitRms\,ps rms on two placements once its analysis-only margins are removed; it catches a large
+clock outlier but overstates the tap-to-tap routing part. A static clock phase moves the offset by
+design without touching the failure voltage, so the guard band an SLM loop must add can be
+estimated at design time and checked with one shmoo.
 \item The margin a burn-in consumes, read through the sensor on 28\,nm (Section~\ref{sec:res28}):
-the steps lost grow from \vDslackHiAbs{} at 1.1\,V to \vDslackLoAbs{} at 0.9\,V, yet one supply shift
-of \vShiftmV\,mV reproduces all three corners, as a uniform threshold-voltage increase would; the
-temperature coefficient of the reading changes sign near 1.0\,V. A \vUsDurH\,h stress of two
+the steps lost grow from \vDslackHiAbs{} at 1.1\,V to \vDslackLoAbs{} at 0.9\,V, yet one supply
+shift of \vShiftmV\,mV reproduces all three corners, as a uniform threshold-voltage increase would;
+the temperature coefficient of the reading changes sign near 1.0\,V. A \vUsDurH\,h stress of two
 16\,nm boards at nominal voltage, by contrast, moved their readings by less than one step.
 \end{enumerate}
 
 % =============================================================================================
 \section{Sensor and Reading}\label{sec:sensor}
 
-The sensor~\cite{sbcci25} samples the monitored path with two flip-flops (Fig.~\ref{fig:struct}):
+The sensor~\cite{sbcci25} samples the monitored path with two flip-flops (Fig.~\ref{fig:struct}a):
 FF2 on the system clock and FF1 on a clock whose phase the clock manager (MMCM) shifts at run
 time. FF3 latches their XOR on a catcher clock a fixed fraction of the period later. A controller
 moves the FF1 clock earlier one fine step at a time, $\delta\phi = 1/(56 f_\mathrm{VCO})$~\cite{ug572}
-(17.857\,ps at $f_\mathrm{VCO}=1$\,GHz), and the reading $r$ is the number of steps before the first
-alarm. The path toggles every cycle, so the alarm is deterministic up to jitter.
+(17.857\,ps at $f_\mathrm{VCO}=1$\,GHz), and the reading $r$ is the first step at which the sensor
+alarms. The path toggles every cycle, so the alarm is deterministic up to jitter.
 
 \textbf{What a reading means.} Let $s_1$ and $s_2$ be the setup slacks of the path at FF1 (at phase
-step 0) and at FF2. FF1 sees the previous value, and the alarm fires, once $r\,\delta\phi > s_1$, so
-$r=\lceil s_1/\delta\phi\rceil$; the functional capture fails when $s_2<0$. The two slacks differ by
-an implementation offset $\Delta=s_2-s_1$: the skew between the two clock trees at FF1 and FF2, the
-routing from the path to each flip-flop, and their setup times. If $\Delta>0$ the reading reaches
-zero while FF2 still captures correctly, a warning margin of $\Delta$; if $\Delta<0$ the sensor is
-late, and the path fails while it still reads $|\Delta|/\delta\phi$ steps. In voltage the margin is
-$\Delta/|\partial d/\partial\Vcc|$, with $d$ the path delay.
+step 0) and at FF2 (Fig.~\ref{fig:struct}b). FF1 sees the previous value, and the alarm fires, once
+$r\,\delta\phi > s_1$, so $r=\lceil s_1/\delta\phi\rceil$; the functional capture fails when $s_2<0$.
+The two slacks differ by an implementation offset $\Delta=s_2-s_1$: the skew between the two clock
+trees at FF1 and FF2, the routing from the path to each flip-flop, and their setup times. If
+$\Delta>0$ the reading reaches zero while FF2 still captures correctly, a warning margin of $\Delta$;
+if $\Delta<0$ the sensor is late, and the path fails while it still reads $|\Delta|/\delta\phi$
+steps. In voltage the margin is $\Delta/|\partial d/\partial\Vcc|$, with $d$ the path delay.
 
 \textbf{After failure.} Once a path fails ($T<d<2T$), FF1 and FF2 capture the same stale value at
 step 0, and the next alarm appears only near $r=(2T-d)/\delta\phi$: beyond the sweep (no alarm) or as
@@ -134,10 +140,13 @@ from a safe one; a functional checker can.
 \begin{figure}[t]
 \centering
 \resizebox{\columnwidth}{!}{\input{figures/fig_struct.tex}}
-\caption{Test structure (16\,nm). A ripple chain whose carry toggles every cycle feeds 23 taps
+\caption{(a)~Test structure (16\,nm). A ripple chain whose carry toggles every cycle feeds 23 taps
 ($S_j=24$, 48, and 70 to 150 in steps of 4); each tap has the sensor of~\cite{sbcci25} and a checker
 that compares the capture flip-flop FF2 with a replica $t$ of the stimulus. One phase sweep reads
-every tap; the FPGA keeps 1\,s statistics per tap.}
+every tap; the FPGA keeps 1\,s statistics per tap. (b)~Timing of one tap: FF1 and FF2 capture the
+same transition with slacks $s_1$ and $s_2$, and each step moves the FF1 edge $\delta\phi$ earlier.
+The reading reaches zero when $s_1$ does, the path fails when $s_2<0$: $\Delta$ is the margin left
+at a zero reading.}
 \label{fig:struct}
 \end{figure}
 
@@ -145,15 +154,16 @@ The chain has \vChainStages{} stages, one LUT3 (carry majority) per stage. Opera
 between 0x55..55 and 0x55..56 and $b=$\,0xAA..AA, so every carry toggles each cycle and both edges
 ripple through the whole chain.
 Tap $j$ takes the sum bit of stage $S_j$ through its own LUT, so all taps load the chain alike. Two
-control taps never fail; the other \vTapNlong{} are four stages apart so that the 10\,ns period is
-crossed inside the set over the whole voltage range. Each tap feeds a sensor and a checker
-$e_j=\mathrm{FF2}_j\oplus t$, which is 0 in every cycle while the tap meets timing; the checker is a
-short single-cycle path, so an error is the monitored path's. A sweep engine moves the FF1 clock
-until every tap has alarmed or \vMaxSteps{} steps (inside the catcher window) have passed, returns
-the phase to its origin and repeats, about \vTapSweepsPerS{} times per second. For every 1\,s window
-and tap the FPGA keeps the number of sweeps with an alarm, the mean, minimum and maximum reading,
-and the number of cycles with $e_j=1$; a virtual I/O core clocked by the board oscillator exposes
-them to the JTAG.
+control taps never fail; the other \vTapNlong{} are four stages apart. On this die, between
+\vTapVhi{} and \vTapVlo\,V, the failure boundary crosses \vTapAN{} of them in placement A (S70 to
+S90) and \vTapBN{} in placement B, the taps analyzed below; the longer ones already fail at the top
+of the range. Each tap feeds a sensor and a checker $e_j=\mathrm{FF2}_j\oplus t$, which is 0 in every
+cycle while the tap meets timing; the checker is a short single-cycle path, so an error is the
+monitored path's. A sweep engine moves the FF1 clock until every tap has alarmed or \vMaxSteps{}
+steps (inside the catcher window) have passed, returns the phase to its origin and repeats, about
+\vTapSweepsPerS{} times per second. For every 1\,s window and tap the FPGA keeps the number of sweeps
+with an alarm, the mean, minimum and maximum reading, and the number of cycles with $e_j=1$; a
+virtual I/O core clocked by the board oscillator exposes them to the JTAG.
 
 \textbf{Implementation.} The design targets xcau15p-ffvb676-1-i (Vivado 2025.2). Chain, sensors and
 checkers occupy one exclusive region; placement A and placement B put that region in two clock
@@ -173,12 +183,14 @@ the slow corner, always positive.
 
 \textbf{16\,nm.} The structure runs on an RV02A board (Artix UltraScale+ xcau15p, nominal
 $\Vcc=0.85$\,V; board~2 of Section~\ref{sec:res16bound}) whose core rail comes from a TPS65400
-regulator that an STM32 sets in 10\,mV steps; $\Vcc$ and the die temperature are read from the SYSMON through the JTAG. Each shmoo steps
-$\Vcc$ from \vTapVhi{} down to \vTapVlo\,V and back (2\,s to settle, then 6 to 8 windows of 1\,s,
-i.e.\ up to $8\times10^{8}$ checked cycles per point; about 8\,min per shmoo), always above the
-0.72\,V operating point of the low-voltage grade of the family~\cite{ds931} and below its 1.0\,V
-absolute maximum. The board sat at room temperature; its SYSMON read about \vTapDie\,\textdegree C,
-a known offset of this board's sensor that we report but do not use.
+regulator that an STM32 sets in 10\,mV steps; $\Vcc$ and the die temperature are read from the
+SYSMON through the JTAG. Each shmoo steps $\Vcc$ from \vTapVhi{} down to \vTapVlo\,V and back (2\,s
+to settle, then 6 to 8 windows of 1\,s, i.e.\ up to $8\times10^{8}$ checked cycles per point; about
+8\,min per shmoo), always above the 0.72\,V operating point of the low-voltage grade of the
+family~\cite{ds931} and below its 1.0\,V absolute maximum. The board sat at room temperature; its
+SYSMON read about \vTapDie\,\textdegree C, a known offset of this board's sensor that we report but
+do not use. The margins below are differences of readings in phase steps and do not depend on the
+SYSMON voltage calibration, which enters only the voltages we quote.
 
 \textbf{28\,nm.} A Nexys~4~DDR board (Artix-7 xc7a100t, nominal 1.0\,V) runs the same sensor, with
 the same 17.857\,ps step, on the most significant sum bit of a 16-bit ripple-carry adder whose
@@ -189,8 +201,8 @@ $\vRunT\pm\vRunTsd$\,\textdegree C (oven air \vRunOven\,\textdegree C), with the
 second (\vRunN{} samples) and never recalibrated; it read $\vRunSlack\pm\vRunSlackSd$ steps
 (\vRunSlackNs\,ns of slack). At about \vPreT\,\textdegree C, corners at 1.10, 1.00 and 0.90\,V were
 taken before the burn-in (single readings) and right after it, in a logged run that also stepped
-$\Vcc$ from \vSweepHi{} to \vSweepLo\,V; cold corners at \vColdT\,\textdegree C followed. Both stresses
-are deliberate overstress (1.4\,V exceeds the absolute-maximum core voltage of the
+$\Vcc$ from \vSweepHi{} to \vSweepLo\,V; cold corners at \vColdT\,\textdegree C followed. The burn-in
+is a deliberate overstress (1.4\,V exceeds the absolute-maximum core voltage of the
 Artix-7~\cite{ds181}), so the rates reported here do not transfer to product
 burn-in~\cite{jesd22a108}.
 
@@ -202,11 +214,13 @@ burn-in~\cite{jesd22a108}.
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig_tap_shmoo}
-\caption{16\,nm, one downward sweep. Top: reading of the taps whose failure boundary falls inside
-the sweep, in placement A (solid) and in the same routed design with the 250\,ps guard of
-Section~\ref{sec:guard} (dashed); a point is drawn while the tap's checker saw no error. Bottom:
-error rate of the failing points of placement A (fraction of cycles in which FF2 held the wrong
-value).}
+\caption{16\,nm, one downward sweep of placement A. Top: reading of the taps whose failure boundary
+falls inside the sweep (solid) and of the same routed design with the 250\,ps guard of
+Section~\ref{sec:guard} (dashed); a point is drawn while the tap's checker saw no error;
+$\times$:~first failing voltage $V_f$. Bottom: close-up near zero. The line through the three
+lowest error-free readings, extrapolated to the failure threshold, gives the margin $m$ (arrow:
+S\vLooStage, which read zero at \vZeroPtsMax{} points before its first error); open circles: failing points at
+which every sweep still alarmed.}
 \label{fig:shmoo}
 \end{figure}
 
@@ -218,24 +232,32 @@ did the control taps at any voltage. Longer taps erred in every cycle up to a de
 beyond which the period-two stimulus makes a capture two cycles late look correct (the longest taps
 at the lowest voltages); all showed either no alarm or the aliased reading of
 Section~\ref{sec:sensor}. Error rates of exactly 0.5 between the two regimes show the two edges
-failing at different voltages.
+failing at different voltages, and there the reading need not vanish: in every sweep,
+\vHalfStages{} of placement \vHalfImpl{} still read \vHalfRLo{} to \vHalfRHi{} steps while one edge
+failed in every cycle in which it occurred, the blindness to one edge of Section~\ref{sec:sensor}
+(open circles in Fig.~\ref{fig:shmoo}).
 
 For each failing tap and voltage sweep we fit a straight line to the three error-free, positive
 readings closest to the boundary, extrapolate it to the failure threshold and call $m$ the negated
-result, in ps: $m>0$ means the reading had reached zero before the first error. The threshold lies between the first failing and the last
-passing voltage; the bounds of $m$ that these two voltages give are the error bars of
-Fig.~\ref{fig:offset}. As the best estimate we take the first failing voltage when its error rate is
-below 0.5, since then only the jitter tail of one edge fails there, and the middle of the interval
-otherwise. Over the \vTapNoGSweepsMin{} to \vTapNoGSweepsMax{} voltage sweeps of each tap (down and
-up, repeated shmoos), $m$ varied by at most \vTapNoGSdMax{} step (standard deviation), with no
-hysteresis; Table~\ref{tab:taps} lists the means.
+result, in ps: $m>0$ means the reading had reached zero before the first error. The threshold lies
+between the first failing voltage $V_f$ and the last passing one; the bounds of $m$ that these two
+voltages give are the error bars of Fig.~\ref{fig:offset} and the intervals of Table~\ref{tab:taps}.
+As the best estimate we take $V_f$ when its error rate is below 0.5, since then only the jitter tail
+of one edge fails there, and the middle of the interval otherwise. Fitting two or four points
+instead of three changes $m$ by at most \vExtrapSensPs\,ps. The line runs beyond the data only for
+taps that read zero before failing (up to \vZeroPtsMax{} voltage points, \vTapGZeroPtsMax{} with the
+guard of Section~\ref{sec:guard}); their margins, the largest, are the least precise (up to
+\vExtrapSensGPs\,ps). Over the \vTapNoGSweepsMin{} to \vTapNoGSweepsMax{} voltage sweeps of each tap
+(down and up, repeated shmoos), $m$ varied by at most \vTapNoGSdMax{} step (standard deviation),
+with no hysteresis; Table~\ref{tab:taps} lists the means.
 
 Over the \vTapNoGN{} failing taps of the two placements, $m$ ranged from \vTapNoGMinSt{} to
 \vTapNoGMaxSt{} steps (\vTapNoGMinPs{} to \vTapNoGMaxPs\,ps, \vTapNoGMinmV{} to \vTapNoGMaxmV\,mV).
 One tap read zero at \vZeroPtsMax{} voltage points before failing, but \vTapNoGLateSure{} of the
 \vTapNoGN{} failed while still reading positive even at the favorable end of their interval, the
-latest one \vWorstLateSt{} steps above zero at the best estimate. The zero reading is thus a close but not a conservative predictor: as built, the sensor can be late by
-about \vWorstLatePs\,ps, or \vWorstLatemV\,mV of core voltage.
+latest one \vWorstLateSt{} steps above zero at the best estimate. The zero reading is thus a close
+but not a conservative predictor: as built, the sensor can be late by about \vWorstLatePs\,ps, or
+\vWorstLatemV\,mV of core voltage.
 
 \subsection{What Sets the Offset}\label{sec:offset}
 
@@ -245,33 +267,50 @@ about \vWorstLatePs\,ps, or \vWorstLatemV\,mV of core voltage.
 \caption{Measured margin $m$ at failure versus the offset $\Dst$ predicted by STA without the
 uncertainty and pessimism terms (slow corner). Filled: the independent failing taps of the two
 placements; hollow: the same routed taps with a guard band ($\Dst$ from the STA of the guarded
-design). Error
-bars span the 10\,mV interval in which errors start. Below zero the path fails while the sensor still
-reads positive.}
+design). Error bars span the 10\,mV interval in which errors start. Below zero the path fails while
+the sensor still reads positive. Labeled: the tap whose FF2 clock arrives late.}
 \label{fig:offset}
 \end{figure}
 
 The tap-to-tap spread follows the implementation. STA charges the FF1 path, which crosses from the
-system clock into the phase-swept clock, \vStaDU\,ps more clock uncertainty and \vStaDCPR\,ps less
-clock-pessimism removal than the same-clock FF2 path; both are worst-case analysis margins, not
-delays of a typical die. Removing both
-from the slack difference gives $\Dst$, computed for each placement from its own routed design with
-no fitted parameter. Over the \vFitN{} independent taps (Fig.~\ref{fig:offset}, filled symbols, and
+system clock into the phase-swept clock, \vStaDU\,ps more clock uncertainty and \vStaDCPR\,ps
+(placement A) or \vStaDCPRB\,ps (B) less clock-pessimism removal than the same-clock FF2 path; both
+are worst-case analysis margins, not delays of a typical die. Removing both from the slack
+difference gives $\Dst$, computed for each placement from its own routed design with no fitted
+parameter. Over the \vFitN{} independent taps (Fig.~\ref{fig:offset}, filled symbols, and
 Table~\ref{tab:taps}), $\Dst$ predicts the measured margin with \vFitRms\,ps rms residual, against
 \vFitNullRms\,ps for the best constant offset ($r=\vFitR$, $p=\vFitP$; Spearman $\rho=\vFitRho$;
-fitted slope \vFitSlope); placement B, measured after the correction had been identified on A,
-follows it with \vFitRmsB\,ps rms. $\Dst$ falls inside the measured interval for \vFitInside{} taps
-and misses the others by at most \vFitMissMax\,ps: the residual is comparable to the 10\,mV voltage
-grid, whose interval spans $\pm$\vFitHalfW\,ps on average. It shows no trend with the failure
-voltage over \vTapVfLo--\vTapVfHi\,V (correlation \vFitResVfR), so the offset does not depend
-strongly on the voltage at which the path fails. The raw STA slack difference would have overstated
-the margins by \vFitRawBiasAbs\,ps on average, predicting a safe sensor where most taps were late.
+fitted slope \vFitSlope), with no trend of the residual with the failure voltage over
+\vTapVfLo--\vTapVfHi\,V (correlation \vFitResVfR). The raw STA slack difference correlates less
+($r=\vFitRawR$) and would have overstated the margins by \vFitRawBiasAbs\,ps on average, predicting a
+safe sensor where most taps were late. The correction is mostly that shift (the raw difference plus
+the best constant would leave \vFitRawConstRms\,ps rms), but STA sets it without any measurement.
+
+The correlation rests largely on one tap. The FF2 of S\vLooStage{} in placement \vLooImpl{}
+receives the system clock \vClkOutPs\,ps later than the other FF2s of \vLooImpl; STA turned that into
+the largest predicted margin, and it was the largest measured one (Fig.~\ref{fig:offset}, labeled).
+Without that tap, $r=\vLooR$ ($p=\vLooP$) and a constant offset (\vLooNullRms\,ps rms) beats $\Dst$
+(\vLooRms\,ps); leaving out any other tap keeps $r$ between \vLooOtherRLo{} and \vLooOtherRHi. In
+the other taps the two capture clocks differ by a constant within a placement (\vClkLevelA\,ps in A,
+\vClkLevelB\,ps in B, spread $\le$\,\vClkSpreadPs\,ps), and $\Dst$ follows the data routing to FF1
+and FF2, which varies by up to \vRouteSpreadPs\,ps from tap to tap. STA ranks that part correctly
+($r=\vFitRInA$ in A, \vFitRInB{} in B) but overstates it: the fitted slope within a placement is
+\vFitSlopeInA{} in A and \vFitSlopeInB{} in B. Placement B, measured after the correction had been
+fixed on A, follows $\Dst$ with \vFitRmsB\,ps rms, whereas the mean margin of A applied to B misses
+by \vFitOosConstRmsB\,ps (\vFitOosConstNoRmsB\,ps if the late-clock tap is left out of the mean).
+$\Dst$ falls inside the measured interval for \vFitInsideA{} of the \vTapAN{} taps of A but only
+\vFitInsideB{} of the \vTapBN{} of B, missing the others by at most \vFitMissMax\,ps, which is
+comparable to the 10\,mV voltage grid, whose interval spans $\pm$\vFitHalfW\,ps on average. STA thus
+gives the offset to about \vFitRms\,ps before anything is measured, including its outliers; a
+tighter bound needs a measurement.
 
 \begin{table}[t]
 \centering
-\caption{Per-tap results on 16\,nm: first failing voltage $V_f$ (V, SYSMON), measured margin $m$ and
-predicted offset $\Dst$ (ps); $m'$, $m''$: margin of the same routed design with the 250 and the
-125\,ps guard. $m>0$: the reading reached zero before the first error.}
+\caption{Per-tap results on 16\,nm: first failing voltage $V_f$ (V, SYSMON), measured margin $m$
+with its interval (super- and subscript) and predicted offset $\Dst$ (ps); $m'$, $m''$: margin of
+the same routed design with the 250 and the 125\,ps guard. $m>0$: the reading reached zero before
+the first error. Means over \vTapASweeps{} (A), \vTapBSweeps{} (B) and \vTapGSweeps{} (guards)
+voltage sweeps.}
 \label{tab:taps}
 \footnotesize
 \setlength{\tabcolsep}{2.2pt}
@@ -284,17 +323,21 @@ The MMCM accepts a static phase on the outputs without fine phase shift, in sett
 of the VCO period (125\,ps here). Delaying the system clock (launch registers, FF2 and checkers) by
 9\textdegree{} (250\,ps) makes FF1 sample that much earlier at step 0 without touching the monitored
 path. We applied it to the routed designs of both placements, changing nothing but two MMCM
-attributes (A$'$, B$'$; the catcher keeps its distance to FF2). At the \vGuardPtN{} tap--voltage
-points measured with and without it, the reading dropped by \vGuardPtSt$\pm$\vGuardPtSd{} steps
-(\vGuardPtPs\,ps; designed \vGuardDesignSt), every tap first failed at the same 10\,mV step as
-before, and all \vGuardPairs{} failing taps then read zero before their first error: by
-\vTapGMinSt{} to \vTapGMaxSt{} steps (\vTapGMinPs{} to \vTapGMaxPs\,ps) at the best estimate, and
-\vTapGEarly{} of them even at the unfavorable end of their interval. A single setting (4.5\textdegree,
-B$''$) lowered the readings of B by \vGuardHPtSt$\pm$\vGuardHPtSd{} steps (\vGuardHPtPs\,ps) instead
-of \vGuardHDesignSt, equally on every tap, so the phase settings of the MMCM are not evenly spaced;
-with it, all \vTapGhN{} failing taps of B also read zero first, by \vTapGhMinPs{} to
-\vTapGhMaxPs\,ps (Table~\ref{tab:taps}). The guard is thus a design parameter whose realized value
-must be measured once, as the reading change of any tap with and without it.
+attributes (A$'$, B$'$; the catcher keeps its distance to FF2). Two results were not given in
+advance. At the \vGuardPtN{} tap--voltage points measured with and without it, the reading dropped
+by \vGuardPtSt$\pm$\vGuardPtSd{} steps (\vGuardPtPs\,ps; designed \vGuardDesignSt), the same on every
+tap to within the reading noise; and every tap first failed at the same 10\,mV step as before, so
+the guard shifts the reading without loading the path. That all \vGuardPairs{} failing taps then
+read zero before their first error, by \vTapGMinSt{} to \vTapGMaxSt{} steps (\vTapGMinPs{} to
+\vTapGMaxPs\,ps) at the best estimate and \vTapGEarly{} of them even at the unfavorable end of their
+interval, follows from \vGuardPtPs\,ps exceeding the latest offset of \vWorstLatePs\,ps. A single
+setting (4.5\textdegree, B$''$) lowered the readings of B by \vGuardHPtSt$\pm$\vGuardHPtSd{} steps
+(\vGuardHPtPs\,ps) instead of \vGuardHDesignSt, equally on every tap, and the second setting added
+\vGuardStepTwoPs\,ps: the realized steps differ from the nominal 125\,ps, as a static phase offset
+between MMCM outputs, which the data sheet bounds~\cite{ds931}, allows. With B$''$, all \vTapGhN{}
+failing taps of B also read zero first, by \vTapGhMinPs{} to \vTapGhMaxPs\,ps (Table~\ref{tab:taps}).
+The guard is thus a design parameter whose realized value must be measured once, as the reading
+change of any tap with and without it.
 
 \subsection{\texorpdfstring{28\,nm}{28 nm}: The Margin a Burn-In Consumes}\label{sec:res28}
 
@@ -313,14 +356,23 @@ Fig.~\ref{fig:run1} compares the corners at \vPreT\,\textdegree C. The burn-in l
 \vDslackHiAbs, \vDslackMidAbs{} and \vDslackLoAbs{} steps ($\pm1$) at 1.10, 1.00 and 0.90\,V, that is
 \vDpsHiAbs, \vDpsMidAbs{} and \vDpsLoAbs\,ps of slack: the loss grows as the voltage falls. One
 parameter accounts for all three. Moved by \vShiftmV$\pm$\vShiftErrmV\,mV towards lower voltage, the
-post-burn-in curve passes through the three pre-burn-in readings within \vShiftResMax{} step (rms
-\vShiftResRms), whereas the best constant slack offset leaves up to \vOffsetResMax{} steps of
-residual at the extreme corners. After the burn-in the path thus needs \vShiftmV\,mV more supply for
-the same slack at every corner, as a uniform threshold-voltage increase from bias-temperature
-instability would cause to first order, rather than a fixed added delay. For an SLM loop this is the
-quantity of interest: the voltage at which the monitored path reads zero rose by \vShiftmV\,mV. If
-the sensor's offset did not age, which we did not test, the failure voltage of the path rose by the
-same amount.
+alpha-power fit ($\alpha=\vAlpha$) of the post-burn-in sweep passes through the three pre-burn-in
+readings within \vShiftResMax{} step (rms \vShiftResRms), whereas the best constant slack offset
+leaves up to \vOffsetResMax{} steps of residual at the extreme corners. The shift does not hinge on
+that model: exponents from 1.1 to 2 give \vShiftAlphaLo--\vShiftAlphaHi\,mV and a cubic polynomial
+\vShiftCubicmV\,mV (residual $\le$\,\vShiftCubicResMax{} step). Local slopes without any model give
+\vDVminHi$\pm$\vDVminErrHi, \vDVminMid$\pm$\vDVminErrMid{} and \vDVminLo$\pm$\vDVminErrLo\,mV at 1.10, 1.00 and
+0.90\,V, pushed apart by their
+one-sided windows at the ends of the sweep. Since the supply is trimmed against the XADC, an XADC
+that drifted during the burn-in would also look like a shift; against the supply's own readback,
+however, the supply-minus-XADC difference changed by only \vXadcDriftLo{} to \vXadcDriftHi\,mV
+between the two sets of corners, at most about a third of the shift. Over 0.9--1.1\,V the path thus
+needs \vShiftmV\,mV more supply for the same slack, as a uniform threshold-voltage increase from
+bias-temperature instability would cause to first order, rather than a fixed added delay. For an
+SLM loop this is the quantity of interest, but it was measured where the path still had \vPostLo{}
+steps of slack: that the voltage at which the path reads zero, below the measured range, rose by the
+same amount is an extrapolation, and so is the failure voltage, since the sensor's offset was not
+aged.
 
 Cooling from about 104 to \vColdT\,\textdegree C raised the reading by \vHotMinusColdHiAbs{} steps at
 1.10\,V, left it within one step at 1.00\,V and \emph{lowered} it by
@@ -331,74 +383,63 @@ crossover, and a low-voltage aging corner must be measured cold.
 
 \subsection{\texorpdfstring{16\,nm}{16 nm}: Stress Bound}\label{sec:res16bound}
 
-Two RV02A boards ran an earlier design with one 256-bit adder path and the same sensor at a
-19.84\,ps step (900\,MHz VCO) for \vUsDurH\,h at $\Vcc=0.85$\,V (closed loop) in an oven at
-\vUsOven\,\textdegree C. The die of board~1 read \vUsTA\,\textdegree C; the SYSMON of board~2, the one
-of Section~\ref{sec:res16}, read \vUsTB\,\textdegree C, which we attribute to its sensor, since at room
-temperature it reads about 40\,\textdegree C above board~1 while drawing less current.
-Table~\ref{tab:us} compares corners taken at room temperature before and after. The largest change,
-\vUsDALo{} step on board~1 at 0.85\,V (\vUsDmaxPs\,ps), is below one step, and board~2 returned the
-same codes: on a path of about \vUsPathNs\,ns the change is below 0.5\,\%.
-
-\begin{table}[t]
-\centering
-\caption{16\,nm corners before and after \vUsDurH\,h (mean of 180 windows of 1\,s; steps of
-19.84\,ps).}
-\label{tab:us}
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
- & \multicolumn{3}{c}{Board 1} & \multicolumn{3}{c}{Board 2} \\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}
-$\Vcc$ target (V) & before & after & $\Delta$ & before & after & $\Delta$ \\
-\midrule
-0.85 & \vUsPreALo & \vUsPostALo & \vUsDALo & \vUsPreBLo & \vUsPostBLo & \vUsDBLo \\
-0.90 & \vUsPreAMid & \vUsPostAMid & \vUsDAMid & \vUsPreBMid & \vUsPostBMid & \vUsDBMid \\
-0.95 & \vUsPreAHi & \vUsPostAHi & \vUsDAHi & \vUsPreBHi & \vUsPostBHi & \vUsDBHi \\
-\bottomrule
-\end{tabular}
-\end{table}
+Two RV02A boards (board~2 is the one of Section~\ref{sec:res16}) ran an earlier design with one
+adder path and the same sensor, at a 19.84\,ps step, for \vUsDurH\,h at $\Vcc=0.85$\,V in an oven at
+\vUsOven\,\textdegree C. Room-temperature corners at 0.85, 0.90 and 0.95\,V moved by at most
+\vUsDmax{} step (\vUsDmaxPs\,ps, below 0.5\,\% of a \vUsPathNs\,ns path), consistent with the
+degradation of at most 1\,\% that ring oscillators on 16\,nm FinFET FPGAs showed after 8000\,h at up
+to 1.3 times the nominal voltage~\cite{sobas24}.
 
 % =============================================================================================
 \section{Discussion and Limitations}\label{sec:disc}
 
 \textbf{For SLM.} A loop that treats $r=0$ as the failure point of the monitored path is off by
 the sensor's implementation offset, here up to \vWorstLatePs\,ps (\vWorstLateSt{} steps, about
-\vWorstLatemV\,mV of core voltage) on the unsafe side. The offset is a design-time quantity: STA
-gives it per path once the analysis-only margins of the cross-clock FF1 path are removed, and a
-static phase on the system clock turns it into a deliberate guard band, after which the reading is
-a calibrated, conservative margin. Every step of guard is margin taken from AVS, so its size is a
-trade-off: sized from STA alone, to cover the most negative $\Dst$ (\vDstMinAbs\,ps late) plus twice
-the model's rms error, it would be \vGuardSizedPs\,ps (\vGuardSizedSet{} settings), where one setting
-sufficed for the measured margins of B. A tapped chain closes that gap cheaply: one shmoo of about 8\,min measures
-the offset of every tap. The 28\,nm result then says what aging does to the margin: a burn-in that
-cost \vDslackLoAbs{} steps at 0.9\,V moved the zero-reading voltage by \vShiftmV\,mV at every
-corner.
+\vWorstLatemV\,mV of core voltage) on the unsafe side. The offset is largely a design-time
+quantity: STA estimates it per path, to \vFitRms\,ps rms here, once the analysis-only margins of the
+cross-clock FF1 path are removed, and it flags taps whose capture clock arrives late. A static phase
+on the system clock turns it into a deliberate guard band, after which the reading is a calibrated,
+conservative margin. Every step of guard is margin taken from AVS, so its size is a trade-off: sized
+from STA alone, to cover the most negative $\Dst$ (\vDstMinAbs\,ps late) plus twice the model's rms
+error, it would be \vGuardSizedPs\,ps (\vGuardSizedSet{} settings), where one setting sufficed for
+the measured margins of B. A tapped chain closes that gap cheaply: one shmoo of about 8\,min
+measures the offset of every tap. The 28\,nm result then says what aging does to the margin: a
+burn-in that cost \vDslackLoAbs{} steps at 0.9\,V moved the slack-voltage curve by \vShiftmV\,mV
+over 0.9--1.1\,V.
 
-\textbf{Limitations.} The validation used one board per technology, so its results are within-device.
-The 16\,nm validation was done at room temperature only: the offset is a skew and routing property,
-but clock-tree delays scale with temperature, so its temperature dependence remains to be measured.
-Whether the offset itself drifts under stress was not tested either. The 28\,nm adder path was not
-driven to failure: at 0.90\,V and 104\,\textdegree C it still had \vPostLo{} steps (\vPostNsLo\,ns) of slack,
-and its pre-burn-in corners are single readings ($\pm1$ step). The 16\,nm stress bound is limited by
-the step size: when the transition sits away from a step boundary, the reading returns the same
-integer in every sweep (the zero spread of some entries in Table~\ref{tab:us}); statistical
-readout~\cite{wong09} or a faster VCO would lower it. RTL, constraints, bench scripts and raw logs
-are available from the authors.
+\textbf{Limitations.} The validation used one board per technology, so its results are
+within-device, and the STA model rests on \vFitN{} taps in two placements, where one tap with a late
+capture clock carries much of the correlation; more placements are needed to pin down the routing
+part. The 16\,nm validation was done at room temperature only: the offset is a skew and routing
+property, but clock-tree delays scale with temperature, so its temperature dependence remains to be
+measured. Whether the offset itself drifts under stress was not tested either. The 28\,nm adder path
+was not driven to failure: at 0.90\,V and 104\,\textdegree C it still had \vPostLo{} steps
+(\vPostNsLo\,ns) of slack, and its pre-burn-in corners are single readings ($\pm1$ step). The 16\,nm
+stress bound is limited by the step size: when the transition sits away from a step boundary, the
+reading returns the same integer in every sweep; statistical readout~\cite{wong09} or a faster VCO
+would lower it.
+\ifblind
+RTL, constraints, bench scripts, raw logs and the scripts that generate every number in this paper
+will be made public upon acceptance.
+\else
+RTL, constraints, bench scripts, raw logs and the scripts that generate every number in this paper
+are available at \url{https://github.com/ArthurPamplonaEng/Lats2027Slack}.
+\fi
 
 % =============================================================================================
 \section{Conclusion}
 
 A zero slack reading is close to, but not exactly at, the failure of the monitored path: on 16\,nm
-the first functional error came between \vWorstLatePs\,ps before and \vTapNoGMaxPsAbs\,ps after the
-reading reached zero, an offset set by the sensor's own sampling skew. Static timing predicts that
-offset per path once its cross-clock analysis margins are removed, on two placements, and a static
-clock phase moves it by design, in settings of about 125\,ps, without touching the failure voltage,
-which makes the reading a calibrated, conservative margin. Read that way, a 28\,nm burn-in at 1.4\,V and
-125\,\textdegree C moved the zero-reading voltage of an adder path by \vShiftmV\,mV, uniformly across
-the voltage range. Next steps are the temperature dependence and the aging of the offset, several
-boards, and the tapped structure under stress, to watch the failure voltage itself move.
+the zero reading and the first functional error were $-$\vWorstLatePs{} to $+$\vTapNoGMaxPsAbs\,ps
+of slack apart, an offset set by the sensor's own sampling skew. Static timing predicts that offset
+to \vFitRms\,ps rms once its cross-clock analysis margins are removed, on two placements and
+including a late-clock outlier, although it overstates the routing part; a static clock phase moves
+the offset by design, in settings of about 125\,ps, without touching the failure voltage, which
+makes the reading a calibrated, conservative margin. Read that way, a 28\,nm burn-in at 1.4\,V and
+125\,\textdegree C moved the slack-voltage curve of an adder path by \vShiftmV\,mV, uniformly over
+0.9--1.1\,V. Next steps are more placements, to pin down the routing part of the offset, its
+temperature dependence and aging, several boards, and the tapped structure under stress, to watch
+the failure voltage itself move.
 
 \bibliographystyle{IEEEtran}
 \bibliography{refs}

@@ -1,4 +1,6 @@
-% References of the LATS 2027 paper. DOIs, volumes and pages checked against Crossref on 2026-11-20.
+% References of the LATS 2027 paper. DOIs, volumes and pages checked against Crossref on 2026-11-20;
+% drake07, lefurgy11, tschanz09 (no DOI; OpenAlex), ahmed16 and the DOI of sbcci26 on 2026-11-23.
+% Data-sheet versions taken from the JICS draft bibliography (contextoantigo/jics_source).
 
 @inproceedings{sbcci25,
   author    = {L. Nogueira and others},
@@ -13,7 +15,9 @@
   author    = {D. Alencar and others},
   title     = {Quantifying the Effect of Burn-In Thermal Control on Delivered Acceleration Factor and On-Chip Slack-Sensor Fidelity in an {FPGA} Target},
   booktitle = {Proc. 39th Symp. Integrated Circuits and Systems Design (SBCCI)},
-  year      = {2026}
+  year      = {2026},
+  pages     = {1--5},
+  doi       = {10.1109/SBCCI69725.2026.11706782}
 }
 
 @inproceedings{agarwal07,
@@ -160,6 +164,7 @@
   author       = {{AMD}},
   title        = {{UltraScale} Architecture Clocking Resources User Guide ({UG572})},
   howpublished = {AMD Adaptive Computing documentation},
+  note         = {v1.11, May 2025},
   year         = {2025}
 }
 
@@ -167,13 +172,15 @@
   author       = {{AMD}},
   title        = {Artix {UltraScale+} {FPGA} Data Sheet: {DC} and {AC} Switching Characteristics ({DS931})},
   howpublished = {AMD Adaptive Computing documentation},
-  year         = {2025}
+  note         = {v1.9, May 2026},
+  year         = {2026}
 }
 
 @misc{ds181,
   author       = {{AMD}},
   title        = {Artix-7 {FPGAs} Data Sheet: {DC} and {AC} Switching Characteristics ({DS181})},
   howpublished = {AMD Adaptive Computing documentation},
+  note         = {v1.30, Mar. 2023},
   year         = {2023}
 }
 
@@ -211,4 +218,39 @@
   year      = {2011},
   pages     = {203--208},
   doi       = {10.1109/VTS.2011.5783784}
+}
+
+@inproceedings{drake07,
+  author    = {A. Drake and others},
+  title     = {A Distributed Critical-Path Timing Monitor for a 65nm High-Performance Microprocessor},
+  booktitle = {IEEE Int. Solid-State Circuits Conf. (ISSCC) Dig. Tech. Papers},
+  year      = {2007},
+  pages     = {398--399},
+  doi       = {10.1109/ISSCC.2007.373462}
+}
+
+@inproceedings{lefurgy11,
+  author    = {C. R. Lefurgy and A. J. Drake and M. S. Floyd and M. S. Allen-Ware and B. Brock and J. A. Tierno and J. B. Carter},
+  title     = {Active Management of Timing Guardband to Save Energy in {POWER7}},
+  booktitle = {Proc. 44th IEEE/ACM Int. Symp. Microarchitecture (MICRO)},
+  year      = {2011},
+  pages     = {1--11},
+  doi       = {10.1145/2155620.2155622}
+}
+
+@inproceedings{tschanz09,
+  author    = {J. Tschanz and K. Bowman and S. Walstra and M. Agostinelli and T. Karnik and V. De},
+  title     = {Tunable Replica Circuits and Adaptive Voltage-Frequency Techniques for Dynamic Voltage, Temperature, and Aging Variation Tolerance},
+  booktitle = {Proc. Symp. VLSI Circuits},
+  year      = {2009},
+  pages     = {112--113}
+}
+
+@inproceedings{ahmed16,
+  author    = {I. Ahmed and S. Zhao and O. Trescases and V. Betz},
+  title     = {Measure Twice and Cut Once: Robust Dynamic Voltage Scaling for {FPGAs}},
+  booktitle = {Proc. 26th Int. Conf. Field Programmable Logic and Applications (FPL)},
+  year      = {2016},
+  pages     = {1--11},
+  doi       = {10.1109/FPL.2016.7577342}
 }

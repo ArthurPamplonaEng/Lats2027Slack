@@ -140,11 +140,11 @@ def boundaries(pts: list[Point], j: int) -> dict:
     return res
 
 
-def margin_steps(pts: list[Point], j: int) -> dict | None:
+def margin_steps(pts: list[Point], j: int, npts: int = 3) -> dict | None:
     """Sensor offset at failure for tap j on one monotonic sweep, in phase steps.
 
     The reading of the error-free points with a positive reading is fitted with a straight line
-    (local slope k, steps per volt, from the lowest three such points) and extrapolated to the
+    (local slope k, steps per volt, from the lowest npts such points, three by default) and extrapolated to the
     failure voltage V* (rule below). m = -r(V*): m > 0 means the reading had
     already reached zero when the first error appeared (sensor early, a warning margin); m < 0
     means errors appeared while the reading was still m steps above zero (sensor late). The
@@ -157,7 +157,7 @@ def margin_steps(pts: list[Point], j: int) -> dict | None:
            if p.state(j) == "OK" and p.reading[j] > 0 and vaxis(p) > b["V_f"]]
     if len(okp) < 2:
         return None
-    okp = sorted(okp)[:3]
+    okp = sorted(okp)[:npts]
     x = np.array([a for a, _ in okp])
     y = np.array([c for _, c in okp])
     k, c0 = np.polyfit(x, y, 1)
@@ -180,7 +180,7 @@ def margin_steps(pts: list[Point], j: int) -> dict | None:
             "u_steps": 0.5 * (m_hi - m_lo), "m_ps": -r_star * STEP_TAP_PS,
             "u_ps": 0.5 * (m_hi - m_lo) * STEP_TAP_PS,
             "m_mV": -r_star / k * 1000.0, "u_mV": 0.5 * (b["V_pass"] - b["V_f"]) * 1000,
-            "zero_points": zero_free, "err_at_Vf": e_f,
+            "zero_points": zero_free, "err_at_Vf": e_f, "V_fit_lo": float(x.min()),
             "r_at_Vf": float(pf.reading[j]), "rmin_at_Vf": float(pf.rmin[j]),
             "rmax_at_Vf": float(pf.rmax[j])}
 

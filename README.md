@@ -15,11 +15,12 @@ datada na raiz (`LATS2027_rascunho_*.pdf`).
 ## O trabalho em uma frase
 
 O sensor de slack por varredura de fase (SBCCI 2025) foi posto lado a lado com um verificador de erro
-funcional em 23 derivações de uma cadeia na AU15P (16 nm), e a tensão foi baixada até a falha. O
-primeiro erro veio entre 108 ps antes e 335 ps depois da leitura zero. Esse desvio é o skew de
-amostragem do próprio sensor: o STA o prevê por derivação (r = 0,84), e uma fase estática no clock
-do sistema o transforma numa guarda de projeto. Na Nexys 4 (28 nm), um burn-in de 214,6 h equivale a
-um deslocamento de 14,3 mV na tensão.
+funcional em 23 derivações de uma cadeia na AU15P (16 nm), e a tensão foi baixada até a falha. A
+leitura zero e o primeiro erro ficaram de −108 a +335 ps de slack um do outro (negativo: o erro veio
+antes). Esse desvio é o skew de amostragem do próprio sensor: sem as margens de análise do caminho
+cruzado de FF1, o STA o prevê com 74 ps rms (r = 0,84; 0,68 sem a derivação de clock atrasado), e uma
+fase estática no clock do sistema o transforma numa guarda de projeto. Na Nexys 4 (28 nm), um burn-in
+de 214,6 h equivale a um deslocamento de 14,3 mV na tensão.
 
 ## Estrutura
 
@@ -70,7 +71,8 @@ vivado -mode batch -source hw/au15p_tap/scripts/make_guard.tcl \
 ```
 
 O LaTeX usado aqui é o TinyTeX (`~/.local/opt/tinytex`); no Overleaf, basta subir o zip e compilar
-`main.tex` com pdfLaTeX.
+`main.tex` com pdfLaTeX. Com o TeX Live do Debian/Ubuntu, falta o IEEEtran: instale
+`texlive-publishers` ou ponha `IEEEtran.cls` e `IEEEtran.bst` (CTAN) no `TEXINPUTS`/`BSTINPUTS`.
 
 ## Regras do projeto
 
